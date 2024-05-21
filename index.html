@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            --black: #222222;  
+            --black: #222222;
         }
 
 
@@ -39,10 +39,6 @@
             background: white;
         }
 
-        body.dark-mode .furigana {
-            border-color: #fff;
-        }
-
         body.dark-mode .number {
             border-color: #fff;
         }
@@ -51,6 +47,10 @@
             color: white;
             background-color: var(--black);
             border-color: white;
+        }
+
+        body.dark-mode .highlight {
+            color: #19368c;
         }
 
 
@@ -66,6 +66,7 @@
         }
 
         .number {
+            width: 94.5vw;
             font-size: 1em;
             font-family: 'Courier New', Courier, monospace;
             user-select: none;
@@ -102,7 +103,6 @@
             font-family: 'Noto Sans JP', sans-serif;
             cursor: pointer;
             user-select: none;
-            border: 1px dotted black;
             padding: 0.2em;
         }
 
@@ -144,6 +144,11 @@
             margin: 0.1em;
         }
 
+        .highlight {
+            background-color: rgba(230, 201, 115, 50%);
+            border-radius: 1em;
+            padding: 0.1em;
+        }
 
 
         /* Your style here*/
@@ -157,7 +162,7 @@
     <div id="container">
         <div class="number" id="1">1</div>
         <div class="exercise">
-            <div class="sentence">1日ごとに。</div>
+            <div class="sentence first elem_日">1日ごとに。</div>
             <div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>ごとに。</div>
             <div class="translation">(Once) every day.</div>
         </div>
@@ -205,7 +210,7 @@
         </div>
         <div class="number" id="9">9</div>
         <div class="exercise">
-            <div class="sentence">一つになる。</div>
+            <div class="sentence first elem_一">一つになる。</div>
             <div class="furigana"><ruby>一<rt>ひと</rt></ruby>つになる。</div>
             <div class="translation">Unite into one.</div>
         </div>
@@ -265,7 +270,7 @@
         </div>
         <div class="number" id="19">19</div>
         <div class="exercise">
-            <div class="sentence">二日ごとに。</div>
+            <div class="sentence first elem_二">二日ごとに。</div>
             <div class="furigana"><ruby>二日<rt>ふつか</rt></ruby>ごとに。</div>
             <div class="translation">Every other day.</div>
         </div>
@@ -307,7 +312,7 @@
         </div>
         <div class="number" id="26">26</div>
         <div class="exercise">
-            <div class="sentence">まだ三日あります。</div>
+            <div class="sentence first elem_三">まだ三日あります。</div>
             <div class="furigana">まだ <ruby>三<rt>みっ</rt></ruby> <ruby>日<rt>か</rt></ruby>あります。</div>
             <div class="translation">We still have three days.</div>
         </div>
@@ -334,7 +339,7 @@
         <div class="exercise">
             <div class="sentence">ここ二、三日はあたたかいです。</div>
             <div class="furigana">ここ <ruby>二<rt>に</rt></ruby>、 <ruby>三<rt>さん</rt></ruby> <ruby>日<rt>にち</rt>
-                </ruby>はあたたかいです。</div>
+                    </ruby>はあたたかいです。</div>
             <div class="translation">It&#x27;s been warm the last few days.</div>
         </div>
         <div class="number" id="31">31</div>
@@ -345,7 +350,7 @@
         </div>
         <div class="number" id="32">32</div>
         <div class="exercise">
-            <div class="sentence">十ぶんだ。</div>
+            <div class="sentence first elem_十">十ぶんだ。</div>
             <div class="furigana"><ruby>十<rt>じゅう</rt></ruby>ぶんだ。</div>
             <div class="translation">That&#x27;s plenty.</div>
         </div>
@@ -377,8 +382,7 @@
         <div class="exercise">
             <div class="sentence">一から十まで一々うるさい。</div>
             <div class="furigana"><ruby>一<rt>いち</rt></ruby>から <ruby>十<rt>じゅう</rt></ruby>まで <ruby>一<rt>いち</rt></ruby>
-                <ruby>々<rt>いち</rt></ruby>うるさい。
-            </div>
+                <ruby>々<rt>いち</rt></ruby>うるさい。</div>
             <div class="translation">Fussy about every little thing.</div>
         </div>
         <div class="number" id="38">38</div>
@@ -397,12 +401,12 @@
         <div class="exercise">
             <div class="sentence">トムはそれに十ドル十一セントついやした。</div>
             <div class="furigana">トムはそれに <ruby>十<rt>じゅう</rt></ruby>ドル <ruby>十<rt>じゅう</rt></ruby> <ruby>一<rt>いち</rt>
-                </ruby>セントついやした。</div>
+                    </ruby>セントついやした。</div>
             <div class="translation">Tom spent ten dollars and eleven cents on it.</div>
         </div>
         <div class="number" id="41">41</div>
         <div class="exercise">
-            <div class="sentence">四つんばい。</div>
+            <div class="sentence first elem_四">四つんばい。</div>
             <div class="furigana"><ruby>四<rt>よ</rt></ruby>つんばい。</div>
             <div class="translation">On all fours.</div>
         </div>
@@ -444,7 +448,7 @@
         </div>
         <div class="number" id="48">48</div>
         <div class="exercise">
-            <div class="sentence">バナナを五つください。</div>
+            <div class="sentence first elem_五">バナナを五つください。</div>
             <div class="furigana">バナナを <ruby>五<rt>いつ</rt></ruby>つください。</div>
             <div class="translation">Five bananas please.</div>
         </div>
@@ -471,7 +475,7 @@
         <div class="exercise">
             <div class="sentence">ネロは十五で、アロアは十二だ。</div>
             <div class="furigana">ネロは <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>で、アロアは <ruby>十<rt>じゅう</rt>
-                </ruby> <ruby>二<rt>に</rt></ruby>だ。</div>
+                    </ruby> <ruby>二<rt>に</rt></ruby>だ。</div>
             <div class="translation">Nello is fifteen, and Alois is twelve.</div>
         </div>
         <div class="number" id="53">53</div>
@@ -482,7 +486,7 @@
         </div>
         <div class="number" id="54">54</div>
         <div class="exercise">
-            <div class="sentence">六ぶんの一。</div>
+            <div class="sentence first elem_六">六ぶんの一。</div>
             <div class="furigana"><ruby>六<rt>ろく</rt></ruby>ぶんの <ruby>一<rt>いち</rt></ruby>。</div>
             <div class="translation">One-sixth.</div>
         </div>
@@ -511,6 +515,10 @@
             <div class="translation">Is six meters OK?</div>
         </div>
     </div>
+
+
+
+
 
 
 
@@ -554,7 +562,45 @@
                     }
                 });
             }
-        }
+
+            // Get all sentence elements with the 'first' class
+            var sentences = document.querySelectorAll('.sentence.first');
+
+            // Loop through all sentence elements
+            for (let i = 0; i < sentences.length; i++) {
+                // Get the original text
+                let originalText = sentences[i].innerHTML;
+
+                // Get the specific Kanji from the class list
+                let kanji = sentences[i].classList[2].split('_')[1];
+
+                // Create a regular expression to match the specific Kanji
+                let regex = new RegExp(kanji, 'g');
+
+                // Replace the specific Kanji with highlighted Kanji
+                let highlightedText = originalText.replace(regex, function (match) {
+                    return '<span class="highlight">' + match + '</span>';
+                });
+
+                // Set the highlighted text
+                sentences[i].innerHTML = highlightedText;
+            }
+
+            // Get all exercise elements that contain a sentence with the 'first' class
+            var exercises = document.querySelectorAll('.exercise .sentence.first');
+
+            // Loop through all exercise elements
+            for (let i = 0; i < exercises.length; i++) {
+                // Get the preceding number div
+                var numberDiv = exercises[i].parentElement.previousElementSibling;
+
+                // Now you can manipulate the numberDiv as needed
+                // For example, you can change its color to red
+                numberDiv.style.backgroundColor  = '#ACE673';
+            }
+
+
+        } //end onload function
 
         document.getElementById('toggleButton').addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
