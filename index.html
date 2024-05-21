@@ -15,7 +15,45 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            --black: #222222;  
         }
+
+
+
+        body.dark-mode {
+            background-color: var(--black);
+            color: #fff;
+        }
+
+        body.dark-mode .exercise {
+            border-color: #fff;
+        }
+
+        body.dark-mode ::-moz-selection {
+            color: var(--black);
+            background: white;
+        }
+
+        body.dark-mode ::selection {
+            color: var(--black);
+            background: white;
+        }
+
+        body.dark-mode .furigana {
+            border-color: #fff;
+        }
+
+        body.dark-mode .number {
+            border-color: #fff;
+        }
+
+        body.dark-mode #toggleButton {
+            color: white;
+            background-color: var(--black);
+            border-color: white;
+        }
+
+
 
         #container {
             display: flex;
@@ -94,6 +132,18 @@
             background: black;
         }
 
+        #toggleButton {
+            font-size: 1em;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+            user-select: none;
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+            padding: 0.2em;
+            margin: 0.1em;
+        }
+
 
 
         /* Your style here*/
@@ -101,6 +151,8 @@
 </head>
 
 <body>
+
+    <button id="toggleButton">Dark Mode</button>
 
     <div id="container">
         <div class="number" id="1">1</div>
@@ -503,6 +555,18 @@
                 });
             }
         }
+
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            // Check if the body has the 'dark-mode' class
+            if (document.body.classList.contains('dark-mode')) {
+                // If it does, change the button text to 'Light Mode'
+                this.innerText = 'Light Mode';
+            } else {
+                // If it doesn't, change the button text back to 'Dark Mode'
+                this.innerText = 'Dark Mode';
+            }
+        });
 
 
 
