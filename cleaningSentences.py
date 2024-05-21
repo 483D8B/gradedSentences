@@ -69,15 +69,13 @@ with open('playgroundData.csv', 'r', encoding='utf-8') as csv_file:
 
         # Create a dictionary to store the first occurrence of each Kanji
         kanji_dict = {}
+        
+        counter = 0
+        sub_counter = 1
 
         # Iterate over each row in the CSV
         for row in csv_reader:
-            # Start the exercise div
-            html_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{html.escape(row[3])}</div>\n')
-            html_file.write('<div class="exercise">\n')
-
-            # Convert the furigana format to use the HTML <ruby> element
-            furigana = re.sub(r'(\w+)\s*\[(.*?)\]', r'<ruby>\1<rt>\2</rt></ruby>', row[1])
+            sub_counter += 1
 
             # Check each character in the sentence
             first_kanji = None
@@ -87,6 +85,17 @@ with open('playgroundData.csv', 'r', encoding='utf-8') as csv_file:
                     kanji_dict[char] = True
                     if first_kanji is None:
                         first_kanji = char
+                        counter += 1
+                        sub_counter = 1
+                        
+                        
+             # Start the exercise div
+            html_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{counter}.{sub_counter}</div>\n')
+            html_file.write('<div class="exercise">\n')
+
+            # Convert the furigana format to use the HTML <ruby> element
+            furigana = re.sub(r'(\w+)\s*\[(.*?)\]', r'<ruby>\1<rt>\2</rt></ruby>', row[1])            
+            
 
             # Enclose each column in a div with the appropriate class and id
             if first_kanji is not None:
