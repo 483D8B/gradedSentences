@@ -54,11 +54,12 @@
         }
 
         .furigana {
+            display: block;
+            float: left;
             font-size: 1.2em;
-            text-align: center;
             font-family: 'Noto Sans JP', sans-serif;
-            text-align: left;
             cursor: pointer;
+            user-select: none;
         }
 
         rt {
@@ -66,13 +67,37 @@
         }
 
         .translation {
+            display: block;
+            float: right;
             font-size: 1em;
             text-align: right;
             font-family: 'Noto Sans JP', sans-serif;
             cursor: pointer;
+            user-select: none;
         }
 
+        .translation:active,
+        .translation:hover {
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
 
+        .furigana:active,
+        .furigana:hover {
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: white;
+            background: black;
+        }
+
+        ::selection {
+            color: white;
+            background: black;
+        }
 
 
 
@@ -455,11 +480,14 @@
             for (let i = 0; i < furiganas.length; i++) {
                 let originalText = furiganas[i].innerHTML;
                 furiganas[i].innerText = 'Show with furigana';
+                // furiganas[i].style.userSelect = "none"; // Make the text non-selectable
                 furiganas[i].addEventListener('click', function () {
                     if (this.innerHTML == originalText) {
                         this.innerText = 'Show with furigana';
+                        // this.style.userSelect = "none"; // Keep the text non-selectable
                     } else {
                         this.innerHTML = originalText;
+                        // this.style.userSelect = "auto"; // Make the text selectable after it's clicked
                     }
                 });
             }
@@ -468,15 +496,21 @@
             for (let i = 0; i < translations.length; i++) {
                 let originalText = translations[i].innerHTML;
                 translations[i].innerText = 'Show translation';
+                // translations[i].style.userSelect = "none"; // Make the text non-selectable
                 translations[i].addEventListener('click', function () {
                     if (this.innerHTML == originalText) {
                         this.innerText = 'Show translation';
+                        // this.style.userSelect = "none"; // Keep the text non-selectable
                     } else {
                         this.innerHTML = originalText;
+                        // this.style.userSelect = "auto"; // Make the text selectable after it's clicked
                     }
                 });
             }
         }
+
+
+
 
     </script>
 </body>
