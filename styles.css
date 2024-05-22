@@ -1,0 +1,223 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --black: #222222;
+    --white: #FAF9F6;
+}
+
+body {
+    background-color: var(--white);
+}
+
+
+body.dark-mode {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+body.dark-mode .exercise {
+    border-color: var(--white);
+}
+
+body.dark-mode ::-moz-selection {
+    color: var(--black);
+    background: var(--white);
+}
+
+body.dark-mode ::selection {
+    color: var(--black);
+    background: var(--white);
+}
+
+body.dark-mode .number {
+    border-color: var(--white);
+}
+
+body.dark-mode #toggleButton {
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--white);
+}
+
+body.dark-mode .highlight {
+    color: #19368c;
+}
+
+body.dark-mode #search {
+    color: var(--white);
+    background: var(--black);
+    border-color: var(--white);
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+body.dark-mode #kanjiSearch {
+    color: var(--white);
+    background: var(--black);
+    border-color: var(--white);
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+body.dark-mode .colouredNumber {
+    color: var(--black);
+    background: var(--white);
+    border-color: var(--white);
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+
+#container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.5em;
+    row-gap: 0.2em;
+}
+
+.number {
+    width: 94.5vw;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Noto Sans JP', sans-serif;
+    user-select: none;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0 0.2em 0 0.2em;
+    border-radius: 0.1em;
+}
+
+.exercise {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 0.5em;
+    width: 90vw;
+    transform: translateX(5%);
+    gap: 1em;
+}
+
+.sentence {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.furigana {
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.2em;
+}
+
+rt {
+    user-select: none;
+}
+
+.translation {
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--white);
+    background: black;
+}
+
+::selection {
+    color: var(--white);
+    background: black;
+}
+
+#toggleButton {
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid black;
+    color: black;
+    background-color: var(--white);
+    padding: 0.2em;
+    margin: 0.1em;
+}
+
+.highlight {
+    background-color: rgba(230, 201, 115, 50%);
+    border-radius: 1em;
+    padding: 0.1em;
+}
+
+#search {
+    display: block;
+    font-size: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    user-select: none;
+    border: 2px solid black;
+    color: black;
+    background-color: var(--white);
+    padding: 0.2em;
+    margin: 0.1em;
+    transform: translateX(35vw);
+    width: 30vw;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#kanjiSearch {
+    display: block;
+    font-size: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    user-select: none;
+    border: 2px solid black;
+    color: black;
+    background-color: var(--white);
+    padding: 0.2em;
+    margin: 0.1em;
+    width: 20vw;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.underline {
+    text-decoration: underline;
+    color: red;
+}
+
+#kanjiFoundContainer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.kanji {
+    cursor: pointer;
+    font-size: 2em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.colouredNumber {
+    background-color: #ACE673;
+}
