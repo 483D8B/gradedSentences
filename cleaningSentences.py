@@ -90,7 +90,10 @@ with open('playgroundData.csv', 'r', encoding='utf-8') as csv_file:
                         
                         
              # Start the exercise div
-            html_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{counter}.{sub_counter}</div>\n')
+            if (first_kanji != None):
+                html_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{counter}.{sub_counter}&nbsp;&nbsp;&nbsp;{first_kanji}</div>\n')
+            else:
+                html_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{counter}.{sub_counter}</div>\n')
             html_file.write('<div class="exercise">\n')
 
             # Convert the furigana format to use the HTML <ruby> element
