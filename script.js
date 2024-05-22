@@ -198,3 +198,12 @@ var kanjiSearchFunction = debounce(function () {
     }
 }, 300); // 300 milliseconds debounce time
 
+
+document.getElementById('counter').addEventListener('click', function () {
+    var container = document.getElementById('container');
+    var x = container.getElementsByTagName("*");
+    for (var i = 0; i < x.length; i++) {
+        var y = Math.floor((Math.random() * 10) + 1);
+        x[i].style.transform = "rotate(" + y + "deg)";
+    }
+});
