@@ -347,5 +347,107 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>六<rt>ろく</rt></ruby>メートルでいいですか。</div>
 	<div class="translation">Is six meters OK?</div>
 </div>
+	<div class="number" id="59">8.6</div>
+<div class="exercise">
+	<div class="sentence">六ページをみてください。</div>
+	<div class="furigana"><ruby>六<rt>ろく</rt></ruby>ページをみてください。</div>
+	<div class="translation">Please see page six.</div>
+</div>
+	<div class="number" id="60">8.7</div>
+<div class="exercise">
+	<div class="sentence">あれは四トントラックではありません。六トントラックです。</div>
+	<div class="furigana">あれは <ruby>四<rt>よん</rt></ruby>トントラックではありません。 <ruby>六<rt>ろく</rt></ruby>トントラックです。</div>
+	<div class="translation">That is not a four-ton truck. It&#x27;s a six-ton truck.</div>
+</div>
+	<div class="number" id="61">9.1&nbsp;&nbsp;&nbsp;七</div>
+<div class="exercise">
+	<div class="sentence first elem_七">七ぶんの一。</div>
+	<div class="furigana"><ruby>七<rt>なな</rt></ruby>ぶんの <ruby>一<rt>いち</rt></ruby>。</div>
+	<div class="translation">One-seventh.</div>
+</div>
+	<div class="number" id="62">9.2</div>
+<div class="exercise">
+	<div class="sentence">十七になりました。</div>
+	<div class="furigana"><ruby>十<rt>じゅう</rt></ruby> <ruby>七<rt>なな</rt></ruby>になりました。</div>
+	<div class="translation">I&#x27;ve turned seventeen.</div>
+</div>
+	<div class="number" id="63">9.3</div>
+<div class="exercise">
+	<div class="sentence">きょうは七五三だ。</div>
+	<div class="furigana">きょうは <ruby>七<rt>しち</rt></ruby> <ruby>五<rt>ご</rt></ruby> <ruby>三<rt>さん</rt></ruby>だ。</div>
+	<div class="translation">Today is Shichi-go-san (festival for children aged seven, five, or three).</div>
+</div>
+	<div class="number" id="64">9.4</div>
+<div class="exercise">
+	<div class="sentence">十七日にあいましょう。</div>
+	<div class="furigana"><ruby>十<rt>じゅう</rt></ruby> <ruby>七<rt>しち</rt></ruby> <ruby>日<rt>にち</rt></ruby>にあいましょう。</div>
+	<div class="translation">Let&#x27;s meet on the 17th.</div>
+</div>
+	<div class="number" id="65">9.5</div>
+<div class="exercise">
+	<div class="sentence">二かける七は十四です。</div>
+	<div class="furigana"><ruby>二<rt>に</rt></ruby>かける <ruby>七<rt>なな</rt></ruby>は <ruby>十<rt>じゅう</rt></ruby> <ruby>四<rt>よん</rt></ruby>です。</div>
+	<div class="translation">Two times seven is fourteen.</div>
+</div>
+	<div class="number" id="66">9.6</div>
+<div class="exercise">
+	<div class="sentence">七十五メートルのロープ。</div>
+	<div class="furigana"><ruby>七<rt>なな</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>メートルのロープ。</div>
+	<div class="translation">A seventy-five meter rope.</div>
+</div>
+	<div class="number" id="67">9.7</div>
+<div class="exercise">
+	<div class="sentence">七つのだいざいの一つだ。</div>
+	<div class="furigana"><ruby>七<rt>なな</rt></ruby>つのだいざいの <ruby>一<rt>ひと</rt></ruby>つだ。</div>
+	<div class="translation">It&#x27;s one of the seven deadly sins.</div>
+</div>
+	<div class="number" id="68">9.8</div>
+<div class="exercise">
+	<div class="sentence">このコンテナは七トンだ。</div>
+	<div class="furigana">このコンテナは <ruby>七<rt>なな</rt></ruby>トンだ。</div>
+	<div class="translation">This container is seven tons.</div>
+</div>
+	<div class="number" id="69">9.9</div>
+<div class="exercise">
+	<div class="sentence">七日にフリーマーケットがある。</div>
+	<div class="furigana"><ruby>七<rt>なの</rt></ruby> <ruby>日<rt>か</rt></ruby>にフリーマーケットがある。</div>
+	<div class="translation">There&#x27;s a flea market on the 7th.</div>
+</div>
+	<div class="number" id="70">10.1&nbsp;&nbsp;&nbsp;八</div>
+<div class="exercise">
+	<div class="sentence first elem_八">八日に。</div>
+	<div class="furigana"><ruby>八<rt>よう</rt></ruby> <ruby>日<rt>か</rt></ruby>に。</div>
+	<div class="translation">On the eighth.</div>
+</div>
+	<div class="number" id="71">10.2</div>
+<div class="exercise">
+	<div class="sentence">八十日のあいだに。</div>
+	<div class="furigana"><ruby>八<rt>はち</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>日<rt>にち</rt></ruby>のあいだに。</div>
+	<div class="translation">In the space of eighty days.</div>
+</div>
+	<div class="number" id="72">10.3</div>
+<div class="exercise">
+	<div class="sentence">一か八かのチャンス。</div>
+	<div class="furigana"><ruby>一<rt>いち</rt></ruby>か <ruby>八<rt>ばち</rt></ruby>かのチャンス。</div>
+	<div class="translation">A sporting chance.</div>
+</div>
+	<div class="number" id="73">10.4</div>
+<div class="exercise">
+	<div class="sentence">十八日、ひまですか。</div>
+	<div class="furigana"><ruby>十<rt>じゅう</rt></ruby> <ruby>八<rt>はち</rt></ruby> <ruby>日<rt>にち</rt></ruby>、ひまですか。</div>
+	<div class="translation">Are you free on the eighteenth?</div>
+</div>
+	<div class="number" id="74">10.5</div>
+<div class="exercise">
+	<div class="sentence">きょうは二十八日です。</div>
+	<div class="furigana">きょうは <ruby>二<rt>に</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>八<rt>はち</rt></ruby> <ruby>日<rt>にち</rt></ruby>です。</div>
+	<div class="translation">Today is the twenty-eighth.</div>
+</div>
+	<div class="number" id="75">10.6</div>
+<div class="exercise">
+	<div class="sentence">ネコはお八つがほしい。</div>
+	<div class="furigana">ネコはお <ruby>八<rt>や</rt></ruby>つがほしい。</div>
+	<div class="translation">The cat wants a snack.</div>
+</div>
 </div>
 `;

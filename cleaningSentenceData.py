@@ -3,9 +3,13 @@ import html
 import re
 
 # Open the CSV file
-with open('playgroundData.csv', 'r', encoding='utf-8') as csv_file:
+with open('grs.csv', 'r', encoding='utf-8') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter='\t')
 
+    # Skip the first two lines
+    next(csv_reader, None)
+    next(csv_reader, None)
+    
     # Open the output HTML file
     with open('output.js', 'w', encoding='utf-8') as js_file:
         # Write the start of the HTML document
