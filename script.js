@@ -71,6 +71,16 @@ window.onload = function () {
         numberDiv.classList.add('colouredNumber');
     }
 
+    var numbers = document.querySelectorAll('#container .number');
+    var lastNumber = numbers[numbers.length - 1];
+
+    var counterDiv = document.getElementById('counter');
+
+    counterDiv.innerHTML = lastNumber.id + ' <i class="fa-solid fa-language"></i>';
+
+
+
+
 
 } //end onload function
 
