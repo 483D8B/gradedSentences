@@ -18,37 +18,41 @@
             padding: 0;
             box-sizing: border-box;
             --black: #222222;
+            --white: #FAF9F6;
         }
 
+        body{
+            background-color: var(--white);
+        }
 
 
         body.dark-mode {
             background-color: var(--black);
-            color: #fff;
+            color: var(--white);
         }
 
         body.dark-mode .exercise {
-            border-color: #fff;
+            border-color: var(--white);
         }
 
         body.dark-mode ::-moz-selection {
             color: var(--black);
-            background: white;
+            background: var(--white);
         }
 
         body.dark-mode ::selection {
             color: var(--black);
-            background: white;
+            background: var(--white);
         }
 
         body.dark-mode .number {
-            border-color: #fff;
+            border-color: var(--white);
         }
 
         body.dark-mode #toggleButton {
-            color: white;
+            color: var(--white);
             background-color: var(--black);
-            border-color: white;
+            border-color: var(--white);
         }
 
         body.dark-mode .highlight {
@@ -56,20 +60,30 @@
         }
 
         body.dark-mode #search {
-            color: white;
+            color: var(--white);
             background: var(--black);
-            border-color: white;
+            border-color: var(--white);
             outline: none !important;
             box-shadow: 0 0 10px #719ECE;
         }
 
         body.dark-mode #kanjiSearch {
-            color: white;
+            color: var(--white);
             background: var(--black);
-            border-color: white;
+            border-color: var(--white);
             outline: none !important;
             box-shadow: 0 0 10px #719ECE;
         }
+
+        body.dark-mode .colouredNumber {
+            color: var(--black);
+            background: var(--white);
+            border-color: var(--white);
+            outline: none !important;
+            box-shadow: 0 0 10px #719ECE;
+        }
+
+        
 
         #container {
             display: flex;
@@ -140,12 +154,12 @@
 
         ::-moz-selection {
             /* Code for Firefox */
-            color: white;
+            color: var(--white);
             background: black;
         }
 
         ::selection {
-            color: white;
+            color: var(--white);
             background: black;
         }
 
@@ -156,7 +170,7 @@
             user-select: none;
             border: 2px solid black;
             color: black;
-            background-color: white;
+            background-color: var(--white);
             padding: 0.2em;
             margin: 0.1em;
         }
@@ -174,7 +188,7 @@
             user-select: none;
             border: 2px solid black;
             color: black;
-            background-color: white;
+            background-color: var(--white);
             padding: 0.2em;
             margin: 0.1em;
             transform: translateX(35vw);
@@ -190,7 +204,7 @@
             user-select: none;
             border: 2px solid black;
             color: black;
-            background-color: white;
+            background-color: var(--white);
             padding: 0.2em;
             margin: 0.1em;
             width: 20vw;
@@ -217,6 +231,11 @@
             font-size: 2em;
             font-family: 'Noto Sans JP', sans-serif;
         }
+
+        .colouredNumber{
+            background-color: #ACE673;
+        }
+
     </style>
 </head>
 
@@ -664,9 +683,8 @@
                 // Get the preceding number div
                 var numberDiv = exercises[i].parentElement.previousElementSibling;
 
-                // Now you can manipulate the numberDiv as needed
-                // For example, you can change its color to red
-                numberDiv.style.backgroundColor = '#ACE673';
+                // Add a new class to the numberDiv
+                numberDiv.classList.add('colouredNumber');
             }
 
 
