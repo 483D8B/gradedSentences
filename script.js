@@ -207,3 +207,13 @@ document.getElementById('counter').addEventListener('click', function () {
         x[i].style.transform = "rotate(" + y + "deg)";
     }
 });
+
+
+document.getElementById('reset').addEventListener('click', function () {
+    let x = document.getElementById('kanjiSearch')
+    x.value = '';
+    let y = document.getElementById('search');
+    y.value = '';
+    x.dispatchEvent(new Event('keyup'));
+    y.dispatchEvent(new Event('keyup'));
+});

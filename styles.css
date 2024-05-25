@@ -244,3 +244,9 @@ rt {
     user-select: none;
     text-align: center;
 }
+
+#reset{
+    position: absolute;
+    top: 3.4em;
+    left: 67vw;
+}
