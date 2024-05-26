@@ -2,6 +2,7 @@ window.onload = function () {
     // Get all furigana and translation elements
     var furiganas = document.getElementsByClassName('furigana');
     var translations = document.getElementsByClassName('translation');
+    var notes = document.getElementsByClassName('notes');
 
     // Add 'Show with furigana' text and click event to all furigana elements
     for (let i = 0; i < furiganas.length; i++) {
@@ -27,6 +28,21 @@ window.onload = function () {
         translations[i].addEventListener('click', function () {
             if (this.innerHTML == originalText) {
                 this.innerText = 'Show translation';
+                // this.style.userSelect = "none"; // Keep the text non-selectable
+            } else {
+                this.innerHTML = originalText;
+                // this.style.userSelect = "auto"; // Make the text selectable after it's clicked
+            }
+        });
+    }
+
+    for (let i = 0; i < notes.length; i++) {
+        let originalText = notes[i].innerHTML;
+        notes[i].innerText = 'Show notes';
+        // translations[i].style.userSelect = "none"; // Make the text non-selectable
+        notes[i].addEventListener('click', function () {
+            if (this.innerHTML == originalText) {
+                this.innerText = 'Show notes';
                 // this.style.userSelect = "none"; // Keep the text non-selectable
             } else {
                 this.innerHTML = originalText;

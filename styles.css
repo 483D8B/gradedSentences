@@ -76,6 +76,14 @@ body.dark-mode #counter {
     border-color: var(--white);
 }
 
+body.dark-mode .notes {
+    color: var(--white);
+    background: var(--black);
+    border-color: var(--white);
+}
+
+
+
 
 
 #container {
@@ -254,9 +262,12 @@ rt {
 .notes{
     font-size: 0.8em;
     font-family: 'Noto Sans JP', sans-serif;
-    margin: 0.5em;
+    margin: auto;
+    display: block;
+    text-align: center;
     padding: 0.5em;
     border: 2px solid black;
     border-radius: 0.1em;
     background-color: var(--white);
+    cursor: pointer;
 }

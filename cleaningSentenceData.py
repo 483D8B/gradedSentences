@@ -44,7 +44,7 @@ with open('grs.csv', 'r', encoding='utf-8') as csv_file:
             first_kanji = None
             for char in row[0]:
                 # If the character is a Kanji and it's the first occurrence, mark it
-                if '\u4e00' <= char <= '\u9fff' and char not in kanji_dict:
+                if ('\u4e00' <= char <= '\u9fff' or char in ['〇']) and char not in kanji_dict:
                     kanji_dict[char] = True
                     if first_kanji is None:
                         first_kanji = char

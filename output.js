@@ -158,6 +158,7 @@ document.getElementById("container").innerHTML = `
 		<div class="note">「と」 [&quot;and&quot; within an exhaustive list; cf. や]</div>
 		<div class="note">「〜を」 [indicates direct object]</div>
 		<div class="note">「-ずつ」 [&quot;__ each&quot;]</div>
+		<div class="note">「×」 [&quot;x mark represent a cross-out mark (the opposite of 〇 mark)&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="17">2-9</div>
@@ -657,6 +658,439 @@ document.getElementById("container").innerHTML = `
 		<div class="note">「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
 		<div class="note">「お-」 [prefix expressing politeness]</div>
 		<div class="note">「AはBがC」 [C describes something about B, as an attribute of subject A]</div>
+	</div>
+</div>
+	<div class="number" id="76">10-7</div>
+<div class="exercise">
+	<div class="sentence">のこりはもう二十八日しかなかった。</div>
+	<div class="furigana">のこりはもう <ruby>二<rt>に</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>八<rt>はち</rt></ruby> <ruby>日<rt>にち</rt></ruby>しかなかった。</div>
+	<div class="translation">There were only twenty-eight days left.</div>
+	<div class="notes">
+		<div class="note">「もう〜」 [changed state]</div>
+		<div class="note">「しか〜ない」 [&quot;no more than __/no other than __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="77">10-8</div>
+<div class="exercise">
+	<div class="sentence">このケーキを八きれにきってください。</div>
+	<div class="furigana">このケーキを <ruby>八<rt>はち</rt></ruby>きれにきってください。</div>
+	<div class="translation">Please cut this cake into eight slices.</div>
+	<div class="notes">
+		<div class="note">「〜に」[&quot;to __&quot;, &quot;toward __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="78">11-1&nbsp;&nbsp;&nbsp;九</div>
+<div class="exercise">
+	<div class="sentence first elem_九">五十九です。</div>
+	<div class="furigana"><ruby>五<rt>ご</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>九<rt>きゅう</rt></ruby>です。</div>
+	<div class="translation">I am fifty-nine.</div>
+</div>
+	<div class="number" id="79">11-2</div>
+<div class="exercise">
+	<div class="sentence">十九せいき。</div>
+	<div class="furigana"><ruby>十<rt>じゅう</rt></ruby> <ruby>九<rt>きゅう</rt></ruby>せいき。</div>
+	<div class="translation">The nineteenth century.</div>
+</div>
+	<div class="number" id="80">11-3</div>
+<div class="exercise">
+	<div class="sentence">九日めについた。</div>
+	<div class="furigana"><ruby>九<rt>ここの</rt></ruby> <ruby>日<rt>か</rt></ruby>めについた。</div>
+	<div class="translation">We arrived on the ninth day.</div>
+	<div class="notes">
+		<div class="note">「-め」 {-目 21} [&quot;__th&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="81">11-4</div>
+<div class="exercise">
+	<div class="sentence">九九をあんきする。</div>
+	<div class="furigana"><ruby>九<rt>く</rt></ruby> <ruby>九<rt>く</rt></ruby>をあんきする。</div>
+	<div class="translation">Memorize the times table.</div>
+</div>
+	<div class="number" id="82">11-5</div>
+<div class="exercise">
+	<div class="sentence">九十ねんだいのヒット。</div>
+	<div class="furigana"><ruby>九<rt>きゅう</rt></ruby> <ruby>十<rt>じゅう</rt></ruby>ねんだいのヒット。</div>
+	<div class="translation">A hit from the nineties.</div>
+</div>
+	<div class="number" id="83">11-6</div>
+<div class="exercise">
+	<div class="sentence">エリカは十九のむすめだ。</div>
+	<div class="furigana">エリカは <ruby>十<rt>じゅう</rt></ruby> <ruby>九<rt>きゅう</rt></ruby>のむすめだ。</div>
+	<div class="translation">Erika is a girl of nineteen.</div>
+</div>
+	<div class="number" id="84">11-7</div>
+<div class="exercise">
+	<div class="sentence">ココナッツを九つください。</div>
+	<div class="furigana">ココナッツを <ruby>九<rt>ここの</rt></ruby>つください。</div>
+	<div class="translation">Nine coconuts, please.</div>
+</div>
+	<div class="number" id="85">12-1&nbsp;&nbsp;&nbsp;丸</div>
+<div class="exercise">
+	<div class="sentence first elem_丸">丸くする。</div>
+	<div class="furigana"><ruby>丸<rt>まる</rt></ruby>くする。</div>
+	<div class="translation">Make round.</div>
+</div>
+	<div class="number" id="86">12-2</div>
+<div class="exercise">
+	<div class="sentence">ポスターを丸める。</div>
+	<div class="furigana">ポスターを <ruby>丸<rt>まる</rt></ruby>める。</div>
+	<div class="translation">Roll up a poster.</div>
+	<div class="notes">
+		<div class="note">「Transitive and intransitive verbs」</div>
+	</div>
+</div>
+	<div class="number" id="87">12-3</div>
+<div class="exercise">
+	<div class="sentence">九九を丸あんきする。</div>
+	<div class="furigana"><ruby>九<rt>く</rt></ruby> <ruby>九<rt>く</rt></ruby>を <ruby>丸<rt>まる</rt></ruby>あんきする。</div>
+	<div class="translation">Rotely memorize the times table.</div>
+</div>
+	<div class="number" id="88">12-4</div>
+<div class="exercise">
+	<div class="sentence">これは丸くないです。</div>
+	<div class="furigana">これは <ruby>丸<rt>まる</rt></ruby>くないです。</div>
+	<div class="translation">This is not round.</div>
+</div>
+	<div class="number" id="89">12-5</div>
+<div class="exercise">
+	<div class="sentence">丸いテーブルがほしい。</div>
+	<div class="furigana"><ruby>丸<rt>まる</rt></ruby>いテーブルがほしい。</div>
+	<div class="translation">I want a round table.</div>
+	<div class="notes">
+		<div class="note">「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="90">12-6</div>
+<div class="exercise">
+	<div class="sentence">マットレスを丸めよう。</div>
+	<div class="furigana">マットレスを <ruby>丸<rt>まる</rt></ruby>めよう。</div>
+	<div class="translation">Let&#x27;s roll up the mattress.</div>
+	<div class="notes">
+		<div class="note">「Volitional」 [&quot;let&#x27;s __&quot;; &quot;I&#x27;ll __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="91">12-7</div>
+<div class="exercise">
+	<div class="sentence">オポッサムが丸まっている。</div>
+	<div class="furigana">オポッサムが <ruby>丸<rt>まる</rt></ruby>まっている。</div>
+	<div class="translation">The possum is all rolled up in a ball.</div>
+	<div class="notes">
+		<div class="note">「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]</div>
+		<div class="note">「Transitive and intransitive verbs」</div>
+	</div>
+</div>
+	<div class="number" id="92">12-8</div>
+<div class="exercise">
+	<div class="sentence">チーム一丸となってたたかう。</div>
+	<div class="furigana">チーム <ruby>一<rt>いち</rt></ruby> <ruby>丸<rt>がん</rt></ruby>となってたたかう。</div>
+	<div class="translation">We fight as a team.</div>
+	<div class="notes">
+		<div class="note">「-て / -で」 [connective form of verbs]</div>
+		<div class="note">「〜となる」 [&quot;become __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="93">12-9</div>
+<div class="exercise">
+	<div class="sentence">この丸いくすりはなんですか。</div>
+	<div class="furigana">この <ruby>丸<rt>まる</rt></ruby>いくすりはなんですか。</div>
+	<div class="translation">What is this round medication?</div>
+</div>
+	<div class="number" id="94">13-1&nbsp;&nbsp;&nbsp;円</div>
+<div class="exercise">
+	<div class="sentence first elem_円">円をかく。</div>
+	<div class="furigana"><ruby>円<rt>えん</rt></ruby>をかく。</div>
+	<div class="translation">Draw a circle.</div>
+</div>
+	<div class="number" id="95">13-2</div>
+<div class="exercise">
+	<div class="sentence">円のかたち。</div>
+	<div class="furigana"><ruby>円<rt>えん</rt></ruby>のかたち。</div>
+	<div class="translation">A circular shape.</div>
+</div>
+	<div class="number" id="96">13-3</div>
+<div class="exercise">
+	<div class="sentence">円をつくる。</div>
+	<div class="furigana"><ruby>円<rt>えん</rt></ruby>をつくる。</div>
+	<div class="translation">Form a circle.</div>
+</div>
+	<div class="number" id="97">13-4</div>
+<div class="exercise">
+	<div class="sentence">円いクモのす。</div>
+	<div class="furigana"><ruby>円<rt>まる</rt></ruby>いクモのす。</div>
+	<div class="translation">A circular spider web (す = nest).</div>
+</div>
+	<div class="number" id="98">13-5</div>
+<div class="exercise">
+	<div class="sentence">これは五十円です。</div>
+	<div class="furigana">これは <ruby>五<rt>ご</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>円<rt>えん</rt></ruby>です。</div>
+	<div class="translation">This costs fifty yen.</div>
+</div>
+	<div class="number" id="99">13-6</div>
+<div class="exercise">
+	<div class="sentence">たったの九十円です。</div>
+	<div class="furigana">たったの <ruby>九<rt>きゅう</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>円<rt>えん</rt></ruby>です。</div>
+	<div class="translation">It&#x27;s only ninety yen.</div>
+	<div class="notes">
+		<div class="note">「たった〜」 [&quot;just __&quot;, &quot;only __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="100">14-1&nbsp;&nbsp;&nbsp;〇</div>
+<div class="exercise">
+	<div class="sentence first elem_〇">アンケートに〇をつけた。</div>
+	<div class="furigana">アンケートに <ruby>〇<rt>まる</rt></ruby>をつけた。</div>
+	<div class="translation">I marked &quot;yes&quot; (=circle mark) on the survey.</div>
+	<div class="notes">
+		<div class="note">「〜に」[&quot;on __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="101">14-2</div>
+<div class="exercise">
+	<div class="sentence">これは〇×のテストです。</div>
+	<div class="furigana">これは <ruby>〇<rt>まる</rt></ruby> ×[ばつ]のテストです。</div>
+	<div class="translation">This is a true-false test.</div>
+</div>
+	<div class="number" id="102">14-3</div>
+<div class="exercise">
+	<div class="sentence">九六〇円のオムライスをください。</div>
+	<div class="furigana">九六〇 <ruby>円<rt>えん</rt></ruby>のオムライスをください。</div>
+	<div class="translation">I&#x27;ll have the 960-yen omuraisu (omelette-wrapped rice) please.</div>
+</div>
+	<div class="number" id="103">14-4</div>
+<div class="exercise">
+	<div class="sentence">とりあえずかれを「〇〇さん」とよびましょう。</div>
+	<div class="furigana">とりあえずかれを「 <ruby>〇<rt>まる</rt></ruby> <ruby>〇<rt>まる</rt></ruby>さん」とよびましょう。</div>
+	<div class="translation">Let&#x27;s just call him &quot;Mr. X&quot; for now.</div>
+	<div class="notes">
+		<div class="note">「-ましょう」 [&quot;I/we shall __&quot;; &quot;let&#x27;s __&quot;]</div>
+		<div class="note">「と」 [marks sound/manner or quoted speech]</div>
+		<div class="note">「とりあえず〜」 {取り敢えず〜* 59, 809} [&quot;__ at once&quot;; &quot;__ for now&quot;].</div>
+	</div>
+</div>
+	<div class="number" id="104">15-1&nbsp;&nbsp;&nbsp;人</div>
+<div class="exercise">
+	<div class="sentence first elem_人">一人につき十円。</div>
+	<div class="furigana"><ruby>一人<rt>ひとり</rt></ruby>につき <ruby>十<rt>じゅう</rt></ruby> <ruby>円<rt>えん</rt></ruby>。</div>
+	<div class="translation">Ten yen per person.</div>
+	<div class="notes">
+		<div class="note">「〜につき」 {〜に付き* 64} [&quot;per __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="105">15-2</div>
+<div class="exercise">
+	<div class="sentence">七人のさむらい。</div>
+	<div class="furigana"><ruby>七<rt>しち</rt></ruby> <ruby>人<rt>にん</rt></ruby>のさむらい。</div>
+	<div class="translation">The Seven Samurai.</div>
+</div>
+	<div class="number" id="106">15-3</div>
+<div class="exercise">
+	<div class="sentence">一人いくらですか？</div>
+	<div class="furigana"><ruby>一人<rt>ひとり</rt></ruby>いくらですか？</div>
+	<div class="translation">How much does it cost for one person?</div>
+</div>
+	<div class="number" id="107">15-4</div>
+<div class="exercise">
+	<div class="sentence">ヨーロッパの人々。</div>
+	<div class="furigana">ヨーロッパの <ruby>人<rt>ひと</rt></ruby> <ruby>々<rt>びと</rt></ruby>。</div>
+	<div class="translation">The people of Europe.</div>
+</div>
+	<div class="number" id="108">15-5</div>
+<div class="exercise">
+	<div class="sentence">あの人がきらいです。</div>
+	<div class="furigana">あの <ruby>人<rt>ひと</rt></ruby>がきらいです。</div>
+	<div class="translation">I don&#x27;t like that person.</div>
+	<div class="notes">
+		<div class="note">「〜がきらいだ」 {〜が嫌いだ* 2058} [&quot;dislike __&quot;]</div>
+		<div class="note">「こ / そ / あ / ど」</div>
+	</div>
+</div>
+	<div class="number" id="109">15-6</div>
+<div class="exercise">
+	<div class="sentence">一人ずつ、一人ずつ。</div>
+	<div class="furigana"><ruby>一人<rt>ひとり</rt></ruby>ずつ、 <ruby>一人<rt>ひとり</rt></ruby>ずつ。</div>
+	<div class="translation">One at a time, one at a time.</div>
+	<div class="notes">
+		<div class="note">「-ずつ」 [&quot;__ each&quot;]</div>
+		<div class="note">「×」 [&quot;x mark represent a cross-out mark (the opposite of 〇 mark)&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="110">15-7</div>
+<div class="exercise">
+	<div class="sentence">四人だけがのこります。</div>
+	<div class="furigana"><ruby>四<rt>よ</rt></ruby> <ruby>人<rt>にん</rt></ruby>だけがのこります。</div>
+	<div class="translation">Only four are left.</div>
+	<div class="notes">
+		<div class="note">「〜だけ」 [&quot;just __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="111">15-8</div>
+<div class="exercise">
+	<div class="sentence">やっと二人になれたね。</div>
+	<div class="furigana">やっと <ruby>二人<rt>ふたり</rt></ruby>になれたね。</div>
+	<div class="translation">The two of us are finally alone.</div>
+	<div class="notes">
+		<div class="note">「ね」 [speaker seeks confirmation/agreement]</div>
+		<div class="note">「Verbs of potential」 [&quot;can __&quot;]</div>
+		<div class="note">「やっと〜」 [&quot;finally __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="112">15-9</div>
+<div class="exercise">
+	<div class="sentence">ロシア人のためのスパイ。</div>
+	<div class="furigana">ロシア <ruby>人<rt>じん</rt></ruby>のためのスパイ。</div>
+	<div class="translation">A spy for the Russians.</div>
+	<div class="notes">
+		<div class="note">「〜ため(に)」 {〜為に* 1236} [&quot;for (the sake of) __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="113">15-10</div>
+<div class="exercise">
+	<div class="sentence">アダムはユダヤ人である。</div>
+	<div class="furigana">アダムはユダヤ <ruby>人<rt>じん</rt></ruby>である。</div>
+	<div class="translation">Adam is Jewish.</div>
+	<div class="notes">
+		<div class="note">「である vs. だ」</div>
+	</div>
+</div>
+	<div class="number" id="114">15-11</div>
+<div class="exercise">
+	<div class="sentence">わたしは、一人になりたい。</div>
+	<div class="furigana">わたしは、 <ruby>一人<rt>ひとり</rt></ruby>になりたい。</div>
+	<div class="translation">I want to be alone.</div>
+	<div class="notes">
+		<div class="note">「-たい」 [&quot;want to __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="115">15-12</div>
+<div class="exercise">
+	<div class="sentence">ジェーンはどんな人ですか。</div>
+	<div class="furigana">ジェーンはどんな <ruby>人<rt>ひと</rt></ruby>ですか。</div>
+	<div class="translation">What kind of person is Jane?</div>
+	<div class="notes">
+		<div class="note">「こ / そ / あ / ど」</div>
+	</div>
+</div>
+	<div class="number" id="116">15-13</div>
+<div class="exercise">
+	<div class="sentence">チケットは、一人5ドルである。</div>
+	<div class="furigana">チケットは、 <ruby>一人<rt>ひとり</rt></ruby>5ドルである。</div>
+	<div class="translation">Tickets are $5 per head.</div>
+</div>
+	<div class="number" id="117">15-14</div>
+<div class="exercise">
+	<div class="sentence">三人とも、すごくラッキーだね。</div>
+	<div class="furigana"><ruby>三<rt>さん</rt></ruby> <ruby>人<rt>にん</rt></ruby>とも、すごくラッキーだね。</div>
+	<div class="translation">All three of you are very lucky.</div>
+	<div class="notes">
+		<div class="note">「ね」 [speaker seeks confirmation/agreement]</div>
+		<div class="note">「〜とも」 [&quot;both/all __&quot;; &quot;(n)either (of) __&quot;].</div>
+	</div>
+</div>
+	<div class="number" id="118">15-15</div>
+<div class="exercise">
+	<div class="sentence">五十人のメンバーのうちの一人。</div>
+	<div class="furigana"><ruby>五<rt>ご</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>人<rt>にん</rt></ruby>のメンバーのうちの <ruby>一人<rt>ひとり</rt></ruby>。</div>
+	<div class="translation">One of the fifty members.</div>
+</div>
+	<div class="number" id="119">15-16</div>
+<div class="exercise">
+	<div class="sentence">かれらも六人、われらも六人だ。</div>
+	<div class="furigana">かれらも <ruby>六<rt>ろく</rt></ruby> <ruby>人<rt>にん</rt></ruby>、われらも <ruby>六<rt>ろく</rt></ruby> <ruby>人<rt>にん</rt></ruby>だ。</div>
+	<div class="translation">Six they are, and six are we.</div>
+	<div class="notes">
+		<div class="note">「〜も」 [&quot;also __&quot;]</div>
+		<div class="note">「〜も〜も」 [&quot;both __ and __&quot;; &quot;neither __ nor __&quot;]</div>
+		<div class="note">「-ら」 {-等* 393} [plural personal pronoun suffix]</div>
+	</div>
+</div>
+	<div class="number" id="120">15-17</div>
+<div class="exercise">
+	<div class="sentence">ぼくたち、二人っきりなんだよ。</div>
+	<div class="furigana">ぼくたち、 <ruby>二人<rt>ふたり</rt></ruby>っきりなんだよ。</div>
+	<div class="translation">We are all alone, you and I.</div>
+	<div class="notes">
+		<div class="note">「ぼく」 {僕 1358} [informal: &quot;I&quot;]</div>
+		<div class="note">「〜(っ)きり」 [&quot;since __&quot;; &quot;only __&quot;]</div>
+		<div class="note">「-たち」 {-達 1475} [plural personal pronoun suffix]</div>
+		<div class="note">「〜よ」 [assertion]</div>
+	</div>
+</div>
+	<div class="number" id="121">15-18</div>
+<div class="exercise">
+	<div class="sentence">ここにはこどもは一人もいません。</div>
+	<div class="furigana">ここにはこどもは <ruby>一人<rt>ひとり</rt></ruby>もいません。</div>
+	<div class="translation">There are no children here.</div>
+	<div class="notes">
+		<div class="note">「こ / そ / あ / ど」</div>
+		<div class="note">「〜も」 [&quot;even __&quot;]</div>
+		<div class="note">「〜に」[location of existence]</div>
+	</div>
+</div>
+	<div class="number" id="122">15-19</div>
+<div class="exercise">
+	<div class="sentence">イギリス人はテレビをテリーとよぶ。</div>
+	<div class="furigana">イギリス <ruby>人<rt>じん</rt></ruby>はテレビをテリーとよぶ。</div>
+	<div class="translation">The British call a TV set a telly.</div>
+</div>
+	<div class="number" id="123">15-20</div>
+<div class="exercise">
+	<div class="sentence">かれらはアメリカ人ではないらしい。</div>
+	<div class="furigana">かれらはアメリカ <ruby>人<rt>じん</rt></ruby>ではないらしい。</div>
+	<div class="translation">They don&#x27;t seem to be Americans.</div>
+	<div class="notes">
+		<div class="note">「ではない vs. じゃない」</div>
+		<div class="note">「〜らしい」 [&quot;(it) seems (that) __&quot;, &quot;I heard (that) __&quot;; &quot;__-like&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="124">15-21</div>
+<div class="exercise">
+	<div class="sentence">あの二人はどうもできているらしい。</div>
+	<div class="furigana">あの <ruby>二人<rt>ふたり</rt></ruby>はどうもできているらしい。</div>
+	<div class="translation">They seem to be in love with each other.</div>
+	<div class="notes">
+		<div class="note">「どうも」 [&quot;somehow&quot;; &quot;no matter how&quot;]</div>
+		<div class="note">「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="125">15-22</div>
+<div class="exercise">
+	<div class="sentence">ジョルダンはもう一人ではありません。</div>
+	<div class="furigana">ジョルダンはもう <ruby>一人<rt>ひとり</rt></ruby>ではありません。</div>
+	<div class="translation">Jordan isn&#x27;t alone anymore.</div>
+	<div class="notes">
+		<div class="note">「もう〜」 [changed state]</div>
+	</div>
+</div>
+	<div class="number" id="126">15-23</div>
+<div class="exercise">
+	<div class="sentence">トムはうちのバンドのボーカルの一人です。</div>
+	<div class="furigana">トムはうちのバンドのボーカルの <ruby>一人<rt>ひとり</rt></ruby>です。</div>
+	<div class="translation">Tom is one of the singers in my band.</div>
+</div>
+	<div class="number" id="127">15-24</div>
+<div class="exercise">
+	<div class="sentence">エジプト人はかれらのファラオをミイラにした。</div>
+	<div class="furigana">エジプト <ruby>人<rt>じん</rt></ruby>はかれらのファラオをミイラにした。</div>
+	<div class="translation">The Egyptians mummified their pharaohs.</div>
+	<div class="notes">
+		<div class="note">「Irregular verb: する」</div>
+	</div>
+</div>
+	<div class="number" id="128">15-25</div>
+<div class="exercise">
+	<div class="sentence">サッカーは十一人で一丸となってたたかうスポーツです。</div>
+	<div class="furigana">サッカーは <ruby>十<rt>じゅう</rt></ruby> <ruby>一<rt>いち</rt></ruby> <ruby>人<rt>にん</rt></ruby>で <ruby>一<rt>いち</rt></ruby> <ruby>丸<rt>がん</rt></ruby>となってたたかうスポーツです。</div>
+	<div class="translation">In soccer, all eleven players compete as one unit.</div>
+	<div class="notes">
+		<div class="note">「〜となる」 [&quot;become __&quot;]</div>
+	</div>
+</div>
+	<div class="number" id="129">15-26</div>
+<div class="exercise">
+	<div class="sentence">ロシア人は「アストロノート」を「コスモノート」とよぶ。</div>
+	<div class="furigana">ロシア <ruby>人<rt>じん</rt></ruby>は「アストロノート」を「コスモノート」とよぶ。</div>
+	<div class="translation">The Russians call their astronauts cosmonauts.</div>
+	<div class="notes">
+		<div class="note">「と」 [marks sound/manner or quoted speech]</div>
 	</div>
 </div>
 </div>
