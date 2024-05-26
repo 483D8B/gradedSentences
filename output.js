@@ -168,6 +168,7 @@ document.getElementById("container").innerHTML = `
 	<div class="notes">
 		<div class="note">「Ellipsis」</div>
 		<div class="note">「いかが」 {如何** 2197, 815} [&quot;how&quot;; &quot;would you like __&quot;]</div>
+		<div class="note">「か」 [question marker]</div>
 		<div class="note">「もう + (numeral) + (counter)」[&quot;__ more&quot;].</div>
 		<div class="note">「〜を」 [indicates direct object]</div>
 	</div>
@@ -178,7 +179,6 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きみにもう <ruby>一<rt>ひと</rt></ruby>つのチャンスをあたえよう。</div>
 	<div class="translation">I&#x27;ll give you another chance.</div>
 	<div class="notes">
-		<div class="note">「か」 [question marker]</div>
 		<div class="note">「きみ」 {君 1407} [informal: &quot;you&quot;]</div>
 		<div class="note">「もう + (numeral) + (counter)」[&quot;__ more&quot;].</div>
 		<div class="note">「〜に」[marks indirect object]</div>
@@ -321,7 +321,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二<rt>に</rt></ruby> <ruby>十<rt>じゅっ</rt></ruby>キロやせた。</div>
 	<div class="translation">I lost twenty kilos.</div>
 	<div class="notes">
-		<div class="note">「Numerals」;1-2; Marx v1 day78-80</div>
+		<div class="note">「Numerals」;1-2;</div>
 		<div class="note">「Past tense verbs」</div>
 	</div>
 </div>
@@ -350,7 +350,6 @@ document.getElementById("container").innerHTML = `
 	<div class="translation">I don&#x27;t need all those details!</div>
 	<div class="notes">
 		<div class="note">「〜から〜まで」 [&quot;from __ to __&quot;]</div>
-		<div class="note">「〜まで」 {〜迄** 1806} [&quot;until __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="37">5-6</div>
@@ -522,7 +521,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>六<rt>ろく</rt></ruby>メートルでいいですか。</div>
 	<div class="translation">Is six meters OK?</div>
 	<div class="notes">
-		<div class="note">「〜で」 [instrument]</div>
+		<div class="note">「〜で」 [means or condition of an action]</div>
 	</div>
 </div>
 	<div class="number" id="59">8-6</div>
@@ -619,7 +618,6 @@ document.getElementById("container").innerHTML = `
 	<div class="translation">On the eighth.</div>
 	<div class="notes">
 		<div class="note">「〜で」 [time]</div>
-		<div class="note">「Verbs of potential」 [&quot;can __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="71">10-2</div>
