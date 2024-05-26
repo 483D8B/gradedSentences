@@ -98,6 +98,38 @@ window.onload = function () {
     changeColor();
 
 
+
+    document.getElementById('showUnit').addEventListener('click', function() {
+        // Get all elements with class 'number' and 'exercise'
+        var numbers = document.getElementsByClassName('number');
+        var exercises = document.getElementsByClassName('exercise');
+    
+        // Loop through all number elements
+        for (var i = 0; i < numbers.length; i++) {
+            // If the element does not have the class 'colouredNumber', toggle its visibility
+            if (!numbers[i].classList.contains('colouredNumber')) {
+                if (numbers[i].style.display === 'none') {
+                    numbers[i].style.display = '';
+                } else {
+                    numbers[i].style.display = 'none';
+                }
+            }
+        }
+    
+        // Loop through all exercise elements
+        for (var i = 0; i < exercises.length; i++) {
+            if (exercises[i].style.display === 'none') {
+                exercises[i].style.display = '';
+            } else {
+                exercises[i].style.display = 'none';
+            }
+        }
+    });
+    
+    
+    
+
+
 } //end onload function
 
 document.getElementById('toggleButton').addEventListener('click', function () {
@@ -168,7 +200,7 @@ function searchFunction() {
 
             // Skip if the filter is an empty string
             if (filters[j] === '') continue;
-            
+
             // Check both Hiragana and Katakana matches
             var hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
             var katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
@@ -290,10 +322,11 @@ function changeColor() {
 function generateAAAGradeColor() {
     var color;
     do {
-        color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        color = '#' + ("000000" + Math.floor(Math.random() * 16777215).toString(16)).slice(-6);
     } while (!isAAAGrade(color));
     return color;
 }
+
 
 function isAAAGrade(color) {
     var rgb = hexToRgb(color);
