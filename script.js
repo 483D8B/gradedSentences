@@ -95,7 +95,7 @@ window.onload = function () {
     counterDiv.innerHTML = lastNumber.id + ' <i class="fa-solid fa-language"></i>';
 
 
-
+    changeColor();
 
 
 } //end onload function
@@ -135,7 +135,7 @@ function searchFunction() {
     });
     container = document.getElementById("container");
     exercises = container.getElementsByClassName('exercise');
-    console.log(input.value);
+    //console.log(input.value);
 
     // Loop through all exercise items
     for (i = 0; i < exercises.length; i++) {
@@ -211,6 +211,12 @@ var kanjiSearchFunction = debounce(function () {
     // Look up the Kanji in the index
     var results = kanjiIndex[filter] || [];
 
+    // If the filter is "まるばつ", add 〇 × to the results
+    if (filter === 'まるばつ') {
+        results.push({ literal: '〇' });
+        results.push({ literal: '×' });
+    }
+
     // Get the results container
     var container = document.getElementById('kanjiFoundContainer');
 
@@ -250,3 +256,36 @@ document.getElementById('reset').addEventListener('click', function () {
     x.dispatchEvent(new Event('keyup'));
     y.dispatchEvent(new Event('keyup'));
 });
+
+
+function changeColor() {
+    var elements = document.getElementsByClassName('colouredNumber');
+    for (var i = 0; i < elements.length; i++) {
+        var randomColor = generateAAAGradeColor();
+        elements[i].style.backgroundColor = randomColor;
+    }
+}
+
+
+function generateAAAGradeColor() {
+    var color;
+    do {
+        color = '#' + Math.floor(Math.random()*16777215).toString(16);
+    } while (!isAAAGrade(color));
+    return color;
+}
+
+function isAAAGrade(color) {
+    var rgb = hexToRgb(color);
+    var brightness = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+    return brightness > 128; // brightness range is 0-255, so anything over 128 will contrast well with black
+}
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
