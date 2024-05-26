@@ -5,7 +5,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>ごとに。</div>
 	<div class="translation">(Once) every day.</div>
 	<div class="notes">
-		<div class="note">「-ごとに」 {-毎に* 105} [&quot;every __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-ごとに</span>」 {-毎に* 105} ["every __"]</div>
 	</div>
 </div>
 	<div class="number" id="2">1-2</div>
@@ -14,8 +14,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>がすぎた。</div>
 	<div class="translation">A day passed.</div>
 	<div class="notes">
-		<div class="note">「が」 [subject marker]</div>
-		<div class="note">「Past tense verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">が</span>」 [subject marker]</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="3">1-3</div>
@@ -30,9 +30,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">あと <ruby>1日<rt>いちにち</rt></ruby>しかない。</div>
 	<div class="translation">There&#x27;s only one day left.</div>
 	<div class="notes">
-		<div class="note">「あと〜」 {後〜 114} [&quot;__ left&quot;, &quot;__ longer&quot;, &quot;__ until&quot;].</div>
-		<div class="note">「ない」 [informal negative of ある]</div>
-		<div class="note">「しか〜ない」 [&quot;no more than __/no other than __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">あと〜</span>」 {後〜 114} ["__ left", "__ longer", "__ until"].</div>
+		<div class="note">「<span class="grammarPointsNote">ない</span>」 [informal negative of ある]</div>
+		<div class="note">「<span class="grammarPointsNote">しか〜ない</span>」 ["no more than __/no other than __"]</div>
 	</div>
 </div>
 	<div class="number" id="5">1-5</div>
@@ -41,11 +41,11 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>コースがありますか。</div>
 	<div class="translation">Do you have one-day routes?</div>
 	<div class="notes">
-		<div class="note">「〜ありますか」 {〜有りますか* 400} [&quot;is/are there any __?&quot;; &quot;do you have any __?&quot;]</div>
-		<div class="note">「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
-		<div class="note">「Ellipsis」</div>
-		<div class="note">「が」 [subject marker]</div>
-		<div class="note">「か」 [question marker]</div>
+		<div class="note">「<span class="grammarPointsNote">〜ありますか</span>」 {〜有りますか* 400} ["is/are there any __?"; "do you have any __?"]</div>
+		<div class="note">「<span class="grammarPointsNote">ある</span>」 {有る 400} ["exist"; "have"]</div>
+		<div class="note">「<span class="grammarPointsNote">Ellipsis</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">が</span>」 [subject marker]</div>
+		<div class="note">「<span class="grammarPointsNote">か</span>」 [question marker]</div>
 	</div>
 </div>
 	<div class="number" id="6">1-6</div>
@@ -54,9 +54,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">わたしは2、3 <ruby>日<rt>にち</rt></ruby>ニューヨークにいた。</div>
 	<div class="translation">I was in New York for a few days.</div>
 	<div class="notes">
-		<div class="note">「いる」 {居る* 255} [&quot;exist&quot;; &quot;be present&quot;]</div>
-		<div class="note">「〜に」[location]</div>
-		<div class="note">「Past tense verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">いる</span>」 {居る* 255} ["exist"; "be present"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[location]</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="7">1-7</div>
@@ -65,8 +65,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">クリスマスまであとなん <ruby>日<rt>にち</rt></ruby>ありますか。</div>
 	<div class="translation">How many more days are there until Christmas?</div>
 	<div class="notes">
-		<div class="note">「あと〜」 {後〜 114} [&quot;__ left&quot;, &quot;__ longer&quot;, &quot;__ until&quot;].</div>
-		<div class="note">「〜まで」 {〜迄** 1806} [&quot;until __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">あと〜</span>」 {後〜 114} ["__ left", "__ longer", "__ until"].</div>
+		<div class="note">「<span class="grammarPointsNote">〜まで</span>」 {〜迄** 1806} ["until __"]</div>
 	</div>
 </div>
 	<div class="number" id="8">1-8</div>
@@ -75,9 +75,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">いよいよサイトが <ruby>20日<rt>はつか</rt></ruby>にオープンします。</div>
 	<div class="translation">The site will open on the 20th.</div>
 	<div class="notes">
-		<div class="note">「が」 [subject marker]</div>
-		<div class="note">「Irregular verb: する」</div>
-		<div class="note">「〜に」[time of occurrence]</div>
+		<div class="note">「<span class="grammarPointsNote">が</span>」 [subject marker]</div>
+		<div class="note">「<span class="grammarPointsNote">Irregular verb: する</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[time of occurrence]</div>
 	</div>
 </div>
 	<div class="number" id="9">2-1&nbsp;&nbsp;&nbsp;一</div>
@@ -86,7 +86,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>ひと</rt></ruby>つになる。</div>
 	<div class="translation">Unite into one.</div>
 	<div class="notes">
-		<div class="note">「Counters」</div>
+		<div class="note">「<span class="grammarPointsNote">Counters</span>」</div>
 	</div>
 </div>
 	<div class="number" id="10">2-2</div>
@@ -101,9 +101,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">しみ <ruby>一<rt>ひと</rt></ruby>つもない。</div>
 	<div class="translation">Without so much as a single stain.</div>
 	<div class="notes">
-		<div class="note">「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
-		<div class="note">「〜も」 [&quot;even __&quot;]</div>
-		<div class="note">「ない」 [informal negative of ある]</div>
+		<div class="note">「<span class="grammarPointsNote">ある</span>」 {有る 400} ["exist"; "have"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜も</span>」 ["even __"]</div>
+		<div class="note">「<span class="grammarPointsNote">ない</span>」 [informal negative of ある]</div>
 	</div>
 </div>
 	<div class="number" id="12">2-4</div>
@@ -112,8 +112,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">たのしい <ruby>一<rt>いち</rt></ruby> <ruby>日<rt>にち</rt></ruby>だった。</div>
 	<div class="translation">It was a fun day.</div>
 	<div class="notes">
-		<div class="note">「だった」 [past tense of copula だ]</div>
-		<div class="note">「Past tense verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">だった</span>」 [past tense of copula だ]</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="13">2-5</div>
@@ -122,8 +122,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">いつもの <ruby>一<rt>いち</rt></ruby> <ruby>日<rt>にち</rt></ruby>だった。</div>
 	<div class="translation">It was a routine day.</div>
 	<div class="notes">
-		<div class="note">「いつも」 {何時も** 815, 383} [&quot;always&quot;]</div>
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">いつも</span>」 {何時も** 815, 383} ["always"]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="14">2-6</div>
@@ -132,10 +132,10 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>いち</rt></ruby>ドルもなかった。</div>
 	<div class="translation">I did not even have one dollar.</div>
 	<div class="notes">
-		<div class="note">「Ellipsis」</div>
-		<div class="note">「〜も」 [&quot;even __&quot;]</div>
-		<div class="note">「なかった」 [negative past tense of ある]</div>
-		<div class="note">「Past tense adjectives」</div>
+		<div class="note">「<span class="grammarPointsNote">Ellipsis</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">〜も</span>」 ["even __"]</div>
+		<div class="note">「<span class="grammarPointsNote">なかった</span>」 [negative past tense of ある]</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense adjectives</span>」</div>
 	</div>
 </div>
 	<div class="number" id="15">2-7</div>
@@ -144,8 +144,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">オフィスでのつらい <ruby>一<rt>いち</rt></ruby> <ruby>日<rt>にち</rt></ruby>。</div>
 	<div class="translation">A trying day at the office.</div>
 	<div class="notes">
-		<div class="note">「〜で」 [location]</div>
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">〜で</span>」 [location]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="16">2-8</div>
@@ -154,11 +154,10 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">これとこれを <ruby>一<rt>ひと</rt></ruby>つずつください。</div>
 	<div class="translation">Please give me one each of this one and this one.</div>
 	<div class="notes">
-		<div class="note">「こ / そ / あ / ど」</div>
-		<div class="note">「と」 [&quot;and&quot; within an exhaustive list; cf. や]</div>
-		<div class="note">「〜を」 [indicates direct object]</div>
-		<div class="note">「-ずつ」 [&quot;__ each&quot;]</div>
-		<div class="note">「×」 [&quot;x mark represent a cross-out mark (the opposite of 〇 mark)&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">こ / そ / あ / ど</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">と</span>」 ["and" within an exhaustive list; cf. や]</div>
+		<div class="note">「<span class="grammarPointsNote">〜を</span>」 [indicates direct object]</div>
+		<div class="note">「<span class="grammarPointsNote">-ずつ</span>」 ["__ each"]</div>
 	</div>
 </div>
 	<div class="number" id="17">2-9</div>
@@ -167,11 +166,11 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">りんごをもう <ruby>一<rt>ひと</rt></ruby>ついかがですか。</div>
 	<div class="translation">Would you like another apple?</div>
 	<div class="notes">
-		<div class="note">「Ellipsis」</div>
-		<div class="note">「いかが」 {如何** 2197, 815} [&quot;how&quot;; &quot;would you like __&quot;]</div>
-		<div class="note">「か」 [question marker]</div>
-		<div class="note">「もう + (numeral) + (counter)」[&quot;__ more&quot;].</div>
-		<div class="note">「〜を」 [indicates direct object]</div>
+		<div class="note">「<span class="grammarPointsNote">Ellipsis</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">いかが</span>」 {如何** 2197, 815} ["how"; "would you like __"]</div>
+		<div class="note">「<span class="grammarPointsNote">か</span>」 [question marker]</div>
+		<div class="note">「<span class="grammarPointsNote">もう + (numeral) + (counter)</span>」["__ more"].</div>
+		<div class="note">「<span class="grammarPointsNote">〜を</span>」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="18">2-10</div>
@@ -180,12 +179,12 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きみにもう <ruby>一<rt>ひと</rt></ruby>つのチャンスをあたえよう。</div>
 	<div class="translation">I&#x27;ll give you another chance.</div>
 	<div class="notes">
-		<div class="note">「きみ」 {君 1407} [informal: &quot;you&quot;]</div>
-		<div class="note">「もう + (numeral) + (counter)」[&quot;__ more&quot;].</div>
-		<div class="note">「〜に」[marks indirect object]</div>
-		<div class="note">「の」 [marks end of modifying phrase]</div>
-		<div class="note">「Volitional」 [&quot;let&#x27;s __&quot;; &quot;I&#x27;ll __&quot;]</div>
-		<div class="note">「〜を」 [indicates direct object]</div>
+		<div class="note">「<span class="grammarPointsNote">きみ</span>」 {君 1407} [informal: "you"]</div>
+		<div class="note">「<span class="grammarPointsNote">もう + (numeral) + (counter)</span>」["__ more"].</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[marks indirect object]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">Volitional</span>」 ["let's __"; "I'll __"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜を</span>」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="19">3-1&nbsp;&nbsp;&nbsp;二</div>
@@ -194,7 +193,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二日<rt>ふつか</rt></ruby>ごとに。</div>
 	<div class="translation">Every other day.</div>
 	<div class="notes">
-		<div class="note">「〜に」[time of occurrence]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[time of occurrence]</div>
 	</div>
 </div>
 	<div class="number" id="20">3-2</div>
@@ -203,9 +202,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">これを <ruby>二<rt>ふた</rt></ruby>つあげます。</div>
 	<div class="translation">I&#x27;ll give you two of these.</div>
 	<div class="notes">
-		<div class="note">「あげる」 {上げる* 41} [&quot;give (to someone)&quot;]</div>
-		<div class="note">「Counters」</div>
-		<div class="note">「〜を」 [indicates direct object]</div>
+		<div class="note">「<span class="grammarPointsNote">あげる</span>」 {上げる* 41} ["give (to someone)"]</div>
+		<div class="note">「<span class="grammarPointsNote">Counters</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">〜を</span>」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="21">3-3</div>
@@ -220,7 +219,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">はなしが <ruby>一<rt>ひと</rt></ruby>つ <ruby>二<rt>ふた</rt></ruby>つあります。</div>
 	<div class="translation">I have a couple of things to speak with you about.</div>
 	<div class="notes">
-		<div class="note">「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">ある</span>」 {有る 400} ["exist"; "have"]</div>
 	</div>
 </div>
 	<div class="number" id="23">3-5</div>
@@ -229,8 +228,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ジムとジョージはうり <ruby>二<rt>ふた</rt></ruby>つだ。</div>
 	<div class="translation">Jim and George are exactly alike (うり二つ = a pair of melons).</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
-		<div class="note">「と」 [&quot;and&quot; within an exhaustive list; cf. や]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
+		<div class="note">「<span class="grammarPointsNote">と</span>」 ["and" within an exhaustive list; cf. や]</div>
 	</div>
 </div>
 	<div class="number" id="24">3-6</div>
@@ -239,8 +238,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">トムは <ruby>一<rt>いち</rt></ruby>も <ruby>二<rt>に</rt></ruby>もなくひきうけた。</div>
 	<div class="translation">Tom readily [unhesitatingly] accepted.</div>
 	<div class="notes">
-		<div class="note">「〜も〜も」 [&quot;both __ and __&quot;; &quot;neither __ nor __&quot;]</div>
-		<div class="note">「Past tense verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">〜も〜も</span>」 ["both __ and __"; "neither __ nor __"]</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="25">3-7</div>
@@ -249,10 +248,10 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ラクダには <ruby>一<rt>ひと</rt></ruby>つか <ruby>二<rt>ふた</rt></ruby>つのこぶがある。</div>
 	<div class="translation">Camels have either one or two humps (こぶ).</div>
 	<div class="notes">
-		<div class="note">「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
-		<div class="note">「か」 [&quot;or&quot;]</div>
-		<div class="note">「〜に」[location of existence]</div>
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">ある</span>」 {有る 400} ["exist"; "have"]</div>
+		<div class="note">「<span class="grammarPointsNote">か</span>」 ["or"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[location of existence]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="26">4-1&nbsp;&nbsp;&nbsp;三</div>
@@ -261,7 +260,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">まだ <ruby>三<rt>みっ</rt></ruby> <ruby>日<rt>か</rt></ruby>あります。</div>
 	<div class="translation">We still have three days.</div>
 	<div class="notes">
-		<div class="note">「まだ〜」 [&quot;still __&quot;; &quot;not yet __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">まだ〜</span>」 ["still __"; "not yet __"]</div>
 	</div>
 </div>
 	<div class="number" id="27">4-2</div>
@@ -276,9 +275,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二<rt>に</rt></ruby>、 <ruby>三<rt>さん</rt></ruby> <ruby>日<rt>にち</rt></ruby>のあいだには、……</div>
 	<div class="translation">In just a few days, …</div>
 	<div class="notes">
-		<div class="note">「〜あいだに」 {〜間に 448} [&quot;while __&quot;]</div>
-		<div class="note">「〜に」[time of occurrence]</div>
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">〜あいだに</span>」 {〜間に 448} ["while __"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[time of occurrence]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="29">4-4</div>
@@ -287,7 +286,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">まだ <ruby>三<rt>さん</rt></ruby>グラムたりません。</div>
 	<div class="translation">It&#x27;s still three grams short.</div>
 	<div class="notes">
-		<div class="note">「まだ〜」 [&quot;still __&quot;; &quot;not yet __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">まだ〜</span>」 ["still __"; "not yet __"]</div>
 	</div>
 </div>
 	<div class="number" id="30">4-5</div>
@@ -296,7 +295,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ここ <ruby>二<rt>に</rt></ruby>、 <ruby>三<rt>さん</rt></ruby> <ruby>日<rt>にち</rt></ruby>はあたたかいです。</div>
 	<div class="translation">It&#x27;s been warm the last few days.</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
 	</div>
 </div>
 	<div class="number" id="31">4-6</div>
@@ -305,9 +304,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">もう <ruby>三<rt>みっ</rt></ruby> <ruby>日<rt>か</rt></ruby>もログインしていません。</div>
 	<div class="translation">It&#x27;s already three days since I&#x27;ve logged in.</div>
 	<div class="notes">
-		<div class="note">「Irregular verb: する」</div>
-		<div class="note">「もう〜」 [changed state]</div>
-		<div class="note">「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">Irregular verb: する</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">もう〜</span>」 [changed state]</div>
+		<div class="note">「<span class="grammarPointsNote">-ている</span>」 ["be __ing"; "have (done) __"]</div>
 	</div>
 </div>
 	<div class="number" id="32">5-1&nbsp;&nbsp;&nbsp;十</div>
@@ -322,8 +321,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二<rt>に</rt></ruby> <ruby>十<rt>じゅっ</rt></ruby>キロやせた。</div>
 	<div class="translation">I lost twenty kilos.</div>
 	<div class="notes">
-		<div class="note">「Numerals」;1-2;</div>
-		<div class="note">「Past tense verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">Numerals</span>」;1-2;</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="34">5-3</div>
@@ -332,7 +331,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二十<rt>はたち</rt></ruby>になりました。</div>
 	<div class="translation">I&#x27;ve turned twenty.</div>
 	<div class="notes">
-		<div class="note">「Past tense verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="35">5-4</div>
@@ -341,7 +340,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きょうは <ruby>十<rt>とお</rt></ruby> <ruby>日<rt>か</rt></ruby>です。</div>
 	<div class="translation">Today is the 10th.</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
 	</div>
 </div>
 	<div class="number" id="36">5-5</div>
@@ -350,7 +349,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>いち</rt></ruby>から <ruby>十<rt>じゅう</rt></ruby>までうるさい！</div>
 	<div class="translation">I don&#x27;t need all those details!</div>
 	<div class="notes">
-		<div class="note">「〜から〜まで」 [&quot;from __ to __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜から〜まで</span>」 ["from __ to __"]</div>
 	</div>
 </div>
 	<div class="number" id="37">5-6</div>
@@ -365,8 +364,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">トムは <ruby>一<rt>いち</rt></ruby>をきいて <ruby>十<rt>じゅう</rt></ruby>をしる。</div>
 	<div class="translation">Tom can deduce a lot of information from the smallest clue.</div>
 	<div class="notes">
-		<div class="note">「-て / -で」 [connective form of verbs]</div>
-		<div class="note">「〜を」 [indicates direct object]</div>
+		<div class="note">「<span class="grammarPointsNote">-て / -で</span>」 [connective form of verbs]</div>
+		<div class="note">「<span class="grammarPointsNote">〜を</span>」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="39">5-8</div>
@@ -375,9 +374,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>いち</rt></ruby>から <ruby>十<rt>じゅう</rt></ruby>までいわないとわからないの？</div>
 	<div class="translation">Must I spell out every little thing?</div>
 	<div class="notes">
-		<div class="note">「の(?)」 [female: question marker]</div>
-		<div class="note">「〜と」 [&quot;if __&quot;; &quot;when __&quot;]</div>
-		<div class="note">「わかる」 {分かる 88} [&quot;understand&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">の(?)</span>」 [female: question marker]</div>
+		<div class="note">「<span class="grammarPointsNote">〜と</span>」 ["if __"; "when __"]</div>
+		<div class="note">「<span class="grammarPointsNote">わかる</span>」 {分かる 88} ["understand"]</div>
 	</div>
 </div>
 	<div class="number" id="40">5-9</div>
@@ -398,7 +397,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よっ</rt></ruby> <ruby>日<rt>か</rt></ruby>ぶりです。</div>
 	<div class="translation">It&#x27;s been four days.</div>
 	<div class="notes">
-		<div class="note">「-ぶり」 {-振り* 903} [&quot;for the first time in __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-ぶり</span>」 {-振り* 903} ["for the first time in __"]</div>
 	</div>
 </div>
 	<div class="number" id="43">6-3</div>
@@ -413,9 +412,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よん</rt></ruby>グラムにしてください。</div>
 	<div class="translation">Please make it four grams.</div>
 	<div class="notes">
-		<div class="note">「Irregular verb: する」</div>
-		<div class="note">「〜にする」 [&quot;opt for __&quot;]</div>
-		<div class="note">「-てください」 {-て下さい 40} [&quot;please __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">Irregular verb: する</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">〜にする</span>」 ["opt for __"]</div>
+		<div class="note">「<span class="grammarPointsNote">-てください</span>」 {-て下さい 40} ["please __"]</div>
 	</div>
 </div>
 	<div class="number" id="45">6-5</div>
@@ -430,7 +429,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>し</rt></ruby>かくいテーブルがほしい。</div>
 	<div class="translation">I want a square table.</div>
 	<div class="notes">
-		<div class="note">「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜がほしい</span>」 {〜が欲しい 1035} ["want  __"]</div>
 	</div>
 </div>
 	<div class="number" id="47">6-7</div>
@@ -439,7 +438,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よん</rt></ruby>ぶんの <ruby>一<rt>いち</rt></ruby>がイギリスじん。</div>
 	<div class="translation">A quarter are English.</div>
 	<div class="notes">
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="48">7-1&nbsp;&nbsp;&nbsp;五</div>
@@ -460,8 +459,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">とうとう、 <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>になりました。</div>
 	<div class="translation">At last my fifteenth birthday came.</div>
 	<div class="notes">
-		<div class="note">「Past tense verbs」</div>
-		<div class="note">「とうとう〜」 [&quot;finally __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">Past tense verbs</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">とうとう〜</span>」 ["finally __"]</div>
 	</div>
 </div>
 	<div class="number" id="51">7-4</div>
@@ -476,8 +475,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ネロは <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>で、アロアは <ruby>十<rt>じゅう</rt></ruby> <ruby>二<rt>に</rt></ruby>だ。</div>
 	<div class="translation">Nello is fifteen, and Alois is twelve.</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
-		<div class="note">「-て / -で」 [connective form of verbs]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
+		<div class="note">「<span class="grammarPointsNote">-て / -で</span>」 [connective form of verbs]</div>
 	</div>
 </div>
 	<div class="number" id="53">7-6</div>
@@ -486,7 +485,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">アントワープまでは <ruby>五<rt>ご</rt></ruby>マイルありました。</div>
 	<div class="translation">Antwerp was a good five miles off.</div>
 	<div class="notes">
-		<div class="note">「〜まで」 {〜迄** 1806} [&quot;until __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜まで</span>」 {〜迄** 1806} ["until __"]</div>
 	</div>
 </div>
 	<div class="number" id="54">8-1&nbsp;&nbsp;&nbsp;六</div>
@@ -507,7 +506,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">むすめは <ruby>十<rt>じゅう</rt></ruby> <ruby>六<rt>ろく</rt></ruby>です。</div>
 	<div class="translation">My daughter is sixteen.</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
 	</div>
 </div>
 	<div class="number" id="57">8-4</div>
@@ -522,7 +521,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>六<rt>ろく</rt></ruby>メートルでいいですか。</div>
 	<div class="translation">Is six meters OK?</div>
 	<div class="notes">
-		<div class="note">「〜で」 [means or condition of an action]</div>
+		<div class="note">「<span class="grammarPointsNote">〜で</span>」 [means or condition of an action]</div>
 	</div>
 </div>
 	<div class="number" id="59">8-6</div>
@@ -531,7 +530,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>六<rt>ろく</rt></ruby>ページをみてください。</div>
 	<div class="translation">Please see page six.</div>
 	<div class="notes">
-		<div class="note">「-てください」 {-て下さい 40} [&quot;please __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-てください</span>」 {-て下さい 40} ["please __"]</div>
 	</div>
 </div>
 	<div class="number" id="60">8-7</div>
@@ -540,8 +539,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">あれは <ruby>四<rt>よん</rt></ruby>トントラックではありません。 <ruby>六<rt>ろく</rt></ruby>トントラックです。</div>
 	<div class="translation">That is not a four-ton truck. It&#x27;s a six-ton truck.</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
-		<div class="note">「こ / そ / あ / ど」</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
+		<div class="note">「<span class="grammarPointsNote">こ / そ / あ / ど</span>」</div>
 	</div>
 </div>
 	<div class="number" id="61">9-1&nbsp;&nbsp;&nbsp;七</div>
@@ -562,7 +561,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きょうは <ruby>七<rt>しち</rt></ruby> <ruby>五<rt>ご</rt></ruby> <ruby>三<rt>さん</rt></ruby>だ。</div>
 	<div class="translation">Today is Shichi-go-san (festival for children aged seven, five, or three).</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
 	</div>
 </div>
 	<div class="number" id="64">9-4</div>
@@ -571,8 +570,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>十<rt>じゅう</rt></ruby> <ruby>七<rt>しち</rt></ruby> <ruby>日<rt>にち</rt></ruby>にあいましょう。</div>
 	<div class="translation">Let&#x27;s meet on the 17th.</div>
 	<div class="notes">
-		<div class="note">「-ましょう」 [&quot;I/we shall __&quot;; &quot;let&#x27;s __&quot;]</div>
-		<div class="note">「〜に」[time of occurrence]</div>
+		<div class="note">「<span class="grammarPointsNote">-ましょう</span>」 ["I/we shall __"; "let's __"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[time of occurrence]</div>
 	</div>
 </div>
 	<div class="number" id="65">9-5</div>
@@ -587,7 +586,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>七<rt>なな</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>メートルのロープ。</div>
 	<div class="translation">A seventy-five meter rope.</div>
 	<div class="notes">
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="67">9-7</div>
@@ -602,8 +601,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">このコンテナは <ruby>七<rt>なな</rt></ruby>トンだ。</div>
 	<div class="translation">This container is seven tons.</div>
 	<div class="notes">
-		<div class="note">「AはBだ」 [&quot;A is B&quot;]</div>
-		<div class="note">「こ / そ / あ / ど」</div>
+		<div class="note">「<span class="grammarPointsNote">AはBだ</span>」 ["A is B"]</div>
+		<div class="note">「<span class="grammarPointsNote">こ / そ / あ / ど</span>」</div>
 	</div>
 </div>
 	<div class="number" id="69">9-9</div>
@@ -618,7 +617,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>八<rt>よう</rt></ruby> <ruby>日<rt>か</rt></ruby>に。</div>
 	<div class="translation">On the eighth.</div>
 	<div class="notes">
-		<div class="note">「〜で」 [time]</div>
+		<div class="note">「<span class="grammarPointsNote">〜で</span>」 [time]</div>
 	</div>
 </div>
 	<div class="number" id="71">10-2</div>
@@ -627,8 +626,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>八<rt>はち</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>日<rt>にち</rt></ruby>のあいだに。</div>
 	<div class="translation">In the space of eighty days.</div>
 	<div class="notes">
-		<div class="note">「〜あいだに」 {〜間に 448} [&quot;while __&quot;]</div>
-		<div class="note">「の」 [marks end of modifying phrase]</div>
+		<div class="note">「<span class="grammarPointsNote">〜あいだに</span>」 {〜間に 448} ["while __"]</div>
+		<div class="note">「<span class="grammarPointsNote">の</span>」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="72">10-3</div>
@@ -655,9 +654,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ネコはお <ruby>八<rt>や</rt></ruby>つがほしい。</div>
 	<div class="translation">The cat wants a snack.</div>
 	<div class="notes">
-		<div class="note">「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
-		<div class="note">「お-」 [prefix expressing politeness]</div>
-		<div class="note">「AはBがC」 [C describes something about B, as an attribute of subject A]</div>
+		<div class="note">「<span class="grammarPointsNote">〜がほしい</span>」 {〜が欲しい 1035} ["want  __"]</div>
+		<div class="note">「<span class="grammarPointsNote">お-</span>」 [prefix expressing politeness]</div>
+		<div class="note">「<span class="grammarPointsNote">AはBがC</span>」 [C describes something about B, as an attribute of subject A]</div>
 	</div>
 </div>
 	<div class="number" id="76">10-7</div>
@@ -666,8 +665,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">のこりはもう <ruby>二<rt>に</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>八<rt>はち</rt></ruby> <ruby>日<rt>にち</rt></ruby>しかなかった。</div>
 	<div class="translation">There were only twenty-eight days left.</div>
 	<div class="notes">
-		<div class="note">「もう〜」 [changed state]</div>
-		<div class="note">「しか〜ない」 [&quot;no more than __/no other than __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">もう〜</span>」 [changed state]</div>
+		<div class="note">「<span class="grammarPointsNote">しか〜ない</span>」 ["no more than __/no other than __"]</div>
 	</div>
 </div>
 	<div class="number" id="77">10-8</div>
@@ -676,7 +675,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">このケーキを <ruby>八<rt>はち</rt></ruby>きれにきってください。</div>
 	<div class="translation">Please cut this cake into eight slices.</div>
 	<div class="notes">
-		<div class="note">「〜に」[&quot;to __&quot;, &quot;toward __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」["to __", "toward __"]</div>
 	</div>
 </div>
 	<div class="number" id="78">11-1&nbsp;&nbsp;&nbsp;九</div>
@@ -697,7 +696,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>九<rt>ここの</rt></ruby> <ruby>日<rt>か</rt></ruby>めについた。</div>
 	<div class="translation">We arrived on the ninth day.</div>
 	<div class="notes">
-		<div class="note">「-め」 {-目 21} [&quot;__th&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-め</span>」 {-目 21} ["__th"]</div>
 	</div>
 </div>
 	<div class="number" id="81">11-4</div>
@@ -736,7 +735,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ポスターを <ruby>丸<rt>まる</rt></ruby>める。</div>
 	<div class="translation">Roll up a poster.</div>
 	<div class="notes">
-		<div class="note">「Transitive and intransitive verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">Transitive and intransitive verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="87">12-3</div>
@@ -757,7 +756,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>丸<rt>まる</rt></ruby>いテーブルがほしい。</div>
 	<div class="translation">I want a round table.</div>
 	<div class="notes">
-		<div class="note">「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜がほしい</span>」 {〜が欲しい 1035} ["want  __"]</div>
 	</div>
 </div>
 	<div class="number" id="90">12-6</div>
@@ -766,7 +765,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">マットレスを <ruby>丸<rt>まる</rt></ruby>めよう。</div>
 	<div class="translation">Let&#x27;s roll up the mattress.</div>
 	<div class="notes">
-		<div class="note">「Volitional」 [&quot;let&#x27;s __&quot;; &quot;I&#x27;ll __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">Volitional</span>」 ["let's __"; "I'll __"]</div>
 	</div>
 </div>
 	<div class="number" id="91">12-7</div>
@@ -775,8 +774,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">オポッサムが <ruby>丸<rt>まる</rt></ruby>まっている。</div>
 	<div class="translation">The possum is all rolled up in a ball.</div>
 	<div class="notes">
-		<div class="note">「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]</div>
-		<div class="note">「Transitive and intransitive verbs」</div>
+		<div class="note">「<span class="grammarPointsNote">-ている</span>」 ["be __ing"; "have (done) __"]</div>
+		<div class="note">「<span class="grammarPointsNote">Transitive and intransitive verbs</span>」</div>
 	</div>
 </div>
 	<div class="number" id="92">12-8</div>
@@ -785,8 +784,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">チーム <ruby>一<rt>いち</rt></ruby> <ruby>丸<rt>がん</rt></ruby>となってたたかう。</div>
 	<div class="translation">We fight as a team.</div>
 	<div class="notes">
-		<div class="note">「-て / -で」 [connective form of verbs]</div>
-		<div class="note">「〜となる」 [&quot;become __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-て / -で</span>」 [connective form of verbs]</div>
+		<div class="note">「<span class="grammarPointsNote">〜となる</span>」 ["become __"]</div>
 	</div>
 </div>
 	<div class="number" id="93">12-9</div>
@@ -831,7 +830,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">たったの <ruby>九<rt>きゅう</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>円<rt>えん</rt></ruby>です。</div>
 	<div class="translation">It&#x27;s only ninety yen.</div>
 	<div class="notes">
-		<div class="note">「たった〜」 [&quot;just __&quot;, &quot;only __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">たった〜</span>」 ["just __", "only __"]</div>
 	</div>
 </div>
 	<div class="number" id="100">14-1&nbsp;&nbsp;&nbsp;〇</div>
@@ -840,7 +839,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">アンケートに <ruby>〇<rt>まる</rt></ruby>をつけた。</div>
 	<div class="translation">I marked &quot;yes&quot; (=circle mark) on the survey.</div>
 	<div class="notes">
-		<div class="note">「〜に」[&quot;on __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」["on __"]</div>
 	</div>
 </div>
 	<div class="number" id="101">14-2</div>
@@ -848,6 +847,9 @@ document.getElementById("container").innerHTML = `
 	<div class="sentence">これは〇×のテストです。</div>
 	<div class="furigana">これは <ruby>〇<rt>まる</rt></ruby> <ruby>×<rt>ばつ</rt></ruby>のテストです。</div>
 	<div class="translation">This is a true-false test.</div>
+	<div class="notes">
+		<div class="note">「<span class="grammarPointsNote">×</span>」 ["x mark represent a cross-out mark (the opposite of 〇 mark)"]</div>
+	</div>
 </div>
 	<div class="number" id="102">14-3</div>
 <div class="exercise">
@@ -861,9 +863,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">とりあえずかれを「 <ruby>〇<rt>まる</rt></ruby> <ruby>〇<rt>まる</rt></ruby>さん」とよびましょう。</div>
 	<div class="translation">Let&#x27;s just call him &quot;Mr. X&quot; for now.</div>
 	<div class="notes">
-		<div class="note">「-ましょう」 [&quot;I/we shall __&quot;; &quot;let&#x27;s __&quot;]</div>
-		<div class="note">「と」 [marks sound/manner or quoted speech]</div>
-		<div class="note">「とりあえず〜」 {取り敢えず〜* 59, 809} [&quot;__ at once&quot;; &quot;__ for now&quot;].</div>
+		<div class="note">「<span class="grammarPointsNote">-ましょう</span>」 ["I/we shall __"; "let's __"]</div>
+		<div class="note">「<span class="grammarPointsNote">と</span>」 [marks sound/manner or quoted speech]</div>
+		<div class="note">「<span class="grammarPointsNote">とりあえず〜</span>」 {取り敢えず〜* 59, 809} ["__ at once"; "__ for now"].</div>
 	</div>
 </div>
 	<div class="number" id="104">15-1&nbsp;&nbsp;&nbsp;人</div>
@@ -872,7 +874,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一人<rt>ひとり</rt></ruby>につき <ruby>十<rt>じゅう</rt></ruby> <ruby>円<rt>えん</rt></ruby>。</div>
 	<div class="translation">Ten yen per person.</div>
 	<div class="notes">
-		<div class="note">「〜につき」 {〜に付き* 64} [&quot;per __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜につき</span>」 {〜に付き* 64} ["per __"]</div>
 	</div>
 </div>
 	<div class="number" id="105">15-2</div>
@@ -899,8 +901,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">あの <ruby>人<rt>ひと</rt></ruby>がきらいです。</div>
 	<div class="translation">I don&#x27;t like that person.</div>
 	<div class="notes">
-		<div class="note">「〜がきらいだ」 {〜が嫌いだ* 2058} [&quot;dislike __&quot;]</div>
-		<div class="note">「こ / そ / あ / ど」</div>
+		<div class="note">「<span class="grammarPointsNote">〜がきらいだ</span>」 {〜が嫌いだ* 2058} ["dislike __"]</div>
+		<div class="note">「<span class="grammarPointsNote">こ / そ / あ / ど</span>」</div>
 	</div>
 </div>
 	<div class="number" id="109">15-6</div>
@@ -909,8 +911,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一人<rt>ひとり</rt></ruby>ずつ、 <ruby>一人<rt>ひとり</rt></ruby>ずつ。</div>
 	<div class="translation">One at a time, one at a time.</div>
 	<div class="notes">
-		<div class="note">「-ずつ」 [&quot;__ each&quot;]</div>
-		<div class="note">「×」 [&quot;x mark represent a cross-out mark (the opposite of 〇 mark)&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-ずつ</span>」 ["__ each"]</div>
 	</div>
 </div>
 	<div class="number" id="110">15-7</div>
@@ -919,7 +920,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よ</rt></ruby> <ruby>人<rt>にん</rt></ruby>だけがのこります。</div>
 	<div class="translation">Only four are left.</div>
 	<div class="notes">
-		<div class="note">「〜だけ」 [&quot;just __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜だけ</span>」 ["just __"]</div>
 	</div>
 </div>
 	<div class="number" id="111">15-8</div>
@@ -928,9 +929,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">やっと <ruby>二人<rt>ふたり</rt></ruby>になれたね。</div>
 	<div class="translation">The two of us are finally alone.</div>
 	<div class="notes">
-		<div class="note">「ね」 [speaker seeks confirmation/agreement]</div>
-		<div class="note">「Verbs of potential」 [&quot;can __&quot;]</div>
-		<div class="note">「やっと〜」 [&quot;finally __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">ね</span>」 [speaker seeks confirmation/agreement]</div>
+		<div class="note">「<span class="grammarPointsNote">Verbs of potential</span>」 ["can __"]</div>
+		<div class="note">「<span class="grammarPointsNote">やっと〜</span>」 ["finally __"]</div>
 	</div>
 </div>
 	<div class="number" id="112">15-9</div>
@@ -939,7 +940,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ロシア <ruby>人<rt>じん</rt></ruby>のためのスパイ。</div>
 	<div class="translation">A spy for the Russians.</div>
 	<div class="notes">
-		<div class="note">「〜ため(に)」 {〜為に* 1236} [&quot;for (the sake of) __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜ため(に)</span>」 {〜為に* 1236} ["for (the sake of) __"]</div>
 	</div>
 </div>
 	<div class="number" id="113">15-10</div>
@@ -948,7 +949,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">アダムはユダヤ <ruby>人<rt>じん</rt></ruby>である。</div>
 	<div class="translation">Adam is Jewish.</div>
 	<div class="notes">
-		<div class="note">「である vs. だ」</div>
+		<div class="note">「<span class="grammarPointsNote">である vs. だ</span>」</div>
 	</div>
 </div>
 	<div class="number" id="114">15-11</div>
@@ -957,7 +958,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">わたしは、 <ruby>一人<rt>ひとり</rt></ruby>になりたい。</div>
 	<div class="translation">I want to be alone.</div>
 	<div class="notes">
-		<div class="note">「-たい」 [&quot;want to __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">-たい</span>」 ["want to __"]</div>
 	</div>
 </div>
 	<div class="number" id="115">15-12</div>
@@ -966,7 +967,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ジェーンはどんな <ruby>人<rt>ひと</rt></ruby>ですか。</div>
 	<div class="translation">What kind of person is Jane?</div>
 	<div class="notes">
-		<div class="note">「こ / そ / あ / ど」</div>
+		<div class="note">「<span class="grammarPointsNote">こ / そ / あ / ど</span>」</div>
 	</div>
 </div>
 	<div class="number" id="116">15-13</div>
@@ -981,8 +982,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>三<rt>さん</rt></ruby> <ruby>人<rt>にん</rt></ruby>とも、すごくラッキーだね。</div>
 	<div class="translation">All three of you are very lucky.</div>
 	<div class="notes">
-		<div class="note">「ね」 [speaker seeks confirmation/agreement]</div>
-		<div class="note">「〜とも」 [&quot;both/all __&quot;; &quot;(n)either (of) __&quot;].</div>
+		<div class="note">「<span class="grammarPointsNote">ね</span>」 [speaker seeks confirmation/agreement]</div>
+		<div class="note">「<span class="grammarPointsNote">〜とも</span>」 ["both/all __"; "(n)either (of) __"].</div>
 	</div>
 </div>
 	<div class="number" id="118">15-15</div>
@@ -997,9 +998,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">かれらも <ruby>六<rt>ろく</rt></ruby> <ruby>人<rt>にん</rt></ruby>、われらも <ruby>六<rt>ろく</rt></ruby> <ruby>人<rt>にん</rt></ruby>だ。</div>
 	<div class="translation">Six they are, and six are we.</div>
 	<div class="notes">
-		<div class="note">「〜も」 [&quot;also __&quot;]</div>
-		<div class="note">「〜も〜も」 [&quot;both __ and __&quot;; &quot;neither __ nor __&quot;]</div>
-		<div class="note">「-ら」 {-等* 393} [plural personal pronoun suffix]</div>
+		<div class="note">「<span class="grammarPointsNote">〜も</span>」 ["also __"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜も〜も</span>」 ["both __ and __"; "neither __ nor __"]</div>
+		<div class="note">「<span class="grammarPointsNote">-ら</span>」 {-等* 393} [plural personal pronoun suffix]</div>
 	</div>
 </div>
 	<div class="number" id="120">15-17</div>
@@ -1008,10 +1009,10 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ぼくたち、 <ruby>二人<rt>ふたり</rt></ruby>っきりなんだよ。</div>
 	<div class="translation">We are all alone, you and I.</div>
 	<div class="notes">
-		<div class="note">「ぼく」 {僕 1358} [informal: &quot;I&quot;]</div>
-		<div class="note">「〜(っ)きり」 [&quot;since __&quot;; &quot;only __&quot;]</div>
-		<div class="note">「-たち」 {-達 1475} [plural personal pronoun suffix]</div>
-		<div class="note">「〜よ」 [assertion]</div>
+		<div class="note">「<span class="grammarPointsNote">ぼく</span>」 {僕 1358} [informal: "I"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜(っ)きり</span>」 ["since __"; "only __"]</div>
+		<div class="note">「<span class="grammarPointsNote">-たち</span>」 {-達 1475} [plural personal pronoun suffix]</div>
+		<div class="note">「<span class="grammarPointsNote">〜よ</span>」 [assertion]</div>
 	</div>
 </div>
 	<div class="number" id="121">15-18</div>
@@ -1020,9 +1021,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ここにはこどもは <ruby>一人<rt>ひとり</rt></ruby>もいません。</div>
 	<div class="translation">There are no children here.</div>
 	<div class="notes">
-		<div class="note">「こ / そ / あ / ど」</div>
-		<div class="note">「〜も」 [&quot;even __&quot;]</div>
-		<div class="note">「〜に」[location of existence]</div>
+		<div class="note">「<span class="grammarPointsNote">こ / そ / あ / ど</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">〜も</span>」 ["even __"]</div>
+		<div class="note">「<span class="grammarPointsNote">〜に</span>」[location of existence]</div>
 	</div>
 </div>
 	<div class="number" id="122">15-19</div>
@@ -1037,8 +1038,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">かれらはアメリカ <ruby>人<rt>じん</rt></ruby>ではないらしい。</div>
 	<div class="translation">They don&#x27;t seem to be Americans.</div>
 	<div class="notes">
-		<div class="note">「ではない vs. じゃない」</div>
-		<div class="note">「〜らしい」 [&quot;(it) seems (that) __&quot;, &quot;I heard (that) __&quot;; &quot;__-like&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">ではない vs. じゃない</span>」</div>
+		<div class="note">「<span class="grammarPointsNote">〜らしい</span>」 ["(it) seems (that) __", "I heard (that) __"; "__-like"]</div>
 	</div>
 </div>
 	<div class="number" id="124">15-21</div>
@@ -1047,8 +1048,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">あの <ruby>二人<rt>ふたり</rt></ruby>はどうもできているらしい。</div>
 	<div class="translation">They seem to be in love with each other.</div>
 	<div class="notes">
-		<div class="note">「どうも」 [&quot;somehow&quot;; &quot;no matter how&quot;]</div>
-		<div class="note">「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">どうも</span>」 ["somehow"; "no matter how"]</div>
+		<div class="note">「<span class="grammarPointsNote">-ている</span>」 ["be __ing"; "have (done) __"]</div>
 	</div>
 </div>
 	<div class="number" id="125">15-22</div>
@@ -1057,7 +1058,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ジョルダンはもう <ruby>一人<rt>ひとり</rt></ruby>ではありません。</div>
 	<div class="translation">Jordan isn&#x27;t alone anymore.</div>
 	<div class="notes">
-		<div class="note">「もう〜」 [changed state]</div>
+		<div class="note">「<span class="grammarPointsNote">もう〜</span>」 [changed state]</div>
 	</div>
 </div>
 	<div class="number" id="126">15-23</div>
@@ -1072,7 +1073,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">エジプト <ruby>人<rt>じん</rt></ruby>はかれらのファラオをミイラにした。</div>
 	<div class="translation">The Egyptians mummified their pharaohs.</div>
 	<div class="notes">
-		<div class="note">「Irregular verb: する」</div>
+		<div class="note">「<span class="grammarPointsNote">Irregular verb: する</span>」</div>
 	</div>
 </div>
 	<div class="number" id="128">15-25</div>
@@ -1081,7 +1082,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">サッカーは <ruby>十<rt>じゅう</rt></ruby> <ruby>一<rt>いち</rt></ruby> <ruby>人<rt>にん</rt></ruby>で <ruby>一<rt>いち</rt></ruby> <ruby>丸<rt>がん</rt></ruby>となってたたかうスポーツです。</div>
 	<div class="translation">In soccer, all eleven players compete as one unit.</div>
 	<div class="notes">
-		<div class="note">「〜となる」 [&quot;become __&quot;]</div>
+		<div class="note">「<span class="grammarPointsNote">〜となる</span>」 ["become __"]</div>
 	</div>
 </div>
 	<div class="number" id="129">15-26</div>
@@ -1090,7 +1091,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ロシア <ruby>人<rt>じん</rt></ruby>は「アストロノート」を「コスモノート」とよぶ。</div>
 	<div class="translation">The Russians call their astronauts cosmonauts.</div>
 	<div class="notes">
-		<div class="note">「と」 [marks sound/manner or quoted speech]</div>
+		<div class="note">「<span class="grammarPointsNote">と</span>」 [marks sound/manner or quoted speech]</div>
 	</div>
 </div>
 </div>

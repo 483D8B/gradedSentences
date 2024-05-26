@@ -288,3 +288,8 @@ rt {
     user-select: none;
     text-align: center;
 }
+
+.grammarPointsNote{
+    font-weight: 600;
+    color: deeppink;
+}

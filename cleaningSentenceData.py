@@ -76,8 +76,16 @@ with open('grs.csv', 'r', encoding='utf-8') as csv_file:
                 js_file.write('\t<div class="notes">\n')
                 notes = notes_dict[note_id].split('\n')
                 for note in notes:
-                    js_file.write(f'\t\t<div class="note">{html.escape(note)}</div>\n')
+                    # Extract the text inside 「」
+                    grammar_points = re.findall(r'「(.*?)」', note)
+                    # Replace the text inside 「」 with the grammarPointsNote div
+                    for gp in grammar_points:
+                        note = note.replace(f'「{gp}」', f'「<span class="grammarPointsNote">{html.escape(gp)}</span>」')
+                    # Write the modified note to the file
+                    js_file.write(f'\t\t<div class="note">{note}</div>\n')
                 js_file.write('\t</div>\n')
+
+
 
 
             # End the exercise div
