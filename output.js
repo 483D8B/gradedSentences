@@ -5,7 +5,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>ごとに。</div>
 	<div class="translation">(Once) every day.</div>
 	<div class="notes">
-		<div class="note">-goto ni 「-ごとに」 {-毎に* 105} [&quot;every __&quot;]: DJG v1 p128.</div>
+		<div class="note">-goto ni 「-ごとに」 {-毎に* 105} [&quot;every __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="2">1-2</div>
@@ -14,8 +14,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>がすぎた。</div>
 	<div class="translation">A day passed.</div>
 	<div class="notes">
-		<div class="note">ga 「が」 [subject marker]: DJG v1 p118; Genki ch8; Marx v1 day8.</div>
-		<div class="note">Past tense verbs 「Past tense verbs」: DJG v1 p576; Genki ch4, 9; Marx v1 day31.</div>
+		<div class="note">ga 「が」 [subject marker]</div>
 	</div>
 </div>
 	<div class="number" id="3">1-3</div>
@@ -31,8 +30,8 @@ document.getElementById("container").innerHTML = `
 	<div class="translation">There&#x27;s only one day left.</div>
 	<div class="notes">
 		<div class="note">ato ~ 「あと〜」 {後〜 114} [&quot;__ left&quot;, &quot;__ longer&quot;, &quot;__ until&quot;].</div>
-		<div class="note">nai 「ない」 [informal negative of ある]: DJG v1 p576.</div>
-		<div class="note">shika ~ nai 「しか〜ない」 [&quot;no more than __/no other than __&quot;]: DJG v1 p398; Genki ch14; Marx v2 day40.</div>
+		<div class="note">nai 「ない」 [informal negative of ある]&quot;</div>
+		<div class="note">shika ~ nai 「しか〜ない」 [&quot;no more than __/no other than __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="5">1-5</div>
@@ -41,10 +40,10 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>1日<rt>いちにち</rt></ruby>コースがありますか。</div>
 	<div class="translation">Do you have one-day routes?</div>
 	<div class="notes">
-		<div class="note">aru 「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]: DJG v1 p73.</div>
-		<div class="note">Ellipsis 「Ellipsis」: DJG v1 p23.</div>
-		<div class="note">ga 「が」 [subject marker]: DJG v1 p118; Genki ch8; Marx v1 day8.</div>
-		<div class="note">ka 「か」 [question marker]: DJG v1 p166; Marx v1 day11.</div>
+		<div class="note">aru 「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
+		<div class="note">Ellipsis 「Ellipsis」</div>
+		<div class="note">ga 「が」 [subject marker]</div>
+		<div class="note">ka 「か」 [question marker]</div>
 	</div>
 </div>
 	<div class="number" id="6">1-6</div>
@@ -53,8 +52,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">わたしは2、3 <ruby>日<rt>にち</rt></ruby>ニューヨークにいた。</div>
 	<div class="translation">I was in New York for a few days.</div>
 	<div class="notes">
-		<div class="note">~ ni 「〜に」[time of occurrence]: DJG v1 p289 &amp; 303.</div>
-		<div class="note">Past tense verbs 「Past tense verbs」: DJG v1 p576; Genki ch4, 9; Marx v1 day31.</div>
+		<div class="note">~ ni 「〜に」[time of occurrence]&quot;</div>
+		<div class="note">Past tense verbs 「Past tense verbs」;1-2</div>
 	</div>
 </div>
 	<div class="number" id="7">1-7</div>
@@ -63,7 +62,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">クリスマスまであとなん <ruby>日<rt>にち</rt></ruby>ありますか。</div>
 	<div class="translation">How many more days are there until Christmas?</div>
 	<div class="notes">
-		<div class="note">~ made 「〜まで」 {〜迄** 1806} [&quot;until __&quot;]: DJG v1 p225; Genki ch23.</div>
+		<div class="note">~ made 「〜まで」 {〜迄** 1806} [&quot;until __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="8">1-8</div>
@@ -72,8 +71,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">いよいよサイトが <ruby>20日<rt>はつか</rt></ruby>にオープンします。</div>
 	<div class="translation">The site will open on the 20th.</div>
 	<div class="notes">
-		<div class="note">Irregular verb: suru 「Irregular verb: する」: DJG v1 p578-79.</div>
-		<div class="note">~ ni 「〜に」[time of occurrence]: DJG v1 p289 &amp; 303.</div>
+		<div class="note">Irregular verb: suru 「Irregular verb: する」</div>
+		<div class="note">~ ni 「〜に」[time of occurrence]&quot;</div>
 	</div>
 </div>
 	<div class="number" id="9">2-1&nbsp;&nbsp;&nbsp;一</div>
@@ -81,9 +80,6 @@ document.getElementById("container").innerHTML = `
 	<div class="sentence first elem_一">一つになる。</div>
 	<div class="furigana"><ruby>一<rt>ひと</rt></ruby>つになる。</div>
 	<div class="translation">Unite into one.</div>
-	<div class="notes">
-		<div class="note">Counters 「Counters」: DJG v1 p604; Genki ch9; Marx v1 day81.</div>
-	</div>
 </div>
 	<div class="number" id="10">2-2</div>
 <div class="exercise">
@@ -97,8 +93,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">しみ <ruby>一<rt>ひと</rt></ruby>つもない。</div>
 	<div class="translation">Without so much as a single stain.</div>
 	<div class="notes">
-		<div class="note">aru 「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]: DJG v1 p73.</div>
-		<div class="note">~ mo 「〜も」 [&quot;even __&quot;]: DJG v1 p250; Genki ch14.</div>
+		<div class="note">aru 「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
+		<div class="note">~ mo 「〜も」 [&quot;even __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="12">2-4</div>
@@ -107,8 +103,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">たのしい <ruby>一<rt>いち</rt></ruby> <ruby>日<rt>にち</rt></ruby>だった。</div>
 	<div class="translation">It was a fun day.</div>
 	<div class="notes">
-		<div class="note">datta 「だった」 [past tense of copula だ]: DJG v1 p580 bottom; Genki ch9; Marx v1 day37.</div>
-		<div class="note">Past tense verbs 「Past tense verbs」: DJG v1 p576; Genki ch4, 9; Marx v1 day31.</div>
+		<div class="note">datta 「だった」 [past tense of copula だ]</div>
 	</div>
 </div>
 	<div class="number" id="13">2-5</div>
@@ -117,8 +112,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">いつもの <ruby>一<rt>いち</rt></ruby> <ruby>日<rt>にち</rt></ruby>だった。</div>
 	<div class="translation">It was a routine day.</div>
 	<div class="notes">
-		<div class="note">itsu mo 「いつも」 {何時も** 815, 383} [&quot;always&quot;]: DJG v1 p253.</div>
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
+		<div class="note">itsu mo 「いつも」 {何時も** 815, 383} [&quot;always&quot;]</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="14">2-6</div>
@@ -127,9 +122,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>いち</rt></ruby>ドルもなかった。</div>
 	<div class="translation">I did not even have one dollar.</div>
 	<div class="notes">
-		<div class="note">Ellipsis 「Ellipsis」: DJG v1 p23.</div>
-		<div class="note">~ mo 「〜も」 [&quot;even __&quot;]: DJG v1 p250; Genki ch14.</div>
-		<div class="note">Past tense adjectives 「Past tense adjectives」: DJG v1 p580; Genki ch5, 9; Marx v1 day65.</div>
+		<div class="note">Ellipsis 「Ellipsis」</div>
+		<div class="note">~ mo 「〜も」 [&quot;even __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="15">2-7</div>
@@ -138,8 +132,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">オフィスでのつらい <ruby>一<rt>いち</rt></ruby> <ruby>日<rt>にち</rt></ruby>。</div>
 	<div class="translation">A trying day at the office.</div>
 	<div class="notes">
-		<div class="note">~ de 「〜で」 [location]: DJG v1 p105.</div>
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
+		<div class="note">~ de 「〜で」 [location]&quot;</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="16">2-8</div>
@@ -148,10 +142,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">これとこれを <ruby>一<rt>ひと</rt></ruby>つずつください。</div>
 	<div class="translation">Please give me one each of this one and this one.</div>
 	<div class="notes">
-		<div class="note">ko/so/a/do 「こ / そ / あ / ど」: DJG v1 p600; Genki ch2; Marx v1 day16-17.</div>
-		<div class="note">to 「と」 [&quot;and&quot; within an exhaustive list; cf. や]: DJG v1 p473; Genki ch4; Marx v1 day57.</div>
-		<div class="note">~ wo 「〜を」 [indicates direct object]: DJG v1 p347; Genki ch3; Marx v1 day9.</div>
-		<div class="note">-zutsu 「-ずつ」 [&quot;__ each&quot;]: DJG v1 p572; Tobira ch11 #9.</div>
+		<div class="note">to 「と」 [&quot;and&quot; within an exhaustive list; cf. や]</div>
+		<div class="note">~ wo 「〜を」 [indicates direct object]</div>
+		<div class="note">-zutsu 「-ずつ」 [&quot;__ each&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="17">2-9</div>
@@ -160,9 +153,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">りんごをもう <ruby>一<rt>ひと</rt></ruby>ついかがですか。</div>
 	<div class="translation">Would you like another apple?</div>
 	<div class="notes">
-		<div class="note">ikaga 「いかが」 {如何** 2197, 815} [&quot;how&quot;; &quot;would you like __&quot;]: DJG v1 p114.</div>
+		<div class="note">ikaga 「いかが」 {如何** 2197, 815} [&quot;how&quot;; &quot;would you like __&quot;]</div>
 		<div class="note">mou + (numeral) + (counter) 「もう + (numeral) + (counter)」[&quot;__ more&quot;].</div>
-		<div class="note">~ wo 「〜を」 [indicates direct object]: DJG v1 p347; Genki ch3; Marx v1 day9.</div>
+		<div class="note">~ wo 「〜を」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="18">2-10</div>
@@ -171,12 +164,12 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きみにもう <ruby>一<rt>ひと</rt></ruby>つのチャンスをあたえよう。</div>
 	<div class="translation">I&#x27;ll give you another chance.</div>
 	<div class="notes">
-		<div class="note">kimi 「きみ」 {君 1407} [informal: &quot;you&quot;]: DJG v1 p28.</div>
+		<div class="note">kimi 「きみ」 {君 1407} [informal: &quot;you&quot;]</div>
 		<div class="note">mou + (numeral) + (counter) 「もう + (numeral) + (counter)」[&quot;__ more&quot;].</div>
-		<div class="note">~ ni 「〜に」[marks indirect object]: DJG v1 p291 &amp; 303.</div>
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
-		<div class="note">Volitional 「Volitional」 [&quot;let&#x27;s __&quot;; &quot;I&#x27;ll __&quot;]: DJG v1 p576 &amp; 578 second column from right; Genki ch15; Marx v1 day29.</div>
-		<div class="note">~ wo 「〜を」 [indicates direct object]: DJG v1 p347; Genki ch3; Marx v1 day9.</div>
+		<div class="note">~ ni 「〜に」[marks indirect object]&quot;</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
+		<div class="note">Volitional 「Volitional」 [&quot;let&#x27;s __&quot;; &quot;I&#x27;ll __&quot;]</div>
+		<div class="note">~ wo 「〜を」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="19">3-1&nbsp;&nbsp;&nbsp;二</div>
@@ -185,7 +178,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二日<rt>ふつか</rt></ruby>ごとに。</div>
 	<div class="translation">Every other day.</div>
 	<div class="notes">
-		<div class="note">~ ni 「〜に」[time of occurrence]: DJG v1 p289 &amp; 303.</div>
+		<div class="note">~ ni 「〜に」[time of occurrence]&quot;</div>
 	</div>
 </div>
 	<div class="number" id="20">3-2</div>
@@ -194,8 +187,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">これを <ruby>二<rt>ふた</rt></ruby>つあげます。</div>
 	<div class="translation">I&#x27;ll give you two of these.</div>
 	<div class="notes">
-		<div class="note">ageru 「あげる」 {上げる* 41} [&quot;give (to someone)&quot;]: DJG v1 p63; Genki ch14; Marx v2 day30.</div>
-		<div class="note">~ wo 「〜を」 [indicates direct object]: DJG v1 p347; Genki ch3; Marx v1 day9.</div>
+		<div class="note">ageru 「あげる」 {上げる* 41} [&quot;give (to someone)&quot;]</div>
+		<div class="note">~ wo 「〜を」 [indicates direct object]</div>
 	</div>
 </div>
 	<div class="number" id="21">3-3</div>
@@ -210,7 +203,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">はなしが <ruby>一<rt>ひと</rt></ruby>つ <ruby>二<rt>ふた</rt></ruby>つあります。</div>
 	<div class="translation">I have a couple of things to speak with you about.</div>
 	<div class="notes">
-		<div class="note">aru 「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]: DJG v1 p73.</div>
+		<div class="note">aru 「ある」 {有る 400} [&quot;exist&quot;; &quot;have&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="23">3-5</div>
@@ -219,8 +212,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ジムとジョージはうり <ruby>二<rt>ふた</rt></ruby>つだ。</div>
 	<div class="translation">Jim and George are exactly alike (うり二つ = a pair of melons).</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
-		<div class="note">to 「と」 [&quot;and&quot; within an exhaustive list; cf. や]: DJG v1 p473; Genki ch4; Marx v1 day57.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">to 「と」 [&quot;and&quot; within an exhaustive list; cf. や]</div>
 	</div>
 </div>
 	<div class="number" id="24">3-6</div>
@@ -229,8 +222,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">トムは <ruby>一<rt>いち</rt></ruby>も <ruby>二<rt>に</rt></ruby>もなくひきうけた。</div>
 	<div class="translation">Tom readily [unhesitatingly] accepted.</div>
 	<div class="notes">
-		<div class="note">~ mo ~ mo 「〜も〜も」 [&quot;both __ and __&quot;; &quot;neither __ nor __&quot;]: DJG v1 p255, v2 p185; Marx v2 day14; Tobira ch6 #3.</div>
-		<div class="note">Past tense verbs 「Past tense verbs」: DJG v1 p576; Genki ch4, 9; Marx v1 day31.</div>
+		<div class="note">~ mo ~ mo 「〜も〜も」 [&quot;both __ and __&quot;; &quot;neither __ nor __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="25">3-7</div>
@@ -239,9 +231,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ラクダには <ruby>一<rt>ひと</rt></ruby>つか <ruby>二<rt>ふた</rt></ruby>つのこぶがある。</div>
 	<div class="translation">Camels have either one or two humps (こぶ).</div>
 	<div class="notes">
-		<div class="note">ka 「か」 [&quot;or&quot;]: DJG v1 p164.</div>
-		<div class="note">~ ni 「〜に」[location of existence]: DJG v1 p299 &amp; 303.</div>
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
+		<div class="note">ka 「か」 [&quot;or&quot;]</div>
+		<div class="note">~ ni 「〜に」[location of existence]&quot;</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="26">4-1&nbsp;&nbsp;&nbsp;三</div>
@@ -250,7 +242,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">まだ <ruby>三<rt>みっ</rt></ruby> <ruby>日<rt>か</rt></ruby>あります。</div>
 	<div class="translation">We still have three days.</div>
 	<div class="notes">
-		<div class="note">mada ~ 「まだ〜」 [&quot;still __&quot;; &quot;not yet __&quot;]: DJG v1 p224; Genki ch9; Marx v1 day87.</div>
+		<div class="note">mada ~ 「まだ〜」 [&quot;still __&quot;; &quot;not yet __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="27">4-2</div>
@@ -265,9 +257,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>二<rt>に</rt></ruby>、 <ruby>三<rt>さん</rt></ruby> <ruby>日<rt>にち</rt></ruby>のあいだには、……</div>
 	<div class="translation">In just a few days, …</div>
 	<div class="notes">
-		<div class="note">~ aida ni 「〜あいだに」 {〜間に 448} [&quot;while __&quot;]: DJG v1 p67; Genki ch21; Marx v1 day88.</div>
-		<div class="note">~ ni 「〜に」[time of occurrence]: DJG v1 p289 &amp; 303.</div>
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
+		<div class="note">~ aida ni 「〜あいだに」 {〜間に 448} [&quot;while __&quot;]</div>
+		<div class="note">~ ni 「〜に」[time of occurrence]&quot;</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="29">4-4</div>
@@ -276,7 +268,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">まだ <ruby>三<rt>さん</rt></ruby>グラムたりません。</div>
 	<div class="translation">It&#x27;s still three grams short.</div>
 	<div class="notes">
-		<div class="note">mada ~ 「まだ〜」 [&quot;still __&quot;; &quot;not yet __&quot;]: DJG v1 p224; Genki ch9; Marx v1 day87.</div>
+		<div class="note">mada ~ 「まだ〜」 [&quot;still __&quot;; &quot;not yet __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="30">4-5</div>
@@ -285,7 +277,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ここ <ruby>二<rt>に</rt></ruby>、 <ruby>三<rt>さん</rt></ruby> <ruby>日<rt>にち</rt></ruby>はあたたかいです。</div>
 	<div class="translation">It&#x27;s been warm the last few days.</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="31">4-6</div>
@@ -294,9 +286,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">もう <ruby>三<rt>みっ</rt></ruby> <ruby>日<rt>か</rt></ruby>もログインしていません。</div>
 	<div class="translation">It&#x27;s already three days since I&#x27;ve logged in.</div>
 	<div class="notes">
-		<div class="note">Irregular verb: suru 「Irregular verb: する」: DJG v1 p578-79.</div>
-		<div class="note">mou ~ 「もう〜」 [changed state]: DJG v1 p254; Marx v1 day87.</div>
-		<div class="note">-te iru 「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]: DJG v1 p155; Genki ch7; Marx v1 day36.</div>
+		<div class="note">Irregular verb: suru 「Irregular verb: する」</div>
+		<div class="note">mou ~ 「もう〜」 [changed state]</div>
+		<div class="note">-te iru 「-ている」 [&quot;be __ing&quot;; &quot;have (done) __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="32">5-1&nbsp;&nbsp;&nbsp;十</div>
@@ -310,18 +302,12 @@ document.getElementById("container").innerHTML = `
 	<div class="sentence">二十キロやせた。</div>
 	<div class="furigana"><ruby>二<rt>に</rt></ruby> <ruby>十<rt>じゅっ</rt></ruby>キロやせた。</div>
 	<div class="translation">I lost twenty kilos.</div>
-	<div class="notes">
-		<div class="note">Past tense verbs 「Past tense verbs」: DJG v1 p576; Genki ch4, 9; Marx v1 day31.</div>
-	</div>
 </div>
 	<div class="number" id="34">5-3</div>
 <div class="exercise">
 	<div class="sentence">二十になりました。</div>
 	<div class="furigana"><ruby>二十<rt>はたち</rt></ruby>になりました。</div>
 	<div class="translation">I&#x27;ve turned twenty.</div>
-	<div class="notes">
-		<div class="note">Past tense verbs 「Past tense verbs」: DJG v1 p576; Genki ch4, 9; Marx v1 day31.</div>
-	</div>
 </div>
 	<div class="number" id="35">5-4</div>
 <div class="exercise">
@@ -329,7 +315,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きょうは <ruby>十<rt>とお</rt></ruby> <ruby>日<rt>か</rt></ruby>です。</div>
 	<div class="translation">Today is the 10th.</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="36">5-5</div>
@@ -338,8 +324,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>いち</rt></ruby>から <ruby>十<rt>じゅう</rt></ruby>までうるさい！</div>
 	<div class="translation">I don&#x27;t need all those details!</div>
 	<div class="notes">
-		<div class="note">~ kara ~ made 「〜から〜まで」 [&quot;from __ to __&quot;]: DJG v2 p99.</div>
-		<div class="note">~ made 「〜まで」 {〜迄** 1806} [&quot;until __&quot;]: DJG v1 p225; Genki ch23.</div>
+		<div class="note">~ kara ~ made 「〜から〜まで」 [&quot;from __ to __&quot;]</div>
+		<div class="note">~ made 「〜まで」 {〜迄** 1806} [&quot;until __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="37">5-6</div>
@@ -354,7 +340,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">トムは <ruby>一<rt>いち</rt></ruby>をきいて <ruby>十<rt>じゅう</rt></ruby>をしる。</div>
 	<div class="translation">Tom can deduce a lot of information from the smallest clue.</div>
 	<div class="notes">
-		<div class="note">-te/-de 「-て / -で」 [connective form of verbs]: DJG v1 p464, v2 p64 of front matter; Genki ch6; Marx v1 day30.</div>
+		<div class="note">-te/-de 「-て / -で」 [connective form of verbs]</div>
 	</div>
 </div>
 	<div class="number" id="39">5-8</div>
@@ -363,9 +349,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>一<rt>いち</rt></ruby>から <ruby>十<rt>じゅう</rt></ruby>までいわないとわからないの？</div>
 	<div class="translation">Must I spell out every little thing?</div>
 	<div class="notes">
-		<div class="note">no(?) 「の(?)」 [female: question marker]: DJG v1 p48; Marx v1 day11.</div>
-		<div class="note">~ to 「〜と」 [&quot;if __&quot;; &quot;when __&quot;]: DJG v1 p480; Genki ch18; Marx v2 day24.</div>
-		<div class="note">wakaru 「わかる」 {分かる 88} [&quot;understand&quot;]: DJG v1 p529.</div>
+		<div class="note">no(?) 「の(?)」 [female: question marker]</div>
+		<div class="note">~ to 「〜と」 [&quot;if __&quot;; &quot;when __&quot;]</div>
+		<div class="note">wakaru 「わかる」 {分かる 88} [&quot;understand&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="40">5-9</div>
@@ -386,7 +372,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よっ</rt></ruby> <ruby>日<rt>か</rt></ruby>ぶりです。</div>
 	<div class="translation">It&#x27;s been four days.</div>
 	<div class="notes">
-		<div class="note">-buri 「-ぶり」 {-振り* 903} [&quot;for the first time in __&quot;]: DJG v2 p343 (covered under -らい).</div>
+		<div class="note">-buri 「-ぶり」 {-振り* 903} [&quot;for the first time in __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="43">6-3</div>
@@ -401,9 +387,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よん</rt></ruby>グラムにしてください。</div>
 	<div class="translation">Please make it four grams.</div>
 	<div class="notes">
-		<div class="note">Irregular verb: suru 「Irregular verb: する」: DJG v1 p578-79.</div>
-		<div class="note">~ ni suru 「〜にする」 [&quot;opt for __&quot;]: DJG v1 p310; Marx v2 day80.</div>
-		<div class="note">-te kudasai 「-てください」 {-て下さい 40} [&quot;please __&quot;]: DJG v1 p209; Genki ch6.</div>
+		<div class="note">Irregular verb: suru 「Irregular verb: する」</div>
+		<div class="note">~ ni suru 「〜にする」 [&quot;opt for __&quot;]</div>
+		<div class="note">-te kudasai 「-てください」 {-て下さい 40} [&quot;please __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="45">6-5</div>
@@ -418,7 +404,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>し</rt></ruby>かくいテーブルがほしい。</div>
 	<div class="translation">I want a square table.</div>
 	<div class="notes">
-		<div class="note">~ ga hoshii 「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]: DJG v1 p144; Genki ch14; Marx v1 day48.</div>
+		<div class="note">~ ga hoshii 「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="47">6-7</div>
@@ -427,7 +413,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>四<rt>よん</rt></ruby>ぶんの <ruby>一<rt>いち</rt></ruby>がイギリスじん。</div>
 	<div class="translation">A quarter are English.</div>
 	<div class="notes">
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="48">7-1&nbsp;&nbsp;&nbsp;五</div>
@@ -448,7 +434,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">とうとう、 <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>になりました。</div>
 	<div class="translation">At last my fifteenth birthday came.</div>
 	<div class="notes">
-		<div class="note">toutou ~ 「とうとう〜」 [&quot;finally __&quot;]: DJG v2 p528; Tobira ch8 #17.</div>
+		<div class="note">toutou ~ 「とうとう〜」 [&quot;finally __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="51">7-4</div>
@@ -463,8 +449,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ネロは <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>で、アロアは <ruby>十<rt>じゅう</rt></ruby> <ruby>二<rt>に</rt></ruby>だ。</div>
 	<div class="translation">Nello is fifteen, and Alois is twelve.</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
-		<div class="note">-te/-de 「-て / -で」 [connective form of verbs]: DJG v1 p464, v2 p64 of front matter; Genki ch6; Marx v1 day30.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">-te/-de 「-て / -で」 [connective form of verbs]</div>
 	</div>
 </div>
 	<div class="number" id="53">7-6</div>
@@ -473,7 +459,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">アントワープまでは <ruby>五<rt>ご</rt></ruby>マイルありました。</div>
 	<div class="translation">Antwerp was a good five miles off.</div>
 	<div class="notes">
-		<div class="note">~ made 「〜まで」 {〜迄** 1806} [&quot;until __&quot;]: DJG v1 p225; Genki ch23.</div>
+		<div class="note">~ made 「〜まで」 {〜迄** 1806} [&quot;until __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="54">8-1&nbsp;&nbsp;&nbsp;六</div>
@@ -494,7 +480,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">むすめは <ruby>十<rt>じゅう</rt></ruby> <ruby>六<rt>ろく</rt></ruby>です。</div>
 	<div class="translation">My daughter is sixteen.</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="57">8-4</div>
@@ -509,7 +495,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>六<rt>ろく</rt></ruby>メートルでいいですか。</div>
 	<div class="translation">Is six meters OK?</div>
 	<div class="notes">
-		<div class="note">~ de 「〜で」 [instrument]: DJG v1 p106; Genki ch10.</div>
+		<div class="note">~ de 「〜で」 [instrument]</div>
 	</div>
 </div>
 	<div class="number" id="59">8-6</div>
@@ -524,8 +510,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">あれは <ruby>四<rt>よん</rt></ruby>トントラックではありません。 <ruby>六<rt>ろく</rt></ruby>トントラックです。</div>
 	<div class="translation">That is not a four-ton truck. It&#x27;s a six-ton truck.</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
-		<div class="note">ko/so/a/do 「こ / そ / あ / ど」: DJG v1 p600; Genki ch2; Marx v1 day16-17.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
+		<div class="note">ko/so/a/do 「こ / そ / あ / ど」;2-8</div>
 	</div>
 </div>
 	<div class="number" id="61">9-1&nbsp;&nbsp;&nbsp;七</div>
@@ -546,7 +532,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">きょうは <ruby>七<rt>しち</rt></ruby> <ruby>五<rt>ご</rt></ruby> <ruby>三<rt>さん</rt></ruby>だ。</div>
 	<div class="translation">Today is Shichi-go-san (festival for children aged seven, five, or three).</div>
 	<div class="notes">
-		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]: DJG v1 p521; Genki ch1; Marx v1 day8.</div>
+		<div class="note">A wa B da 「AはBだ」 [&quot;A is B&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="64">9-4</div>
@@ -555,8 +541,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>十<rt>じゅう</rt></ruby> <ruby>七<rt>しち</rt></ruby> <ruby>日<rt>にち</rt></ruby>にあいましょう。</div>
 	<div class="translation">Let&#x27;s meet on the 17th.</div>
 	<div class="notes">
-		<div class="note">-mashou 「-ましょう」 [&quot;I/we shall __&quot;; &quot;let&#x27;s __&quot;]: DJG v1 p240; Genki ch5; Marx v1 day29.</div>
-		<div class="note">~ ni 「〜に」[time of occurrence]: DJG v1 p289 &amp; 303.</div>
+		<div class="note">-mashou 「-ましょう」 [&quot;I/we shall __&quot;; &quot;let&#x27;s __&quot;]</div>
+		<div class="note">~ ni 「〜に」[time of occurrence]&quot;</div>
 	</div>
 </div>
 	<div class="number" id="65">9-5</div>
@@ -571,7 +557,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>七<rt>なな</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>五<rt>ご</rt></ruby>メートルのロープ。</div>
 	<div class="translation">A seventy-five meter rope.</div>
 	<div class="notes">
-		<div class="note">no 「の」 [marks end of modifying phrase]: DJG v1 p312; Genki ch10.</div>
+		<div class="note">no 「の」 [marks end of modifying phrase]</div>
 	</div>
 </div>
 	<div class="number" id="67">9-7</div>
@@ -585,9 +571,6 @@ document.getElementById("container").innerHTML = `
 	<div class="sentence">このコンテナは七トンだ。</div>
 	<div class="furigana">このコンテナは <ruby>七<rt>なな</rt></ruby>トンだ。</div>
 	<div class="translation">This container is seven tons.</div>
-	<div class="notes">
-		<div class="note">ko/so/a/do 「こ / そ / あ / ど」: DJG v1 p600; Genki ch2; Marx v1 day16-17.</div>
-	</div>
 </div>
 	<div class="number" id="69">9-9</div>
 <div class="exercise">
@@ -601,8 +584,8 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>八<rt>よう</rt></ruby> <ruby>日<rt>か</rt></ruby>に。</div>
 	<div class="translation">On the eighth.</div>
 	<div class="notes">
-		<div class="note">~ de 「〜で」 [time]: DJG v1 p109.</div>
-		<div class="note">Verbs of potential 「Verbs of potential」 [&quot;can __&quot;]: DJG v1 p370; Genki ch13; Marx v1 day50.</div>
+		<div class="note">~ de 「〜で」 [time]&quot;</div>
+		<div class="note">Verbs of potential 「Verbs of potential」 [&quot;can __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="71">10-2</div>
@@ -611,7 +594,7 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana"><ruby>八<rt>はち</rt></ruby> <ruby>十<rt>じゅう</rt></ruby> <ruby>日<rt>にち</rt></ruby>のあいだに。</div>
 	<div class="translation">In the space of eighty days.</div>
 	<div class="notes">
-		<div class="note">~ aida ni 「〜あいだに」 {〜間に 448} [&quot;while __&quot;]: DJG v1 p67; Genki ch21; Marx v1 day88.</div>
+		<div class="note">~ aida ni 「〜あいだに」 {〜間に 448} [&quot;while __&quot;]</div>
 	</div>
 </div>
 	<div class="number" id="72">10-3</div>
@@ -638,9 +621,9 @@ document.getElementById("container").innerHTML = `
 	<div class="furigana">ネコはお <ruby>八<rt>や</rt></ruby>つがほしい。</div>
 	<div class="translation">The cat wants a snack.</div>
 	<div class="notes">
-		<div class="note">~ ga hoshii 「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]: DJG v1 p144; Genki ch14; Marx v1 day48.</div>
-		<div class="note">o- 「お-」 [prefix expressing politeness]: DJG v1 p343.</div>
-		<div class="note">A wa B ga C 「AはBがC」 [C describes something about B, as an attribute of subject A]: DJG v1 p525.</div>
+		<div class="note">~ ga hoshii 「〜がほしい」 {〜が欲しい 1035} [&quot;want  __&quot;]</div>
+		<div class="note">o- 「お-」 [prefix expressing politeness]&quot;</div>
+		<div class="note">A wa B ga C 「AはBがC」 [C describes something about B, as an attribute of subject A]&quot;</div>
 	</div>
 </div>
 </div>
