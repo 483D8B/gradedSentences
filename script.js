@@ -115,20 +115,32 @@ document.getElementById('toggleButton').addEventListener('click', function () {
 
 var searchInput = document.getElementById('search');
 searchInput.focus();
-wanakana.bind(searchInput, { IMEMode: 'toKana' });
+// Set initial IMEMode to 'toHiragana'
+var IMEMode = 'toHiragana';
+wanakana.bind(searchInput, { IMEMode: IMEMode });
+
+// Function to toggle IMEMode between 'toHiragana' and 'toKatakana'
+function toggleIMEMode() {
+    IMEMode = IMEMode === 'toHiragana' ? 'toKatakana' : 'toHiragana';
+    wanakana.bind(searchInput, { IMEMode: IMEMode });
+}
+
 
 function searchFunction() {
-    // Declare variables
+    // Declare variables    
     var input, filters, container, exercises, sentence, number, i, j, txtValue;
     input = document.getElementById('search');
-    filters = input.value.split(' ').map(word => wanakana.toHiragana(word.toUpperCase()));
+    filters = input.value.split(' ').map(word => {
+        return IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word);
+    });
     container = document.getElementById("container");
     exercises = container.getElementsByClassName('exercise');
+    console.log(input.value);
 
     // Loop through all exercise items
     for (i = 0; i < exercises.length; i++) {
         sentence = exercises[i].getElementsByClassName("sentence")[0];
-        number = exercises[i].previousElementSibling; // get the previous sibling element which is the number
+        number = exercises[i].previousElementSibling;
         txtValue = sentence.textContent || sentence.innerText;
         var matched = false;
 
@@ -137,10 +149,15 @@ function searchFunction() {
 
         // Loop through all filters
         for (j = 0; j < filters.length; j++) {
-            if (filters[j] && wanakana.toHiragana(txtValue.toUpperCase()).indexOf(filters[j]) > -1) {
+            // Check both Hiragana and Katakana matches
+            var hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
+            var katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
+
+            if (hiraganaMatch || katakanaMatch) {
                 matched = true;
                 // underline the matched content
-                sentence.innerHTML = sentence.innerHTML.replace(new RegExp(filters[j], 'gi'), '<span class="underline">$&</span>');
+                var regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
+                sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
             }
         }
 
