@@ -33,6 +33,7 @@ body.dark-mode ::selection {
 
 body.dark-mode .number {
     border-color: var(--white);
+    background-color: transparent;
 }
 
 body.dark-mode #toggleButton {
@@ -81,6 +82,14 @@ body.dark-mode .notes {
     background: var(--black);
     border-color: var(--white);
 }
+
+
+body.dark-mode #showUnit {
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--white);    
+}
+
 
 
 

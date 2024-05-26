@@ -313,7 +313,9 @@ var kanjiSearchFunction = debounce(function () {
         kanjiDiv.onclick = function () {
             var searchInput = document.getElementById('search');
             searchInput.value += this.textContent + ' '; // Set input value to Kanji
+            input.value = '';
             searchInput.dispatchEvent(new Event('keyup')); // Manually trigger the keyup event
+            input.dispatchEvent(new Event('keyup'));
         };
         container.appendChild(kanjiDiv);
     }
