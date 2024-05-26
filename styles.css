@@ -93,7 +93,7 @@ body.dark-mode .notes {
     align-items: flex-start;
     justify-content: center;
     padding: 0.5em;
-    row-gap: 0.2em;
+    row-gap: 0.5em;
 }
 
 .number {
@@ -108,7 +108,9 @@ body.dark-mode .notes {
     border-bottom: 2px solid black;
     padding: 0 0.2em 0 0.2em;
     border-radius: 0.1em;
+    background-color: var(--white);
 }
+
 
 .exercise {
     display: flex;
@@ -118,6 +120,8 @@ body.dark-mode .notes {
     width: 90vw;
     transform: translateX(5%);
     gap: 1em;
+    margin-top: -0.6em;
+    border-top: transparent;
 }
 
 .sentence {
@@ -293,3 +297,4 @@ rt {
     font-weight: 600;
     color: deeppink;
 }
+
