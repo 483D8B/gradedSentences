@@ -59,9 +59,8 @@ with open('grs.csv', 'r', encoding='utf-8') as csv_file:
                 js_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{counter}-{sub_counter}</div>\n')
             js_file.write('<div class="exercise">\n')
 
-            # Convert the furigana format to use the HTML <ruby> element
-            furigana = re.sub(r'(\w+)\s*\[(.*?)\]', r'<ruby>\1<rt>\2</rt></ruby>', row[1])            
-            
+            # Convert the furigana format to use the HTML <ruby> element      
+            furigana = re.sub(r'([\w×]+)\s*\[(.*?)\]', r'<ruby>\1<rt>\2</rt></ruby>', row[1])
 
             # Enclose each column in a div with the appropriate class and id
             if first_kanji is not None:

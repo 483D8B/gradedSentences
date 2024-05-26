@@ -846,7 +846,7 @@ document.getElementById("container").innerHTML = `
 	<div class="number" id="101">14-2</div>
 <div class="exercise">
 	<div class="sentence">これは〇×のテストです。</div>
-	<div class="furigana">これは <ruby>〇<rt>まる</rt></ruby> ×[ばつ]のテストです。</div>
+	<div class="furigana">これは <ruby>〇<rt>まる</rt></ruby> <ruby>×<rt>ばつ</rt></ruby>のテストです。</div>
 	<div class="translation">This is a true-false test.</div>
 </div>
 	<div class="number" id="102">14-3</div>
