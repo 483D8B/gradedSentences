@@ -278,10 +278,10 @@ rt {
 
 
 #showUnit{
-    position: absolute;
+    position: fixed;
     font-size: 1em;
     top: 0;
-    left: 20vw;
+    right: 1vw;
     margin-left: 7.5em;
     margin-top: 0.5em;
     display: block;

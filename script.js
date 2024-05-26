@@ -99,13 +99,20 @@ window.onload = function () {
 
 
 
-    document.getElementById('showUnit').addEventListener('click', function() {
+    // Store the initial visibility state of all elements
+    var numbersVisibility = [];
+    var exercisesVisibility = [];
+
+    document.getElementById('showUnit').addEventListener('click', function () {
         // Get all elements with class 'number' and 'exercise'
         var numbers = document.getElementsByClassName('number');
         var exercises = document.getElementsByClassName('exercise');
-    
+
         // Loop through all number elements
         for (var i = 0; i < numbers.length; i++) {
+            // Store the initial visibility state
+            numbersVisibility[i] = numbers[i].style.display;
+
             // If the element does not have the class 'colouredNumber', toggle its visibility
             if (!numbers[i].classList.contains('colouredNumber')) {
                 if (numbers[i].style.display === 'none') {
@@ -115,9 +122,12 @@ window.onload = function () {
                 }
             }
         }
-    
+
         // Loop through all exercise elements
         for (var i = 0; i < exercises.length; i++) {
+            // Store the initial visibility state
+            exercisesVisibility[i] = exercises[i].style.display;
+
             if (exercises[i].style.display === 'none') {
                 exercises[i].style.display = '';
             } else {
@@ -125,9 +135,29 @@ window.onload = function () {
             }
         }
     });
-    
-    
-    
+
+    // Get all elements with the class colouredNumber
+    var elements = document.getElementsByClassName('colouredNumber');
+
+    // Add a double click event listener to each element
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('dblclick', function (e) {
+            // Restore the visibility of all elements
+            var numbers = document.getElementsByClassName('number');
+            var exercises = document.getElementsByClassName('exercise');
+
+            for (var i = 0; i < numbers.length; i++) {
+                numbers[i].style.display = numbersVisibility[i];
+            }
+
+            for (var i = 0; i < exercises.length; i++) {
+                exercises[i].style.display = exercisesVisibility[i];
+            }
+
+            // Scroll the page to the clicked element
+            e.target.scrollIntoView({ behavior: "smooth" });
+        });
+    }
 
 
 } //end onload function
