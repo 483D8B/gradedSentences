@@ -95,7 +95,7 @@ window.onload = function () {
     counterDiv.innerHTML = lastNumber.id + ' <i class="fa-solid fa-language"></i>';
 
 
-    changeColor();
+    // changeColor();
 
 
 
