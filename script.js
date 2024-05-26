@@ -137,6 +137,22 @@ function searchFunction() {
     exercises = container.getElementsByClassName('exercise');
     //console.log(input.value);
 
+    // If the input value is composed only of space characters, display all exercises and return
+    if (/^\s*$/.test(input.value)) {
+        for (i = 0; i < exercises.length; i++) {
+            exercises[i].style.display = "";
+            if (exercises[i].previousElementSibling) {
+                exercises[i].previousElementSibling.style.display = ""; // show the number
+            }
+        }
+        return;
+    }
+
+    // If the input value is not a space character, proceed with the usual search
+    filters = input.value.split(' ').map(word => {
+        return IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word);
+    });
+
     // Loop through all exercise items
     for (i = 0; i < exercises.length; i++) {
         sentence = exercises[i].getElementsByClassName("sentence")[0];
@@ -149,6 +165,10 @@ function searchFunction() {
 
         // Loop through all filters
         for (j = 0; j < filters.length; j++) {
+
+            // Skip if the filter is an empty string
+            if (filters[j] === '') continue;
+            
             // Check both Hiragana and Katakana matches
             var hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
             var katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
@@ -161,7 +181,7 @@ function searchFunction() {
             }
         }
 
-        if (matched || !input.value) {
+        if (matched || !input.value.trim()) {
             exercises[i].style.display = "";
             number.style.display = ""; // show the number
         } else {
@@ -270,7 +290,7 @@ function changeColor() {
 function generateAAAGradeColor() {
     var color;
     do {
-        color = '#' + Math.floor(Math.random()*16777215).toString(16);
+        color = '#' + Math.floor(Math.random() * 16777215).toString(16);
     } while (!isAAAGrade(color));
     return color;
 }
