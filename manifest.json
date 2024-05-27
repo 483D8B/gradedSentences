@@ -14,6 +14,14 @@
       "purpose": "any"
     }
   ],
+  "screenshots" : [
+    {
+      "src": "screenshot.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "platform": "wide"
+    }
+  ],
   "launch_handler": {
     "client_mode": "focus-existing"
   },
