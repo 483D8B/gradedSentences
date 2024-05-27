@@ -22,7 +22,7 @@ if ('serviceWorker' in navigator) {
   
   // Function to open Kanji Study app
   function openKanjiStudy(query) {
-    window.location.href = 'kanjistudy://search?q=' + query;
+    window.location.href = 'kanjistudy://grs?id=' + query;
   }
   
   
