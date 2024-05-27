@@ -294,7 +294,7 @@ rt {
     position: fixed;
     font-size: 1em;
     top: 0;
-    right: 1vw;
+    right: 2vw;
     margin-left: 7.5em;
     margin-top: 0.5em;
     display: block;
@@ -304,6 +304,8 @@ rt {
     font-family: 'Courier New', Courier, monospace;
     user-select: none;
     text-align: center;
+    z-index: 1;
+    background-color: var(--white);
 }
 
 .grammarPointsNote {
