@@ -20,5 +20,10 @@
   ],
   "id": "k4954hfno5bfg",
   "lang": "en",
-  "dir": "auto"
+  "dir": "auto",
+  "scope": "/gradedSentences/",
+  "orientation": "portrait",
+  "categories": [
+    "education"
+  ]
 }
