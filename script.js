@@ -149,7 +149,7 @@ window.onload = function () {
 
     // Add a double click event listener to each element
     for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('dblclick', function (e) {
+        elements[i].addEventListener('click', function (e) {
             // Restore the visibility of all elements
             var numbers = document.getElementsByClassName('number');
             var exercises = document.getElementsByClassName('exercise');
@@ -172,7 +172,7 @@ window.onload = function () {
         // Add an event listener to the share button// Add an event listener to all divs with class 'number'
         let numberDivs = document.getElementsByClassName('number');
         for (let i = 0; i < numberDivs.length; i++) {
-            numberDivs[i].addEventListener('click', function () {
+            numberDivs[i].addEventListener('dblclick', function () {
                 let numberElementId = this.id;
 
                 openKanjiStudy(numberElementId);
