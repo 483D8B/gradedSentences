@@ -8,10 +8,13 @@ if ('serviceWorker' in navigator) {
   
   // Add an event listener to the share button
   document.getElementById('shareButton').addEventListener('click', function() {
-    let selectedText = window.getSelection().toString();
-    openKanjiStudy(selectedText);
+    let selectedText = window.getSelection().anchorNode;
+    let previousElement = selectedText.previousElementSibling;
+    let previousElementId = previousElement ? previousElement.id : '';
+  
+    openKanjiStudy(previousElementId);
     navigator.share({
-      text: selectedText,
+      text: previousElementId,
     })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
