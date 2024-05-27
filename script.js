@@ -1,22 +1,23 @@
 
 if (typeof navigator.serviceWorker !== 'undefined') {
     navigator.serviceWorker.register('service-worker.js')
-  }
+}
 
-  if (navigator.share) {
+if (navigator.share) {
     let selectedText = window.getSelection().toString();
+    openKanjiStudy(selectedText);
     navigator.share({
-      text: selectedText,
+        text: selectedText,
     })
-    .then(() => console.log('Successful share'))
-    .catch((error) => console.log('Error sharing', error));
-  }
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.log('Error sharing', error));
+}
 
-  window.addEventListener('contextmenu', function (e) { 
-    e.preventDefault(); 
-  }, false);
-  
-  
+// Function to open Kanji Study app
+function openKanjiStudy(query) {
+    window.location.href = 'kanjistudy://search?q=' + query;
+}
+
 
 
 window.onload = function () {
