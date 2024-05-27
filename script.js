@@ -10,8 +10,15 @@ if ('serviceWorker' in navigator) {
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
   
+    // Remove the existing context menu
+    let oldMenu = document.getElementById('customContextMenu');
+    if (oldMenu) {
+      oldMenu.remove();
+    }
+  
     // Create the context menu
     let contextMenu = document.createElement('div');
+    contextMenu.id = 'customContextMenu';
     contextMenu.style.position = 'absolute';
     contextMenu.style.top = `${e.pageY}px`;
     contextMenu.style.left = `${e.pageX}px`;
@@ -36,6 +43,7 @@ if ('serviceWorker' in navigator) {
   function openKanjiStudy(query) {
     window.location.href = 'kanjistudy://search?q=' + query;
   }
+  
   
 
 
