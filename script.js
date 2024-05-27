@@ -1,23 +1,42 @@
-
-if (typeof navigator.serviceWorker !== 'undefined') {
+// Register the service worker
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
-}
-
-if (navigator.share) {
-    let selectedText = window.getSelection().toString();
-    openKanjiStudy(selectedText);
-    navigator.share({
+      .then(function(registration) {
+        console.log('Service Worker Registered. Scope is:' + registration.scope);
+      });
+  }
+  
+  // Create a custom context menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  
+    // Create the context menu
+    let contextMenu = document.createElement('div');
+    contextMenu.style.position = 'absolute';
+    contextMenu.style.top = `${e.pageY}px`;
+    contextMenu.style.left = `${e.pageX}px`;
+    contextMenu.innerHTML = '<button id="shareButton">Share</button>';
+  
+    // Append the context menu to the body
+    document.body.appendChild(contextMenu);
+  
+    // Add an event listener to the share button
+    document.getElementById('shareButton').addEventListener('click', function() {
+      let selectedText = window.getSelection().toString();
+      openKanjiStudy(selectedText);
+      navigator.share({
         text: selectedText,
-    })
-        .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing', error));
-}
-
-// Function to open Kanji Study app
-function openKanjiStudy(query) {
+      })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+    });
+  });
+  
+  // Function to open Kanji Study app
+  function openKanjiStudy(query) {
     window.location.href = 'kanjistudy://search?q=' + query;
-}
-
+  }
+  
 
 
 window.onload = function () {
