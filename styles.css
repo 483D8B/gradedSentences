@@ -312,6 +312,7 @@ rt {
 }
 
 #shareButton{
+    position: fixed;
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
@@ -321,4 +322,7 @@ rt {
     background-color: var(--white);
     padding: 0.2em;
     margin: 0.5em;
+    top: 0;
+    right: 3em;
+    z-index: 1;
 }

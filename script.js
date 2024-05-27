@@ -6,38 +6,8 @@ if ('serviceWorker' in navigator) {
       });
   }
   
-  // Create a custom context menu
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  
-    // Remove the existing context menu
-    let oldMenu = document.getElementById('customContextMenu');
-    if (oldMenu) {
-      oldMenu.remove();
-    }
-  
-    // Create the context menu
-    let contextMenu = document.createElement('div');
-    contextMenu.id = 'customContextMenu';
-    contextMenu.style.position = 'absolute';
-    contextMenu.style.top = `${e.pageY - 20}px`;
-    contextMenu.style.left = `${e.pageX}px`;
-  
-    // Create the share button
-    let shareButton = document.createElement('button');
-    shareButton.id = 'shareButton';
-    shareButton.innerText = 'Share';
-    shareButton.onclick = shareAndOpenKanjiStudy;
-  
-    // Append the share button to the context menu
-    contextMenu.appendChild(shareButton);
-  
-    // Append the context menu to the body
-    document.body.appendChild(contextMenu);
-  });
-  
-  // Function to share selected text and open Kanji Study app
-  function shareAndOpenKanjiStudy() {
+  // Add an event listener to the share button
+  document.getElementById('shareButton').addEventListener('click', function() {
     let selectedText = window.getSelection().toString();
     openKanjiStudy(selectedText);
     navigator.share({
@@ -45,7 +15,7 @@ if ('serviceWorker' in navigator) {
     })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
-  }
+  });
   
   // Function to open Kanji Study app
   function openKanjiStudy(query) {
