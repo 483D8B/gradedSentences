@@ -2,7 +2,7 @@
   "name": "Graded Sentences",
   "short_name": "私の文",
   "description": "My reading practice website.",
-  "start_url": "gradedSentences/?fullscreen=true",
+  "start_url": "gradedSentences/index.html?fullscreen=true",
   "display": "fullscreen",
   "background_color": "#483d8b",
   "theme_color": "#000000",
