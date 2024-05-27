@@ -2,8 +2,8 @@
   "name": "Graded Sentences",
   "short_name": "私の文",
   "description": "My reading practice website.",
-  "start_url": "gradedSentences/index.html?fullscreen=true",
-  "display": "fullscreen",
+  "start_url": "/gradedSentences/",
+  "display": "standalone",
   "background_color": "#483d8b",
   "theme_color": "#000000",
   "icons": [
@@ -21,8 +21,7 @@
   "id": "k4954hfno5bfg",
   "lang": "en",
   "dir": "auto",
-  "scope": "/gradedSentences/",
-  "orientation": "portrait",
+  "orientation": "any",
   "categories": [
     "education"
   ]
