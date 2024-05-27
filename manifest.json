@@ -2,7 +2,7 @@
     "name": "Graded Sentences",
     "short_name": "MyPWA",
     "description": "An example of a Progressive Web App",
-    "start_url": "/",
+    "start_url": "gradedSentences/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
