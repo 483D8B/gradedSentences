@@ -1,6 +1,6 @@
 {
     "name": "Graded Sentences",
-    "short_name": "readingPractice",
+    "short_name": "私の文",
     "description": "My reading practice website.",
     "start_url": "gradedSentences/",
     "display": "minimal-ui",
