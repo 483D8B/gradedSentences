@@ -3,6 +3,16 @@ if (typeof navigator.serviceWorker !== 'undefined') {
     navigator.serviceWorker.register('service-worker.js')
   }
 
+  if (navigator.share) {
+    let selectedText = window.getSelection().toString();
+    navigator.share({
+      text: selectedText,
+    })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+  }
+  
+
 
 window.onload = function () {
     // Get all furigana and translation elements
