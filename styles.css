@@ -311,7 +311,7 @@ rt {
     color: deeppink;
 }
 
-#shareButton{
+/* #shareButton{
     position: fixed;
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
@@ -325,4 +325,4 @@ rt {
     top: 0;
     right: 3em;
     z-index: 1;
-}
+} */
