@@ -310,3 +310,15 @@ rt {
     font-weight: 600;
     color: deeppink;
 }
+
+#shareButton{
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid black;
+    color: black;
+    background-color: var(--white);
+    padding: 0.2em;
+    margin: 0.5em;
+}
