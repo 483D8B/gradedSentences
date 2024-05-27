@@ -11,6 +11,11 @@ if (typeof navigator.serviceWorker !== 'undefined') {
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
   }
+
+  window.addEventListener('contextmenu', function (e) { 
+    e.preventDefault(); 
+  }, false);
+  
   
 
 
