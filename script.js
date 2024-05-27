@@ -1,31 +1,39 @@
 // Register the service worker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker Registered. Scope is:' + registration.scope);
-      });
-  }
-  
-  // Add an event listener to the share button
-  document.getElementById('shareButton').addEventListener('click', function() {
-    let selectedText = window.getSelection().anchorNode;
-    let previousElement = selectedText.previousElementSibling;
-    let previousElementId = previousElement ? previousElement.id : '';
-  
-    openKanjiStudy(previousElementId);
-    navigator.share({
-      text: previousElementId,
-    })
-    .then(() => console.log('Successful share'))
-    .catch((error) => console.log('Error sharing', error));
-  });
-  
-  // Function to open Kanji Study app
-  function openKanjiStudy(query) {
+        .then(function (registration) {
+            console.log('Service Worker Registered. Scope is:' + registration.scope);
+        });
+}
+
+
+if (navigator.share) {
+    // Add an event listener to the share button
+    document.getElementById('shareButton').addEventListener('click', function () {
+        let selectedText = window.getSelection().anchorNode;
+        let previousElement = selectedText.previousElementSibling;
+        let previousElementId = previousElement ? previousElement.id : '';
+
+        openKanjiStudy(previousElementId);
+        navigator.share({
+            text: previousElementId,
+        })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing', error));
+    });
+} else {
+    console.log('Web Share API is not supported in this browser.');
+}
+
+
+
+
+// Function to open Kanji Study app
+function openKanjiStudy(query) {
     window.location.href = 'kanjistudy://grs?id=' + query;
-  }
-  
-  
+}
+
+
 
 
 window.onload = function () {
