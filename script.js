@@ -6,36 +6,6 @@ if ('serviceWorker' in navigator) {
         });
 }
 
-
-if (navigator.share) {
-    // Add an event listener to the share button
-    document.getElementById('shareButton').addEventListener('click', function () {
-        let selectedText = window.getSelection().anchorNode;
-        let previousElement = selectedText.previousElementSibling;
-        let previousElementId = previousElement ? previousElement.id : '';
-
-        openKanjiStudy(previousElementId);
-        navigator.share({
-            text: previousElementId,
-        })
-            .then(() => console.log('Successful share'))
-            .catch((error) => console.log('Error sharing', error));
-    });
-} else {
-    console.log('Web Share API is not supported in this browser.');
-}
-
-
-
-
-// Function to open Kanji Study app
-function openKanjiStudy(query) {
-    window.location.href = 'kanjistudy://grs?id=' + query;
-}
-
-
-
-
 window.onload = function () {
     // Get all furigana and translation elements
     var furiganas = document.getElementsByClassName('furigana');
@@ -195,6 +165,27 @@ window.onload = function () {
             // Scroll the page to the clicked element
             e.target.scrollIntoView({ behavior: "smooth" });
         });
+    }
+
+
+    if (navigator.share) {
+        // Add an event listener to the share button// Add an event listener to all divs with class 'number'
+        let numberDivs = document.getElementsByClassName('number');
+        for (let i = 0; i < numberDivs.length; i++) {
+            numberDivs[i].addEventListener('click', function () {
+                let numberElementId = this.id;
+
+                openKanjiStudy(numberElementId);
+                navigator.share({
+                    text: numberElementId,
+                })
+                    .then(() => console.log('Successful share'))
+                    .catch((error) => console.log('Error sharing', error));
+            });
+        }
+
+    } else {
+        console.log('Web Share API is not supported in this browser.');
     }
 
 
@@ -417,5 +408,7 @@ function hexToRgb(hex) {
 }
 
 
-
-
+// Function to open Kanji Study app
+function openKanjiStudy(query) {
+    window.location.href = 'kanjistudy://grs?id=' + query;
+}
