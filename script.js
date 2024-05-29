@@ -16,6 +16,7 @@ window.onload = function () {
     for (let i = 0; i < furiganas.length; i++) {
         let originalText = furiganas[i].innerHTML;
         furiganas[i].innerText = 'Show with furigana';
+        furiganas[i].dataset.originalText = originalText; // Store the original text in a data attribute
         // furiganas[i].style.userSelect = "none"; // Make the text non-selectable
         furiganas[i].addEventListener('click', function () {
             if (this.innerHTML == originalText) {
@@ -322,6 +323,7 @@ var kanjiSearchFunction = debounce(function () {
     var input = document.getElementById('kanjiSearch');
     var filter = wanakana.toHiragana(input.value);
 
+
     // Look up the Kanji in the index
     var results = kanjiIndex[filter] || [];
 
@@ -348,10 +350,75 @@ var kanjiSearchFunction = debounce(function () {
             input.value = '';
             searchInput.dispatchEvent(new Event('keyup')); // Manually trigger the keyup event
             input.dispatchEvent(new Event('keyup'));
+            readingSearch.value += this.textContent + ' ';
+            readingSearch.dispatchEvent(new Event('keyup'));
         };
         container.appendChild(kanjiDiv);
     }
 }, 300); // 300 milliseconds debounce time
+
+
+
+var readingInput = document.getElementById('readingSearch');
+
+// Create an index of readings by Kanji
+var readingIndex = {};
+for (var i = 0; i < readings.length; i++) {
+    var kanji = readings[i];
+    kanji.ja_on.concat(kanji.ja_kun).forEach(pronunciation => {
+        if (!readingIndex[kanji.literal]) {
+            readingIndex[kanji.literal] = [];
+        }
+        readingIndex[kanji.literal].push(pronunciation);
+    });
+}
+var readingSearchFunction = debounce(function () {
+    // Get the input value
+    var input = document.getElementById('readingSearch');
+    var filter = input.value;
+
+    // Split the input value into individual Kanji characters
+    var kanjis = Array.from(filter);
+
+    // Clear the container
+    var container = document.getElementById('readingFoundContainer');
+    container.innerHTML = '';
+
+    // Define a color palette
+    var colorPalette = ['red', 'blue', 'green', 'purple', 'orange', 'pink', 'yellow', 'brown', 'cyan', 'magenta'];
+
+    // Perform the search for each Kanji separately
+    kanjis.forEach(function (kanji) {
+        // Get the details of the Kanji character using the kanji.js library
+        var kanjiDetails = Kanji.getDetails(kanji);
+
+        if (kanjiDetails) {
+            // Create a mapping of each reading to a unique color
+            var readingToColor = {};
+            kanjiDetails.kunyomi.concat(kanjiDetails.onyomi).forEach(function (reading, index) {
+                readingToColor[reading] = colorPalette[index % colorPalette.length];
+            });
+
+            // Add the Kanji to the container
+            var kanjiDiv = document.createElement('div');
+            kanjiDiv.textContent = kanjiDetails.literal; // Display the Kanji
+            kanjiDiv.classList.add('bo'); // Add class for styling
+            container.appendChild(kanjiDiv);
+            kanjiDiv.classList.add('break');
+
+            // Add the results to the container
+            for (var i = 0; i < kanjiDetails.kunyomi.concat(kanjiDetails.onyomi).length; i++) {
+                var readingDiv = document.createElement('div');
+                readingDiv.textContent = kanjiDetails.kunyomi.concat(kanjiDetails.onyomi)[i]; // Display the matched reading
+                readingDiv.style.color = readingToColor[kanjiDetails.kunyomi.concat(kanjiDetails.onyomi)[i]]; // Set the color based on the reading
+                readingDiv.classList.add('reading'); // Add class for styling
+                container.appendChild(readingDiv);
+            }
+        }
+    });
+}, 300); // 300 milliseconds debounce time
+
+
 
 
 document.getElementById('counter').addEventListener('click', function () {
