@@ -6,6 +6,7 @@ if ('serviceWorker' in navigator) {
         });
 }
 
+
 window.onload = function () {
     // Get all furigana and translation elements
     var furiganas = document.getElementsByClassName('furigana');

@@ -11,19 +11,8 @@ self.addEventListener("message", (event) => {
 });
 
 workbox.routing.registerRoute(
-  // Match only output.js file
-  new RegExp('/output\\.js'),
-  new workbox.strategies.NetworkFirst({
-    cacheName: CACHE,
-    plugins: [
-      {
-        cacheKeyWillBeUsed: async ({request}) => {
-          // Remove the versioning info from the URL before it's used as a cache key
-          let url = new URL(request.url);
-          url.searchParams.delete('v');
-          return url.href;
-        }
-      }
-    ]
+  new RegExp('/*'),
+  new workbox.strategies.NetworkOnly({
+    cacheName: CACHE
   })
 );
