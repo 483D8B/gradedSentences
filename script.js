@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
         .then(function (registration) {
             console.log('Service Worker Registered. Scope is:' + registration.scope);
-            reg.update();
+            registration.update();
         });
 }
 
