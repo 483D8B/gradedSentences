@@ -1,6 +1,6 @@
 // This is the "Offline copy of pages" service worker
 
-const CACHE = "pwabuilder-offline-v1";
+const CACHE = "pwabuilder-offline";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
@@ -11,16 +11,19 @@ self.addEventListener("message", (event) => {
 });
 
 workbox.routing.registerRoute(
-  new RegExp('/*'),
+  // Match only output.js file
+  new RegExp('/output\\.js'),
   new workbox.strategies.NetworkFirst({
-    cacheName: CACHE
+    cacheName: CACHE,
+    plugins: [
+      {
+        cacheKeyWillBeUsed: async ({request}) => {
+          // Remove the versioning info from the URL before it's used as a cache key
+          let url = new URL(request.url);
+          url.searchParams.delete('v');
+          return url.href;
+        }
+      }
+    ]
   })
 );
-
-self.addEventListener('install', function(event) {
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(clients.claim());
-});
