@@ -133,7 +133,7 @@ body.dark-mode #showUnit {
     border: 2px solid black;
     padding: 0.5em;
     width: 90vw;
-    transform: translateX(5%);
+    transform: translateX(5.1%);
     gap: 1em;
     margin-top: -0.6em;
     border-top: transparent;
@@ -280,7 +280,7 @@ rt {
 
 #reset {
     position: absolute;
-    top: 3.4em;
+    top: 3.2em;
     left: 67vw;
 }
 
