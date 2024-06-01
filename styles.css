@@ -133,7 +133,7 @@ body.dark-mode #showUnit {
     border: 2px solid black;
     padding: 0.5em;
     width: 90vw;
-    transform: translateX(5.1%);
+    transform: translateX(5%);
     gap: 1em;
     margin-top: -0.6em;
     border-top: transparent;

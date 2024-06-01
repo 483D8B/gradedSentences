@@ -424,6 +424,10 @@ var readingSearchFunction = debounce(function () {
 
 
 document.getElementById('counter').addEventListener('click', function () {
+    var exercises = document.querySelectorAll('.exercise');
+    exercises.forEach(function(exercise) {
+      exercise.style.borderTop = '2px solid black';
+    });
     var container = document.getElementById('container');
     var x = container.getElementsByTagName("*");
     for (var i = 0; i < x.length; i++) {
