@@ -225,17 +225,14 @@ function toggleIMEMode() {
 
 function searchFunction() {
     // Declare variables    
-    var input, filters, container, exercises, sentence, number, i, j, txtValue;
-    input = document.getElementById('search');
-    filters = input.value.split(' ').map(word => {
-        return IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word);
-    });
-    container = document.getElementById("container");
-    exercises = container.getElementsByClassName('exercise');
-    //console.log(input.value);
+    const input = document.getElementById('search');
+    const container = document.getElementById("container");
+    const exercises = container.getElementsByClassName('exercise');
+
+    let filters = input.value.split(' ').map(word => IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word));
 
     // Mapping from Western numbers to Japanese kanji numbers
-    var numberMapping = {
+    const numberMapping = {
         "1": "一",
         "2": "二",
         "3": "三",
@@ -249,67 +246,59 @@ function searchFunction() {
     };
 
     // Reverse mapping from Japanese kanji numbers to Western numbers
-    var reverseNumberMapping = {};
-    for (var key in numberMapping) {
+    let reverseNumberMapping = {};
+    for (let key in numberMapping) {
         reverseNumberMapping[numberMapping[key]] = key;
     }
 
-    // If the input value is composed only of space characters, display all exercises and return
-    if (/^\s*$/.test(input.value)) {
-        for (i = 0; i < exercises.length; i++) {
-            exercises[i].style.display = "";
-            if (exercises[i].previousElementSibling) {
-                exercises[i].previousElementSibling.style.display = ""; // show the number
-            }
-        }
-        return;
-    }
-
-    // If the input value is not a space character, proceed with the usual search
-    filters = input.value.split(' ').map(word => {
-        return IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word);
-    });
-
     // Loop through all exercise items
-    for (i = 0; i < exercises.length; i++) {
-        sentence = exercises[i].getElementsByClassName("sentence")[0];
-        number = exercises[i].previousElementSibling;
-        txtValue = sentence.textContent || sentence.innerText;
-        var matched = false;
+    for (let i = 0; i < exercises.length; i++) {
+        let sentence = exercises[i].getElementsByClassName("sentence")[0];
+        let number = exercises[i].previousElementSibling;
+        let txtValue = sentence.textContent || sentence.innerText;
 
         // remove the highlighting
         sentence.innerHTML = txtValue.replace(/<span class="underline">(.*?)<\/span>/gi, '$1');
 
+        let matched = false;
+
+        // If the input value is composed only of space characters, display all exercises and return
+        if (/^\s*$/.test(input.value)) {
+            exercises[i].style.display = "";
+            if (exercises[i].previousElementSibling) {
+                exercises[i].previousElementSibling.style.display = ""; // show the number
+            }
+            continue;
+        }
+
         // Loop through all filters
-        for (j = 0; j < filters.length; j++) {
+        for (let j = 0; j < filters.length; j++) {
 
             // Skip if the filter is an empty string
             if (filters[j] === '') continue;
 
             // Check both Hiragana and Katakana matches
-            var hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
-            var katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
-
+            let hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
+            let katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
 
             // Check if the filter is a Western number and highlight the corresponding Japanese kanji number
             if (numberMapping[filters[j]] && txtValue.includes(numberMapping[filters[j]])) {
                 matched = true;
-                var regex = new RegExp(numberMapping[filters[j]], 'gi');
+                let regex = new RegExp(numberMapping[filters[j]], 'gi');
                 sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
             }
 
             // Check if the filter is a Japanese kanji number and highlight the corresponding Western number
             if (reverseNumberMapping[filters[j]] && txtValue.includes(reverseNumberMapping[filters[j]])) {
                 matched = true;
-                var regex = new RegExp(reverseNumberMapping[filters[j]], 'gi');
+                let regex = new RegExp(reverseNumberMapping[filters[j]], 'gi');
                 sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
             }
-
 
             if (hiraganaMatch || katakanaMatch) {
                 matched = true;
                 // underline the matched content
-                var regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
+                let regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
                 sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
             }
         }
@@ -323,6 +312,7 @@ function searchFunction() {
         }
     }
 }
+
 
 
 
