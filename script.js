@@ -413,7 +413,7 @@ var readingSearchFunction = debounce(function () {
             for (var i = 0; i < kanjiDetails.ja_on.length; i++) {
                 var readingDiv = document.createElement('div');
                 readingDiv.textContent = kanjiDetails.ja_on[i]; // Display the matched reading
-                readingDiv.style.color = onyomiColor; // Set color for onyomi
+                readingDiv.classList.add('onyomi');
                 readingDiv.classList.add('reading'); // Add class for styling
                 container.appendChild(readingDiv);
             }
@@ -422,7 +422,7 @@ var readingSearchFunction = debounce(function () {
             for (var i = 0; i < kanjiDetails.ja_kun.length; i++) {
                 var readingDiv = document.createElement('div');
                 readingDiv.textContent = kanjiDetails.ja_kun[i]; // Display the matched reading
-                readingDiv.style.color = kunyomiColor; // Set color for kunyomi
+                readingDiv.classList.add('kunyomi');
                 readingDiv.classList.add('reading'); // Add class for styling
                 container.appendChild(readingDiv);
             }
