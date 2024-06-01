@@ -234,6 +234,26 @@ function searchFunction() {
     exercises = container.getElementsByClassName('exercise');
     //console.log(input.value);
 
+    // Mapping from Western numbers to Japanese kanji numbers
+    var numberMapping = {
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十"
+    };
+
+    // Reverse mapping from Japanese kanji numbers to Western numbers
+    var reverseNumberMapping = {};
+    for (var key in numberMapping) {
+        reverseNumberMapping[numberMapping[key]] = key;
+    }
+
     // If the input value is composed only of space characters, display all exercises and return
     if (/^\s*$/.test(input.value)) {
         for (i = 0; i < exercises.length; i++) {
@@ -269,6 +289,22 @@ function searchFunction() {
             // Check both Hiragana and Katakana matches
             var hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
             var katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
+
+
+            // Check if the filter is a Western number and highlight the corresponding Japanese kanji number
+            if (numberMapping[filters[j]] && txtValue.includes(numberMapping[filters[j]])) {
+                matched = true;
+                var regex = new RegExp(numberMapping[filters[j]], 'gi');
+                sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+            }
+
+            // Check if the filter is a Japanese kanji number and highlight the corresponding Western number
+            if (reverseNumberMapping[filters[j]] && txtValue.includes(reverseNumberMapping[filters[j]])) {
+                matched = true;
+                var regex = new RegExp(reverseNumberMapping[filters[j]], 'gi');
+                sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+            }
+
 
             if (hiraganaMatch || katakanaMatch) {
                 matched = true;
@@ -390,10 +426,6 @@ var readingSearchFunction = debounce(function () {
     var container = document.getElementById('readingFoundContainer');
     container.innerHTML = '';
 
-    // Define colors for onyomi and kunyomi
-    var onyomiColor = 'red';
-    var kunyomiColor = 'blue';
-
     // Perform the search for each Kanji separately
     kanjis.forEach(function (kanji) {
         // Get the details of the Kanji character from the readings array
@@ -405,9 +437,10 @@ var readingSearchFunction = debounce(function () {
             // Add the Kanji to the container
             var kanjiDiv = document.createElement('div');
             kanjiDiv.textContent = kanji; // Display the Kanji
-            kanjiDiv.classList.add('bo'); // Add class for styling
             container.appendChild(kanjiDiv);
             kanjiDiv.classList.add('break');
+            kanjiDiv.setAttribute('data-content', kanji);
+            kanjiDiv.textContent = '';
 
             // Add the onyomi readings to the container
             for (var i = 0; i < kanjiDetails.ja_on.length; i++) {

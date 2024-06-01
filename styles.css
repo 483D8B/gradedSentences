@@ -103,6 +103,16 @@ body.dark-mode .onyomi {
     color: #be84a3;
 }
 
+body.dark-mode .break {
+    border: 1px solid var(--white);
+}
+
+body.dark-mode .break::after {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+
 
 
 #container {
@@ -250,6 +260,7 @@ rt {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 10px;
+    padding-bottom: 2em;
 }
 
 .kanji {
@@ -351,13 +362,22 @@ rt {
 .break {
     flex-basis: 100%;
     text-align: center;
-    border: 0;
-    background-image: url(whale_min.png);
-    background-repeat: no-repeat;
-    background-position: right;
+    border-top: 1px solid var(--black);
+    text-align: center;
+    height: 0;
+    margin-left: 1em;
     margin-right: 1em;
 }
 
+.break::after {
+    content: attr(data-content);
+    display: inline-block;
+    position: relative;
+    color: var(--black);
+    background: var(--white);
+    padding: 0.2em;
+    transform: translateY(-50%);
+}
 
 .kunyomi {
     color: #0d378f;
