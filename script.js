@@ -367,13 +367,17 @@ var readingInput = document.getElementById('readingSearch');
 var readingIndex = {};
 for (var i = 0; i < readings.length; i++) {
     var kanji = readings[i];
-    kanji.ja_on.concat(kanji.ja_kun).forEach(pronunciation => {
-        if (!readingIndex[kanji.literal]) {
-            readingIndex[kanji.literal] = [];
-        }
-        readingIndex[kanji.literal].push(pronunciation);
+    if (!readingIndex[kanji.literal]) {
+        readingIndex[kanji.literal] = { onyomi: [], kunyomi: [] };
+    }
+    kanji.ja_on.forEach(pronunciation => {
+        readingIndex[kanji.literal].onyomi.push(pronunciation);
+    });
+    kanji.ja_kun.forEach(pronunciation => {
+        readingIndex[kanji.literal].kunyomi.push(pronunciation);
     });
 }
+
 var readingSearchFunction = debounce(function () {
     // Get the input value
     var input = document.getElementById('readingSearch');
@@ -386,21 +390,18 @@ var readingSearchFunction = debounce(function () {
     var container = document.getElementById('readingFoundContainer');
     container.innerHTML = '';
 
-    // Define a color palette
-    var colorPalette = ['red', 'blue', 'green', 'purple', 'orange', 'pink', 'yellow', 'brown', 'cyan', 'magenta'];
+    // Define colors for onyomi and kunyomi
+    var onyomiColor = 'red';
+    var kunyomiColor = 'blue';
 
     // Perform the search for each Kanji separately
     kanjis.forEach(function (kanji) {
-        // Get the details of the Kanji character from readingIndex
-        var kanjiDetails = readingIndex[kanji];
+        // Get the details of the Kanji character from the readings array
+        var kanjiDetails = readings.find(function (reading) {
+            return reading.literal === kanji;
+        });
 
         if (kanjiDetails) {
-            // Create a mapping of each reading to a unique color
-            var readingToColor = {};
-            kanjiDetails.forEach(function (reading, index) {
-                readingToColor[reading] = colorPalette[index % colorPalette.length];
-            });
-
             // Add the Kanji to the container
             var kanjiDiv = document.createElement('div');
             kanjiDiv.textContent = kanji; // Display the Kanji
@@ -408,11 +409,20 @@ var readingSearchFunction = debounce(function () {
             container.appendChild(kanjiDiv);
             kanjiDiv.classList.add('break');
 
-            // Add the results to the container
-            for (var i = 0; i < kanjiDetails.length; i++) {
+            // Add the onyomi readings to the container
+            for (var i = 0; i < kanjiDetails.ja_on.length; i++) {
                 var readingDiv = document.createElement('div');
-                readingDiv.textContent = kanjiDetails[i]; // Display the matched reading
-                readingDiv.style.color = readingToColor[kanjiDetails[i]]; // Set the color based on the reading
+                readingDiv.textContent = kanjiDetails.ja_on[i]; // Display the matched reading
+                readingDiv.style.color = onyomiColor; // Set color for onyomi
+                readingDiv.classList.add('reading'); // Add class for styling
+                container.appendChild(readingDiv);
+            }
+
+            // Add the kunyomi readings to the container
+            for (var i = 0; i < kanjiDetails.ja_kun.length; i++) {
+                var readingDiv = document.createElement('div');
+                readingDiv.textContent = kanjiDetails.ja_kun[i]; // Display the matched reading
+                readingDiv.style.color = kunyomiColor; // Set color for kunyomi
                 readingDiv.classList.add('reading'); // Add class for styling
                 container.appendChild(readingDiv);
             }
