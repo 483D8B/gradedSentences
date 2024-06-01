@@ -391,28 +391,28 @@ var readingSearchFunction = debounce(function () {
 
     // Perform the search for each Kanji separately
     kanjis.forEach(function (kanji) {
-        // Get the details of the Kanji character using the kanji.js library
-        var kanjiDetails = Kanji.getDetails(kanji);
+        // Get the details of the Kanji character from readingIndex
+        var kanjiDetails = readingIndex[kanji];
 
         if (kanjiDetails) {
             // Create a mapping of each reading to a unique color
             var readingToColor = {};
-            kanjiDetails.kunyomi.concat(kanjiDetails.onyomi).forEach(function (reading, index) {
+            kanjiDetails.forEach(function (reading, index) {
                 readingToColor[reading] = colorPalette[index % colorPalette.length];
             });
 
             // Add the Kanji to the container
             var kanjiDiv = document.createElement('div');
-            kanjiDiv.textContent = kanjiDetails.literal; // Display the Kanji
+            kanjiDiv.textContent = kanji; // Display the Kanji
             kanjiDiv.classList.add('bo'); // Add class for styling
             container.appendChild(kanjiDiv);
             kanjiDiv.classList.add('break');
 
             // Add the results to the container
-            for (var i = 0; i < kanjiDetails.kunyomi.concat(kanjiDetails.onyomi).length; i++) {
+            for (var i = 0; i < kanjiDetails.length; i++) {
                 var readingDiv = document.createElement('div');
-                readingDiv.textContent = kanjiDetails.kunyomi.concat(kanjiDetails.onyomi)[i]; // Display the matched reading
-                readingDiv.style.color = readingToColor[kanjiDetails.kunyomi.concat(kanjiDetails.onyomi)[i]]; // Set the color based on the reading
+                readingDiv.textContent = kanjiDetails[i]; // Display the matched reading
+                readingDiv.style.color = readingToColor[kanjiDetails[i]]; // Set the color based on the reading
                 readingDiv.classList.add('reading'); // Add class for styling
                 container.appendChild(readingDiv);
             }
@@ -423,10 +423,13 @@ var readingSearchFunction = debounce(function () {
 
 
 
+
 document.getElementById('counter').addEventListener('click', function () {
+
+    // console.log(kanji.getDetails('明'));
     var exercises = document.querySelectorAll('.exercise');
-    exercises.forEach(function(exercise) {
-      exercise.style.borderTop = '2px solid black';
+    exercises.forEach(function (exercise) {
+        exercise.style.borderTop = '2px solid black';
     });
     var container = document.getElementById('container');
     var x = container.getElementsByTagName("*");
