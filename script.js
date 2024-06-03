@@ -229,15 +229,15 @@ window.onload = function () {
 
 } //end onload function
 
-document.getElementById('toggleButton').addEventListener('click', function () {
+document.getElementById('toggleMode').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
     // Check if the body has the 'dark-mode' class
     if (document.body.classList.contains('dark-mode')) {
         // If it does, change the button text to 'Light Mode'
-        this.innerText = 'Light Mode';
+        this.innerHTML = '<i class="fa-solid fa-lightbulb"></i>';
     } else {
         // If it doesn't, change the button text back to 'Dark Mode'
-        this.innerText = 'Dark Mode';
+        this.innerHTML= '<i class="fa-solid fa-lightbulb"></i>';
     }
 });
 
