@@ -147,10 +147,49 @@ window.onload = function () {
     var numbersVisibility = [];
     var exercisesVisibility = [];
 
+    var toggleStyle = false;
+
     document.getElementById('showUnit').addEventListener('click', function () {
         // Get all elements with class 'number' and 'exercise'
         var numbers = document.getElementsByClassName('number');
         var exercises = document.getElementsByClassName('exercise');
+        var container = document.getElementById('container');
+        var kHeaders = document.getElementsByClassName('kanjiHeader');
+        var cHeaders = document.getElementsByClassName('counter');
+
+        // If toggleStyle is false, apply the new styles
+        // Otherwise, apply the initial styles
+        if (!toggleStyle) {
+            container.style.flexWrap = 'wrap';
+            container.style.flexDirection = 'row';
+            container.classList.remove('aspect-ratio-1-1');
+            for (var i = 0; i < numbers.length; i++) {
+                numbers[i].style.width = '3em';
+            }
+            for (var i = 0; i < kHeaders.length; i++) {
+                kHeaders[i].style.display = 'table';
+            }
+            for (var i = 0; i < cHeaders.length; i++) {
+                cHeaders[i].style.display = 'table';
+            }
+
+        } else {
+            container.style.flexWrap = 'nowrap';
+            container.style.flexDirection = 'column';
+            container.classList.add('aspect-ratio-1-1');
+            for (var i = 0; i < numbers.length; i++) {
+                numbers[i].style.width = '94.5vw';
+            }
+            for (var i = 0; i < kHeaders.length; i++) {
+                kHeaders[i].style.display = 'inline-block';
+            }
+            for (var i = 0; i < cHeaders.length; i++) {
+                cHeaders[i].style.display = 'inline-block';
+            }
+        }
+
+        // Toggle the value of toggleStyle
+        toggleStyle = !toggleStyle;
 
         // Loop through all number elements
         for (var i = 0; i < numbers.length; i++) {

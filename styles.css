@@ -132,9 +132,6 @@ body.dark-mode #toggleAllTranslations {
 
 
 
-
-
-
 #container {
     display: flex;
     flex-wrap: nowrap;
@@ -346,7 +343,7 @@ rt {
     background-color: var(--white);
 }
 
-#toggleAllTranslations{
+#toggleAllTranslations {
     position: fixed;
     font-size: 1em;
     top: 0;
@@ -422,7 +419,7 @@ rt {
     color: #9a1e7b;
 }
 
-#furiganaSearch{
+#furiganaSearch {
     display: block;
     font-size: 1em;
     font-family: 'Noto Sans JP', sans-serif;
@@ -438,7 +435,7 @@ rt {
 }
 
 
-#filteredNumber{
+#filteredNumber {
     position: absolute;
     top: 3em;
     left: 0;
@@ -452,6 +449,22 @@ rt {
     width: 5em;
     text-align: center;
     font-weight: bold;
+}
+
+.aspect-ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.kanjiHeader{
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.counter{
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 
