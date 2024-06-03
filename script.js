@@ -521,6 +521,8 @@ var furiganaSearchFunction = debounce(function () {
     let filters = input.value.split(' ').map(word => IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word));
     let kanjiFilters = kanjiInput.value.trim().split(' ');
 
+    let matchCount = 0; // Initialize the counter
+
     // Loop through all exercise items
     for (let i = 0; i < exercises.length; i++) {
         let furigana = exercises[i].getElementsByClassName("furigana")[0];
@@ -574,12 +576,18 @@ var furiganaSearchFunction = debounce(function () {
         if (matched || (!input.value.trim() && kanjiFilters.some(kanjiFilter => rubyText.indexOf(kanjiFilter) > -1))) {
             exercises[i].style.opacity = "1";
             number.style.opacity = "1"; // show the number
+            matchCount++; // Increment the counter
         } else {
-            exercises[i].style.opacity = "0.1";
-            number.style.opacity = "0.1"; // decrease the opacity
+            exercises[i].style.opacity = "0.3";
+            number.style.opacity = "0.3"; // decrease the opacity
         }
     }
+
+
+    document.getElementById("filteredNumber").innerText = matchCount
+
 }, 300); // 300 milliseconds debounce time
+
 
 
 

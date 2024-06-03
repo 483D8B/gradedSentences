@@ -429,6 +429,22 @@ rt {
 }
 
 
+#filteredNumber{
+    position: absolute;
+    top: 3em;
+    left: 0;
+    display: inline-block;
+    border: 2px solid black;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    padding: 0.2em;
+    margin: 0.5em;
+    width: 5em;
+    text-align: center;
+    font-weight: bold;
+}
+
 
 /* #shareButton{
     position: fixed;
