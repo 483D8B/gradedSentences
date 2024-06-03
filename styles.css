@@ -116,6 +116,13 @@ body.dark-mode #readingSearch {
     box-shadow: 0 0 10px #719ECE;
 }
 
+body.dark-mode #furiganaSearch {
+    color: var(--white);
+    background: var(--black);
+    border-color: var(--white);
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
 
 
 
@@ -404,6 +411,21 @@ rt {
 
 .onyomi {
     color: #9a1e7b;
+}
+
+#furiganaSearch{
+    display: block;
+    font-size: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    user-select: none;
+    border: 2px solid black;
+    color: black;
+    background-color: var(--white);
+    padding: 0.2em;
+    margin: 0.5em;
+    width: 20vw;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
 }
 
 

@@ -508,6 +508,80 @@ var readingSearchFunction = debounce(function () {
 
 
 
+var furiganaSearchInput = document.getElementById('furiganaSearch');
+// Set initial IMEMode to 'toHiragana'
+wanakana.bind(furiganaSearchInput, { IMEMode: IMEMode });
+
+
+var furiganaSearchFunction = debounce(function () {
+    const container = document.getElementById("container");
+    const exercises = container.getElementsByClassName('exercise');
+    const input = document.getElementById('furiganaSearch');
+    const kanjiInput = document.getElementById('search');
+    let filters = input.value.split(' ').map(word => IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word));
+    let kanjiFilters = kanjiInput.value.trim().split(' ');
+
+    // Loop through all exercise items
+    for (let i = 0; i < exercises.length; i++) {
+        let furigana = exercises[i].getElementsByClassName("furigana")[0];
+        let txtValue = furigana.dataset.originalText; // Use the original text stored in data attribute
+        let number = exercises[i].previousElementSibling;
+        let matched = false;
+
+        // Create a temporary div element and set its innerHTML to the original text
+        let tempDiv = document.createElement('div');
+        tempDiv.innerHTML = txtValue;
+
+        // Extract the text inside the <ruby> tags
+        let rubyText = '';
+        let rubyElements = tempDiv.getElementsByTagName('ruby');
+        for (let j = 0; j < rubyElements.length; j++) {
+            rubyText += rubyElements[j].textContent;
+        }
+
+        // If the input value is composed only of space characters, display all exercises and return
+        if (/^\s*$/.test(input.value) && /^\s*$/.test(kanjiInput.value)) {
+            exercises[i].style.display = "";
+            if (exercises[i].previousElementSibling) {
+                exercises[i].previousElementSibling.style.display = ""; // show the number
+            }
+            continue;
+        }
+
+        // Loop through all kanji filters
+        for (let k = 0; k < kanjiFilters.length; k++) {
+            let kanjiFilter = kanjiFilters[k];
+
+            // Check if the kanji filter is present in the original text
+            let kanjiMatch = rubyText.indexOf(kanjiFilter) > -1;
+
+            // Loop through all filters
+            for (let j = 0; j < filters.length; j++) {
+
+                // Skip if the filter is an empty string
+                if (filters[j] === '') continue;
+
+                // Check both Hiragana and Katakana matches
+                let hiraganaMatch = wanakana.toHiragana(rubyText).indexOf(wanakana.toHiragana(filters[j])) > -1;
+                let katakanaMatch = wanakana.toKatakana(rubyText).indexOf(wanakana.toKatakana(filters[j])) > -1;
+
+                if ((hiraganaMatch || katakanaMatch) && kanjiMatch) {
+                    matched = true;
+                }
+            }
+        }
+
+        if (matched || (!input.value.trim() && kanjiFilters.some(kanjiFilter => rubyText.indexOf(kanjiFilter) > -1))) {
+            exercises[i].style.display = "";
+            number.style.display = ""; // show the number
+        } else {
+            exercises[i].style.display = "none";
+            number.style.display = "none"; // hide the number
+        }
+    }
+}, 300); // 300 milliseconds debounce time
+
+
 
 
 document.getElementById('counter').addEventListener('click', function () {
