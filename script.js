@@ -523,6 +523,9 @@ var furiganaSearchFunction = debounce(function () {
 
     let matchCount = 0; // Initialize the counter
 
+    // Define an array of colors for highlighting
+    let colors = ['red', 'blue', 'green', 'purple', 'orange'];
+
     // Loop through all exercise items
     for (let i = 0; i < exercises.length; i++) {
         let furigana = exercises[i].getElementsByClassName("furigana")[0];
@@ -569,6 +572,9 @@ var furiganaSearchFunction = debounce(function () {
 
                 if ((hiraganaMatch || katakanaMatch) && kanjiMatch) {
                     matched = true;
+                    // underline the matched content with a specific color
+                    let regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
+                    furigana.innerHTML = furigana.innerHTML.replace(regex, `<span class="underline" style="color: ${colors[j % colors.length]}">$&</span>`);
                 }
             }
         }
