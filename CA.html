@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Your style here*/
+
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .form-section {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid black;
+            margin: 0.5em;
+            padding: 20px;
+            gap: 0.2em;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        input {
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        h3 {
+            padding-bottom: 1em;
+        }
+
+        #save {
+            background-color: white;
+            border: 2px solid black;
+            color: black;
+            padding: 0.1em;
+            text-align: center;
+        }
+
+        .myForm {
+            page-break-before: always;
+        }
+
+        #showAll {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin-right: 2em;
+            margin-top: 1em;
+            background-color: white;
+            border: 2px solid black;
+            color: black;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        @media print {
+            #showAll {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your content here -->
+
+    <div id="container">
+
+
+        <form id="myForm" class="myForm" action="/submit_form" method="post" onsubmit="saveToIndexedDB(event)">
+            <div class="form-section">
+                <h3>Data e ora</h3>
+                <label for="date">Data:</label><br>
+                <input type="text" id="date" name="date" ondblclick="insertCurrentDate()"
+                    onchange="saveToLocalStorage(this)"><br>
+                <label for="time">Ora:</label><br>
+                <input type="text" id="time" name="time" ondblclick="insertCurrentTime()"
+                    onchange="saveToLocalStorage(this)"><br>
+            </div>
+
+
+            <div class="form-section">
+                <h3>CHIAMANTE</h3>
+                <label for="telephone">Telefono:</label><br>
+                <input type="tel" id="telephone" name="telephone" onchange="saveToLocalStorage(this)"><br>
+                <label for="callername">Nome:</label><br>
+                <input type="text" id="callername" name="callername" onchange="saveToLocalStorage(this)"><br>
+                <label for="callersurname">Cognome:</label><br>
+                <input type="text" id="callersurname" name="callersurname" onchange="saveToLocalStorage(this)"><br>
+            </div>
+
+            <div class="form-section">
+                <h3>PAZIENTE</h3>
+                <label for="patientname">Nome:</label><br>
+                <input type="text" id="patientname" name="patientname" onchange="saveToLocalStorage(this)"><br>
+                <label for="patientsurname">Cognome:</label><br>
+                <input type="text" id="patientsurname" name="patientsurname" onchange="saveToLocalStorage(this)"><br>
+                <label for="dob">Data di nascita:</label><br>
+                <input type="date" id="dob" name="dob" onchange="saveToLocalStorage(this)"><br>
+            </div>
+
+            <div class="form-section">
+                <h3>LOCALIZZAZIONE</h3>
+                <label for="localita">LOCALITA':</label><br>
+                <input type="text" id="localita" name="localita" onchange="saveToLocalStorage(this)"><br>
+                <label for="location">COMUNE:</label><br>
+                <input type="text" id="location" name="location" onchange="saveToLocalStorage(this)"><br>
+                <label for="street">VIA:</label><br>
+                <input type="text" id="street" name="street" onchange="saveToLocalStorage(this)"><br>
+                <label for="text">CIVICO:</label><br>
+                <input type="text" id="number" name="number" onchange="saveToLocalStorage(this)"><br>
+            </div>
+
+            <div class="form-section">
+                <h3>CONTINUITA' ASSISTENZIALE</h3>
+                <label for="sede">SEDE:</label><br>
+                <input type="text" id="sede" name="sede" onchange="saveToLocalStorage(this)"><br>
+                <label for="medico">Medico:</label><br>
+                <input type="text" id="medico" name="medico" onchange="saveToLocalStorage(this)"><br>
+
+                <br>
+                <input type="checkbox" id="mca_disponibile" name="mca_disponibile" onchange="saveToLocalStorage(this)">
+                <label for="mca_disponibile">MCA disponibile, chiamata inoltrata</label><br>
+
+                <input type="checkbox" id="mca_non_disponibile" name="mca_non_disponibile"
+                    onchange="saveToLocalStorage(this)">
+                <label for="mca_non_disponibile">MCA non disponibile</label><br>
+
+                <input type="checkbox" id="inoltrato_a_118" name="inoltrato_a_118" onchange="saveToLocalStorage(this)">
+                <label for="inoltrato_a_118">Inoltrato a 118</label><br>
+
+                <input type="checkbox" id="pz_attende" name="pz_attende" onchange="saveToLocalStorage(this)">
+                <label for="pz_attende">Pz attende</label><br>
+            </div>
+            <div class="form-section">
+                <input type="submit" id="save" value="Salva">
+            </div>
+
+        </form>
+
+        <!-- <button type="button" onclick="loadFromIndexedDB()">Load</button> -->
+        <button id="showAll" type="button" onclick="loadAllFromIndexedDB()">Vedi tutte</button>
+    </div>
+    <script>
+
+
+
+        var db;
+
+        // Create an IndexedDB database and an object store
+        var request = window.indexedDB.open("FormDatabase", 1);
+        request.onerror = function (event) {
+            console.log("error: ");
+        };
+        request.onsuccess = function (event) {
+            db = request.result;
+            console.log("success: " + db);
+        };
+        request.onupgradeneeded = function (event) {
+            var db = event.target.result;
+            var objectStore = db.createObjectStore("formData", { keyPath: "id", autoIncrement: true });
+        }
+
+        function saveToLocalStorage(input) {
+            var value = input.value;
+
+            // If the input is a date, convert it to DD/MM/YYYY format
+            if (input.type === 'date') {
+                var date = new Date(value);
+                var dd = String(date.getDate()).padStart(2, '0');
+                var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = date.getFullYear();
+
+                value = dd + '/' + mm + '/' + yyyy;
+            }
+
+            localStorage.setItem(input.name, value);
+        }
+
+        window.onload = function () {
+            // Populate the form fields with the data from localStorage
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                var value = localStorage.getItem(key);
+                var input = document.getElementById(key);
+
+                // If the input is a date, convert the value to DD/MM/YYYY format
+                if (input && input.type === 'date') {
+                    var parts = value.split('/');
+                    var date = new Date(parts[2], parts[1] - 1, parts[0]);
+                    value = date.toISOString().split('T')[0];
+                }
+
+                if (input) input.value = value;
+            }
+        }
+
+        function insertCurrentDate() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = dd + '/' + mm + '/' + yyyy;
+            document.getElementById('date').value = today;
+            saveToLocalStorage(document.getElementById('date'));
+        }
+
+        function insertCurrentTime() {
+            var now = new Date();
+            var hh = String(now.getHours()).padStart(2, '0');
+            var mm = String(now.getMinutes()).padStart(2, '0');
+
+            now = hh + ':' + mm;
+            document.getElementById('time').value = now;
+            saveToLocalStorage(document.getElementById('time'));
+        }
+
+        function saveToIndexedDB(event) {
+            event.preventDefault();
+
+            // Get the form data from localStorage
+            var data = {};
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                var value = localStorage.getItem(key);
+                data[key] = value;
+            }
+
+            // Save the form data to IndexedDB
+            var request = db.transaction(["formData"], "readwrite")
+                .objectStore("formData")
+                .add(data);
+
+            request.onsuccess = function (event) {
+                console.log("Form data has been saved to IndexedDB");
+
+                // Clear localStorage
+                localStorage.clear();
+
+                // Reset the form
+                document.getElementById('myForm').reset();
+            };
+
+            request.onerror = function (event) {
+                console.log("Unable to add data\r\nForm data is already exist in your database! ");
+            }
+        }
+
+
+        function createFormWithData(data) {
+            // Get the template form and clone it
+            var templateForm = document.getElementById('myForm');
+            var form = templateForm.cloneNode(true);
+
+            // Remove the save button from the cloned form
+            var saveButton = form.querySelector('#save');
+            if (saveButton) {
+                saveButton.parentNode.removeChild(saveButton);
+            }
+
+            // Iterate over the data object
+            for (var key in data) {
+                if (data.hasOwnProperty(key)) {
+                    // Find the input element with the same name as the data property
+                    var input = form.querySelector('[name="' + key + '"]');
+                    if (input) {
+                        // Set the value of the input element
+                        input.value = data[key];
+                    }
+                }
+            }
+
+            // Return the new form element
+            return form;
+        }
+
+
+
+
+
+        function loadFromIndexedDB() {
+            var transaction = db.transaction(["formData"]);
+            var objectStore = transaction.objectStore("formData");
+            objectStore.openCursor().onsuccess = function (event) {
+                var cursor = event.target.result;
+                if (cursor) {
+                    var data = cursor.value;
+                    for (var key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            var input = document.getElementById(key);
+                            if (input) {
+                                // If the input is a date, convert the value to DD/MM/YYYY format
+                                if (input.type === 'date') {
+                                    var parts = data[key].split('/');
+                                    var day = parseInt(parts[0], 10);
+                                    var month = parseInt(parts[1], 10) - 1; // months are 0-based in JavaScript
+                                    var year = parseInt(parts[2], 10);
+                                    // Ensure the date parts are valid
+                                    if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                                        var date = new Date(year, month, day);
+                                        input.value = date.toISOString().split('T')[0];
+                                    }
+                                } else {
+                                    input.value = data[key];
+                                }
+                            }
+                        }
+                    }
+                    cursor.continue();
+                }
+            };
+        }
+
+        function loadAllFromIndexedDB() {
+            var transaction = db.transaction(["formData"]);
+            var objectStore = transaction.objectStore("formData");
+            objectStore.openCursor().onsuccess = function (event) {
+                var cursor = event.target.result;
+                if (cursor) {
+                    // Create a new form with the record data
+                    var form = createFormWithData(cursor.value);
+                    form.classList.add('myForm'); // Add class to form
+                    form.classList.add('form-section'); // Add class to form
+
+                    // Append the new form to the page
+                    document.body.appendChild(form);
+
+                    cursor.continue();
+                }
+            };
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

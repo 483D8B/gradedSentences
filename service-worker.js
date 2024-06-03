@@ -17,8 +17,26 @@ workbox.routing.registerRoute(
 
 // Cache other files
 workbox.routing.registerRoute(
-  ({url}) => url.origin === location.origin && !url.pathname.endsWith('output.js'),
+  ({ url }) => url.origin === location.origin && !url.pathname.endsWith('output.js'),
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: CACHE
   })
 );
+
+
+// Clear existing caches on activation to ensure updated content
+self.addEventListener('activate', event => {
+  const cacheWhitelist = [CACHE];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (!cacheWhitelist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+  return self.clients.claim();
+});

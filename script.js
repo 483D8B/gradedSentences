@@ -3,9 +3,41 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
         .then(function (registration) {
             console.log('Service Worker Registered. Scope is:' + registration.scope);
-            registration.update();
+
+            // Check if there's an updated service worker waiting to take over
+            if (registration.waiting) {
+                updateServiceWorker(registration);
+            }
+
+            // Listen for new installing service worker
+            registration.addEventListener('updatefound', function () {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', function () {
+                    if (newWorker.state === 'installed') {
+                        if (navigator.serviceWorker.controller) {
+                            // New service worker is installed and waiting
+                            updateServiceWorker(registration);
+                        } else {
+                            // No previous service worker, so this is the first one installed
+                            console.log('Service Worker Installed for the first time.');
+                        }
+                    }
+                });
+            });
         });
+
+    // Force the waiting service worker to become active
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+        window.location.reload();
+    });
 }
+
+function updateServiceWorker(registration) {
+    if (confirm("New version available. Update now?")) {
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+    }
+}
+
 
 
 window.onload = function () {
