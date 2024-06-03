@@ -124,6 +124,15 @@ body.dark-mode #furiganaSearch {
     box-shadow: 0 0 10px #719ECE;
 }
 
+body.dark-mode #toggleAllTranslations {
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--white);
+}
+
+
+
+
 
 
 #container {
