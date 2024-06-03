@@ -529,6 +529,7 @@ var furiganaSearchFunction = debounce(function () {
     // Loop through all exercise items
     for (let i = 0; i < exercises.length; i++) {
         let furigana = exercises[i].getElementsByClassName("furigana")[0];
+        let sentence = exercises[i].getElementsByClassName("sentence")[0];
         let txtValue = furigana.dataset.originalText; // Use the original text stored in data attribute
         let number = exercises[i].previousElementSibling;
         let matched = false;
@@ -573,8 +574,8 @@ var furiganaSearchFunction = debounce(function () {
                 if ((hiraganaMatch || katakanaMatch) && kanjiMatch) {
                     matched = true;
                     // underline the matched content with a specific color
-                    let regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
-                    furigana.innerHTML = furigana.innerHTML.replace(regex, `<span class="underline" style="color: ${colors[j % colors.length]}">$&</span>`);
+                    let regex = new RegExp(`(${kanjiFilter})`, 'gi');
+                    sentence.innerHTML = sentence.innerHTML.replace(regex, `<span class="underline" style="color: ${colors[j % colors.length]}">$&</span>`);
                 }
             }
         }
@@ -584,11 +585,10 @@ var furiganaSearchFunction = debounce(function () {
             number.style.opacity = "1"; // show the number
             matchCount++; // Increment the counter
         } else {
-            exercises[i].style.opacity = "0.3";
-            number.style.opacity = "0.3"; // decrease the opacity
+            exercises[i].style.opacity = "0.1";
+            number.style.opacity = "0.1"; // decrease the opacity
         }
     }
-
 
     document.getElementById("filteredNumber").innerText = matchCount
 
