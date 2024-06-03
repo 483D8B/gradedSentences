@@ -541,9 +541,9 @@ var furiganaSearchFunction = debounce(function () {
 
         // If the input value is composed only of space characters, display all exercises and return
         if (/^\s*$/.test(input.value) && /^\s*$/.test(kanjiInput.value)) {
-            exercises[i].style.display = "";
+            exercises[i].style.opacity = "1";
             if (exercises[i].previousElementSibling) {
-                exercises[i].previousElementSibling.style.display = ""; // show the number
+                exercises[i].previousElementSibling.style.opacity = "1"; // show the number
             }
             continue;
         }
@@ -572,14 +572,15 @@ var furiganaSearchFunction = debounce(function () {
         }
 
         if (matched || (!input.value.trim() && kanjiFilters.some(kanjiFilter => rubyText.indexOf(kanjiFilter) > -1))) {
-            exercises[i].style.display = "";
-            number.style.display = ""; // show the number
+            exercises[i].style.opacity = "1";
+            number.style.opacity = "1"; // show the number
         } else {
-            exercises[i].style.display = "none";
-            number.style.display = "none"; // hide the number
+            exercises[i].style.opacity = "0.1";
+            number.style.opacity = "0.1"; // decrease the opacity
         }
     }
 }, 300); // 300 milliseconds debounce time
+
 
 
 
