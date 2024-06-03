@@ -457,10 +457,114 @@ for (var i = 0; i < readings.length; i++) {
     });
 }
 
+
+let colors = generateColors(15);
+
+
+// Create a mapping between the readings and the colors
+let colorMapping = {};
+
+// Helper function to update colorMapping
+function updateColorMapping(readings) {
+    readings.forEach((reading, index) => {
+        const normalizedReading = normalizeReading(reading);
+        if (!colorMapping[normalizedReading]) {
+            colorMapping[normalizedReading] = colors[Object.keys(colorMapping).length % colors.length];
+        }
+    });
+}
+
+// Function to normalize readings by removing punctuation and converting to Hiragana
+function normalizeReading(reading) {
+    return wanakana.toHiragana(reading.replace(/[-.]/g, ''));
+}
+
+// Function to check if a reading matches any of the filters
+function matchesFilter(reading, filters) {
+    return filters.some(filter => reading.includes(filter));
+}
+
+var furiganaSearchInput = document.getElementById('furiganaSearch');
+// Set initial IMEMode to 'toHiragana'
+wanakana.bind(furiganaSearchInput, { IMEMode: IMEMode });
+
+var furiganaSearchFunction = debounce(function () {
+    const container = document.getElementById("container");
+    const exercises = container.getElementsByClassName('exercise');
+    const input = document.getElementById('furiganaSearch');
+    const kanjiInput = document.getElementById('search');
+    let filters = input.value.split(' ').map(word => normalizeReading(word));
+    let kanjiFilters = kanjiInput.value.trim().split(' ').map(word => normalizeReading(word));
+
+    let matchCount = 0; // Initialize the counter
+
+    // Update colorMapping for each furigana
+    updateColorMapping(filters);
+
+    // Loop through all exercise items
+    for (let i = 0; i < exercises.length; i++) {
+        let furigana = exercises[i].getElementsByClassName("furigana")[0];
+        let sentence = exercises[i].getElementsByClassName("sentence")[0];
+        let txtValue = furigana.dataset.originalText; // Use the original text stored in data attribute
+        let number = exercises[i].previousElementSibling;
+        let matched = false;
+
+        // Create a temporary div element and set its innerHTML to the original text
+        let tempDiv = document.createElement('div');
+        tempDiv.innerHTML = txtValue;
+
+        // Extract the text inside the <ruby> tags and normalize
+        let rubyReadings = [];
+        let rubyElements = tempDiv.getElementsByTagName('ruby');
+        for (let j = 0; j < rubyElements.length; j++) {
+            let rtElement = rubyElements[j].getElementsByTagName('rt')[0];
+            if (rtElement) {
+                rubyReadings.push(normalizeReading(rtElement.textContent));
+            }
+        }
+
+        // If the input value is composed only of space characters, display all exercises and return
+        if (/^\s*$/.test(input.value) && /^\s*$/.test(kanjiInput.value)) {
+            exercises[i].style.opacity = "1";
+            if (exercises[i].previousElementSibling) {
+                exercises[i].previousElementSibling.style.opacity = "1"; // show the number
+            }
+            continue;
+        }
+
+        // Check for matches with filters
+        for (let filter of filters) {
+            if (filter === '') continue;
+
+            // Check if the normalized reading contains the filter
+            let hiraganaMatch = rubyReadings.some(reading => reading.includes(filter));
+
+            if (hiraganaMatch) {
+                matched = true;
+                // underline the matched content with a specific color
+                let regex = new RegExp(`(${filter})`, 'gi');
+                sentence.innerHTML = sentence.innerHTML.replace(regex, `<span class="underline" style="color: ${colorMapping[filter] || 'black'}">$&</span>`);
+            }
+        }
+
+        if (matched) {
+            exercises[i].style.opacity = "1";
+            number.style.opacity = "1"; // show the number
+            matchCount++; // Increment the counter
+        } else {
+            exercises[i].style.opacity = "0.3";
+            number.style.opacity = "0.3"; // decrease the opacity
+        }
+    }
+
+    document.getElementById("filteredNumber").innerText = matchCount;
+
+}, 300); // 300 milliseconds debounce time
+
 var readingSearchFunction = debounce(function () {
     // Get the input value
     var input = document.getElementById('readingSearch');
-    var filter = input.value;
+    var filter = normalizeReading(input.value);
 
     // Split the input value into individual Kanji characters
     var kanjis = Array.from(filter);
@@ -468,6 +572,15 @@ var readingSearchFunction = debounce(function () {
     // Clear the container
     var container = document.getElementById('readingFoundContainer');
     container.innerHTML = '';
+
+    // Update colorMapping for each Kanji reading
+    kanjis.forEach((kanji) => {
+        let kanjiDetails = readings.find(reading => reading.literal === kanji);
+        if (kanjiDetails) {
+            updateColorMapping(kanjiDetails.ja_on);
+            updateColorMapping(kanjiDetails.ja_kun);
+        }
+    });
 
     // Perform the search for each Kanji separately
     kanjis.forEach(function (kanji) {
@@ -491,6 +604,7 @@ var readingSearchFunction = debounce(function () {
                 readingDiv.textContent = kanjiDetails.ja_on[i]; // Display the matched reading
                 readingDiv.classList.add('onyomi');
                 readingDiv.classList.add('reading'); // Add class for styling
+                readingDiv.style.color = colorMapping[normalizeReading(kanjiDetails.ja_on[i])] || 'black'; // Apply the color
                 container.appendChild(readingDiv);
             }
 
@@ -500,103 +614,12 @@ var readingSearchFunction = debounce(function () {
                 readingDiv.textContent = kanjiDetails.ja_kun[i]; // Display the matched reading
                 readingDiv.classList.add('kunyomi');
                 readingDiv.classList.add('reading'); // Add class for styling
+                readingDiv.style.color = colorMapping[normalizeReading(kanjiDetails.ja_kun[i])] || 'black'; // Apply the color
                 container.appendChild(readingDiv);
             }
         }
     });
 }, 300); // 300 milliseconds debounce time
-
-
-
-var furiganaSearchInput = document.getElementById('furiganaSearch');
-// Set initial IMEMode to 'toHiragana'
-wanakana.bind(furiganaSearchInput, { IMEMode: IMEMode });
-
-
-var furiganaSearchFunction = debounce(function () {
-    const container = document.getElementById("container");
-    const exercises = container.getElementsByClassName('exercise');
-    const input = document.getElementById('furiganaSearch');
-    const kanjiInput = document.getElementById('search');
-    let filters = input.value.split(' ').map(word => IMEMode === 'toHiragana' ? wanakana.toHiragana(word) : wanakana.toKatakana(word));
-    let kanjiFilters = kanjiInput.value.trim().split(' ');
-
-    let matchCount = 0; // Initialize the counter
-
-    // Define an array of colors for highlighting
-    let colors = ['red', 'blue', 'green', 'purple', 'orange'];
-
-    // Loop through all exercise items
-    for (let i = 0; i < exercises.length; i++) {
-        let furigana = exercises[i].getElementsByClassName("furigana")[0];
-        let sentence = exercises[i].getElementsByClassName("sentence")[0];
-        let txtValue = furigana.dataset.originalText; // Use the original text stored in data attribute
-        let number = exercises[i].previousElementSibling;
-        let matched = false;
-
-        // Create a temporary div element and set its innerHTML to the original text
-        let tempDiv = document.createElement('div');
-        tempDiv.innerHTML = txtValue;
-
-        // Extract the text inside the <ruby> tags
-        let rubyText = '';
-        let rubyElements = tempDiv.getElementsByTagName('ruby');
-        for (let j = 0; j < rubyElements.length; j++) {
-            rubyText += rubyElements[j].textContent;
-        }
-
-        // If the input value is composed only of space characters, display all exercises and return
-        if (/^\s*$/.test(input.value) && /^\s*$/.test(kanjiInput.value)) {
-            exercises[i].style.opacity = "1";
-            if (exercises[i].previousElementSibling) {
-                exercises[i].previousElementSibling.style.opacity = "1"; // show the number
-            }
-            continue;
-        }
-
-        // Loop through all kanji filters
-        for (let k = 0; k < kanjiFilters.length; k++) {
-            let kanjiFilter = kanjiFilters[k];
-
-            // Check if the kanji filter is present in the original text
-            let kanjiMatch = rubyText.indexOf(kanjiFilter) > -1;
-
-            // Loop through all filters
-            for (let j = 0; j < filters.length; j++) {
-
-                // Skip if the filter is an empty string
-                if (filters[j] === '') continue;
-
-                // Check both Hiragana and Katakana matches
-                let hiraganaMatch = wanakana.toHiragana(rubyText).indexOf(wanakana.toHiragana(filters[j])) > -1;
-                let katakanaMatch = wanakana.toKatakana(rubyText).indexOf(wanakana.toKatakana(filters[j])) > -1;
-
-                if ((hiraganaMatch || katakanaMatch) && kanjiMatch) {
-                    matched = true;
-                    // underline the matched content with a specific color
-                    let regex = new RegExp(`(${kanjiFilter})`, 'gi');
-                    sentence.innerHTML = sentence.innerHTML.replace(regex, `<span class="underline" style="color: ${colors[j % colors.length]}">$&</span>`);
-                }
-            }
-        }
-
-        if (matched || (!input.value.trim() && kanjiFilters.some(kanjiFilter => rubyText.indexOf(kanjiFilter) > -1))) {
-            exercises[i].style.opacity = "1";
-            number.style.opacity = "1"; // show the number
-            matchCount++; // Increment the counter
-        } else {
-            exercises[i].style.opacity = "0.1";
-            number.style.opacity = "0.1"; // decrease the opacity
-        }
-    }
-
-    document.getElementById("filteredNumber").innerText = matchCount
-
-}, 300); // 300 milliseconds debounce time
-
-
-
-
 
 
 document.getElementById('counter').addEventListener('click', function () {
@@ -662,4 +685,19 @@ function hexToRgb(hex) {
 // Function to open Kanji Study app
 function openKanjiStudy(query) {
     window.location.href = 'kanjistudy://grs?id=' + query;
+}
+
+
+function generateColors(n) {
+    let colors = [];
+    for(let i = 0; i < n; i++) {
+        // Vary the hue between 0 and 360 degrees
+        let hue = Math.floor(360 * i / n);
+
+        // Use maximum saturation and half lightness for good contrast
+        let color = `hsl(${hue}, 100%, 50%)`;
+
+        colors.push(color);
+    }
+    return colors;
 }
