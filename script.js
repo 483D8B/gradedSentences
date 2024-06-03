@@ -67,13 +67,14 @@ window.onload = function () {
     for (let i = 0; i < translations.length; i++) {
         let originalText = translations[i].innerHTML;
         translations[i].innerText = 'Show translation';
+        translations[i].dataset.originalText = originalText;
         // translations[i].style.userSelect = "none"; // Make the text non-selectable
         translations[i].addEventListener('click', function () {
             if (this.innerHTML == originalText) {
                 this.innerText = 'Show translation';
                 // this.style.userSelect = "none"; // Keep the text non-selectable
             } else {
-                this.innerHTML = originalText;
+                this.innerHTML = this.dataset.originalText;
                 // this.style.userSelect = "auto"; // Make the text selectable after it's clicked
             }
         });
@@ -225,6 +226,26 @@ window.onload = function () {
 
 
 
+    var toggleState = false;
+
+    document.getElementById('toggleAllTranslations').addEventListener('click', function () {
+        var translations = document.getElementsByClassName('translation');
+        if (!toggleState) {
+            for (let i = 0; i < translations.length; i++) {
+                translations[i].innerHTML = translations[i].dataset.originalText;
+            }
+            toggleState = true;
+        } else {
+            for (let i = 0; i < translations.length; i++) {
+                translations[i].innerHTML = 'Show translation';
+            }
+            toggleState = false;
+        }
+    });
+
+    //ghimpen
+
+
 
 
 } //end onload function
@@ -237,7 +258,7 @@ document.getElementById('toggleMode').addEventListener('click', function () {
         this.innerHTML = '<i class="fa-solid fa-lightbulb"></i>';
     } else {
         // If it doesn't, change the button text back to 'Dark Mode'
-        this.innerHTML= '<i class="fa-solid fa-lightbulb"></i>';
+        this.innerHTML = '<i class="fa-solid fa-lightbulb"></i>';
     }
 });
 
