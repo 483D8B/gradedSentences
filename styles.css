@@ -136,6 +136,14 @@ body.dark-mode #toggleAllFurigana {
     box-shadow: 0 0 2px var(--white);
 }
 
+body.dark-mode .kanjiGroup {
+    background-color: var(--black);
+    border-color: var(--white);
+    box-shadow: 0 0 2px var(--white);
+}
+
+
+
 
 
 
