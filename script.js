@@ -517,54 +517,49 @@ for (var i = 0; i < readings.length; i++) {
     });
 }
 
-var readingSearchFunction = debounce(function () {
+const readingSearchFunction = debounce(() => {
     // Get the input value
-    var input = document.getElementById('readingSearch');
-    var filter = input.value;
+    const input = document.getElementById('readingSearch');
+    const filter = input.value;
 
     // Split the input value into individual Kanji characters
-    var kanjis = Array.from(filter);
+    const kanjis = Array.from(filter);
 
     // Clear the container
-    var container = document.getElementById('readingFoundContainer');
+    const container = document.getElementById('readingFoundContainer');
     container.innerHTML = '';
 
     // Perform the search for each Kanji separately
-    kanjis.forEach(function (kanji) {
+    kanjis.forEach((kanji) => {
         // Get the details of the Kanji character from the readings array
-        var kanjiDetails = readings.find(function (reading) {
-            return reading.literal === kanji;
-        });
+        const kanjiDetails = readings.find(reading => reading.literal === kanji);
 
         if (kanjiDetails) {
             // Add the Kanji to the container
-            var kanjiDiv = document.createElement('div');
-            kanjiDiv.textContent = kanji; // Display the Kanji
-            container.appendChild(kanjiDiv);
+            const kanjiDiv = document.createElement('div');
             kanjiDiv.classList.add('break');
             kanjiDiv.setAttribute('data-content', kanji);
-            kanjiDiv.textContent = '';
+            container.appendChild(kanjiDiv);
 
             // Add the onyomi readings to the container
-            for (var i = 0; i < kanjiDetails.ja_on.length; i++) {
-                var readingDiv = document.createElement('div');
-                readingDiv.textContent = kanjiDetails.ja_on[i]; // Display the matched reading
-                readingDiv.classList.add('onyomi');
-                readingDiv.classList.add('reading'); // Add class for styling
+            kanjiDetails.ja_on.forEach(onyomi => {
+                const readingDiv = document.createElement('div');
+                readingDiv.textContent = onyomi; // Display the matched reading
+                readingDiv.classList.add('onyomi', 'reading'); // Add class for styling
                 container.appendChild(readingDiv);
-            }
+            });
 
             // Add the kunyomi readings to the container
-            for (var i = 0; i < kanjiDetails.ja_kun.length; i++) {
-                var readingDiv = document.createElement('div');
-                readingDiv.textContent = kanjiDetails.ja_kun[i]; // Display the matched reading
-                readingDiv.classList.add('kunyomi');
-                readingDiv.classList.add('reading'); // Add class for styling
+            kanjiDetails.ja_kun.forEach(kunyomi => {
+                const readingDiv = document.createElement('div');
+                readingDiv.textContent = kunyomi; // Display the matched reading
+                readingDiv.classList.add('kunyomi', 'reading'); // Add class for styling
                 container.appendChild(readingDiv);
-            }
+            });
         }
     });
 }, 300); // 300 milliseconds debounce time
+
 
 
 
