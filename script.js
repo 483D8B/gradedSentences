@@ -192,8 +192,6 @@ window.onload = function () {
 
         toggleStyle = !toggleStyle;
 
-        console.log(toggleStyle)
-
         // Update the visibility state
         numbersVisibility = Array.from(numbers).map(number => number.style.display);
         exercisesVisibility = Array.from(exercises).map(exercise => exercise.style.display);
@@ -205,6 +203,18 @@ window.onload = function () {
 
 
     Array.from(document.getElementsByClassName('colouredNumber')).forEach(element => {
+        element.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+
+            let textToCopy = element.textContent;
+            let kanjiToCopy = textToCopy.replace(/[\d-]/g, ''); // Remove digits and hyphens
+
+            let readingField = document.getElementById('readingSearch');
+            readingField.value += kanjiToCopy + ' ';
+            readingField.dispatchEvent(new Event('keyup'));
+
+        });
+
         element.addEventListener('click', function (e) {
             var numbers = document.getElementsByClassName('number');
             var exercises = document.getElementsByClassName('exercise');
