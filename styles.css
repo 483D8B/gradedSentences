@@ -329,7 +329,7 @@ rt {
     position: fixed;
     font-size: 1em;
     top: 0;
-    right: 2vw;
+    right: 1em;
     margin-left: 7.5em;
     margin-top: 0.5em;
     display: block;
@@ -347,7 +347,7 @@ rt {
     position: fixed;
     font-size: 1em;
     top: 0;
-    right: 3em;
+    right: 3.5em;
     margin-left: 7.5em;
     margin-top: 0.5em;
     display: block;

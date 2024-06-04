@@ -149,98 +149,76 @@ window.onload = function () {
 
     var toggleStyle = false;
 
+    function toggleElementVisibility(elements, visibilityArray) {
+        for (var i = 0; i < elements.length; i++) {
+            visibilityArray[i] = elements[i].style.display;
+            if (!elements[i].classList.contains('colouredNumber')) {
+                elements[i].style.display = elements[i].style.display === 'none' ? '' : 'none';
+            }
+        }
+    }
+
+    function restoreElementVisibility(elements, visibilityArray) {
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = visibilityArray[i];
+        }
+    }
+
     document.getElementById('showUnit').addEventListener('click', function () {
-        // Get all elements with class 'number' and 'exercise'
         var numbers = document.getElementsByClassName('number');
         var exercises = document.getElementsByClassName('exercise');
         var container = document.getElementById('container');
         var kHeaders = document.getElementsByClassName('kanjiHeader');
         var cHeaders = document.getElementsByClassName('counter');
 
-        // If toggleStyle is false, apply the new styles
-        // Otherwise, apply the initial styles
-        if (!toggleStyle) {
-            container.style.flexWrap = 'wrap';
-            container.style.flexDirection = 'row';
-            container.classList.remove('aspect-ratio-1-1');
-            for (var i = 0; i < numbers.length; i++) {
-                numbers[i].style.width = '3em';
-            }
-            for (var i = 0; i < kHeaders.length; i++) {
-                kHeaders[i].style.display = 'table';
-            }
-            for (var i = 0; i < cHeaders.length; i++) {
-                cHeaders[i].style.display = 'table';
-            }
+        container.style.flexWrap = toggleStyle ? 'nowrap' : 'wrap';
+        container.style.flexDirection = toggleStyle ? 'column' : 'row';
+        toggleStyle ? container.classList.add('aspect-ratio-1-1') : container.classList.remove('aspect-ratio-1-1');
 
-        } else {
+        var width = toggleStyle ? '94.5vw' : '3em';
+        var display = toggleStyle ? 'inline-block' : 'table';
+
+        Array.from(numbers).forEach(number => number.style.width = width);
+        Array.from(kHeaders).concat(Array.from(cHeaders)).forEach(header => header.style.display = display);
+
+        toggleStyle = !toggleStyle;
+
+        // Update the visibility state
+        numbersVisibility = Array.from(numbers).map(number => number.style.display);
+        exercisesVisibility = Array.from(exercises).map(exercise => exercise.style.display);
+
+        toggleElementVisibility(numbers, numbersVisibility);
+        toggleElementVisibility(exercises, exercisesVisibility);
+    });
+
+
+    Array.from(document.getElementsByClassName('colouredNumber')).forEach(element => {
+        element.addEventListener('click', function (e) {
+            var numbers = document.getElementsByClassName('number');
+            var exercises = document.getElementsByClassName('exercise');
+            var container = document.getElementById('container');
+            var kHeaders = document.getElementsByClassName('kanjiHeader');
+            var cHeaders = document.getElementsByClassName('counter');
+
+            // Restore the visibility of all elements
+            Array.from(numbers).forEach(number => number.style.display = '');
+            Array.from(exercises).forEach(exercise => exercise.style.display = '');
+
+            // Reset the styles
             container.style.flexWrap = 'nowrap';
             container.style.flexDirection = 'column';
             container.classList.add('aspect-ratio-1-1');
-            for (var i = 0; i < numbers.length; i++) {
-                numbers[i].style.width = '94.5vw';
-            }
-            for (var i = 0; i < kHeaders.length; i++) {
-                kHeaders[i].style.display = 'inline-block';
-            }
-            for (var i = 0; i < cHeaders.length; i++) {
-                cHeaders[i].style.display = 'inline-block';
-            }
-        }
 
-        // Toggle the value of toggleStyle
-        toggleStyle = !toggleStyle;
+            Array.from(numbers).forEach(number => number.style.width = '94.5vw');
+            Array.from(kHeaders).concat(Array.from(cHeaders)).forEach(header => header.style.display = 'inline-block');
 
-        // Loop through all number elements
-        for (var i = 0; i < numbers.length; i++) {
-            // Store the initial visibility state
-            numbersVisibility[i] = numbers[i].style.display;
+            toggleStyle = false;
 
-            // If the element does not have the class 'colouredNumber', toggle its visibility
-            if (!numbers[i].classList.contains('colouredNumber')) {
-                if (numbers[i].style.display === 'none') {
-                    numbers[i].style.display = '';
-                } else {
-                    numbers[i].style.display = 'none';
-                }
-            }
-        }
-
-        // Loop through all exercise elements
-        for (var i = 0; i < exercises.length; i++) {
-            // Store the initial visibility state
-            exercisesVisibility[i] = exercises[i].style.display;
-
-            if (exercises[i].style.display === 'none') {
-                exercises[i].style.display = '';
-            } else {
-                exercises[i].style.display = 'none';
-            }
-        }
-    });
-
-    // Get all elements with the class colouredNumber
-    var elements = document.getElementsByClassName('colouredNumber');
-
-    // Add a double click event listener to each element
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', function (e) {
-            // Restore the visibility of all elements
-            var numbers = document.getElementsByClassName('number');
-            var exercises = document.getElementsByClassName('exercise');
-
-            for (var i = 0; i < numbers.length; i++) {
-                numbers[i].style.display = numbersVisibility[i];
-            }
-
-            for (var i = 0; i < exercises.length; i++) {
-                exercises[i].style.display = exercisesVisibility[i];
-            }
-
-            // Scroll the page to the clicked element
             e.target.scrollIntoView({ behavior: "smooth" });
         });
-    }
+    });
+
+
 
 
     if (navigator.share) {
