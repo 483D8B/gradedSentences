@@ -37,8 +37,7 @@ function updateServiceWorker(registration) {
         registration.waiting.postMessage({ type: 'SKIP_WAITING' });
     }
 }
-
-
+var toggleStyle = false;
 
 window.onload = function () {
     // Get all furigana and translation elements
@@ -147,7 +146,7 @@ window.onload = function () {
     var numbersVisibility = [];
     var exercisesVisibility = [];
 
-    var toggleStyle = false;
+
 
     function toggleElementVisibility(elements, visibilityArray) {
         for (var i = 0; i < elements.length; i++) {
@@ -171,6 +170,16 @@ window.onload = function () {
         var kHeaders = document.getElementsByClassName('kanjiHeader');
         var cHeaders = document.getElementsByClassName('counter');
 
+        // Clear the search fields and dispatch the 'input' event
+        ['search', 'kanjiSearch', 'readingSearch', 'furiganaSearch'].forEach(function (id) {
+            var inputField = document.getElementById(id);
+            if (inputField.value != '') {
+                var event = new Event('keyup', { bubbles: true });
+                inputField.value = '';
+                inputField.dispatchEvent(event);
+            }
+        });
+
         container.style.flexWrap = toggleStyle ? 'nowrap' : 'wrap';
         container.style.flexDirection = toggleStyle ? 'column' : 'row';
         toggleStyle ? container.classList.add('aspect-ratio-1-1') : container.classList.remove('aspect-ratio-1-1');
@@ -183,12 +192,15 @@ window.onload = function () {
 
         toggleStyle = !toggleStyle;
 
+        console.log(toggleStyle)
+
         // Update the visibility state
         numbersVisibility = Array.from(numbers).map(number => number.style.display);
         exercisesVisibility = Array.from(exercises).map(exercise => exercise.style.display);
 
         toggleElementVisibility(numbers, numbersVisibility);
         toggleElementVisibility(exercises, exercisesVisibility);
+
     });
 
 
@@ -321,64 +333,67 @@ function searchFunction() {
         reverseNumberMapping[numberMapping[key]] = key;
     }
 
-    // Loop through all exercise items
-    for (let i = 0; i < exercises.length; i++) {
-        let sentence = exercises[i].getElementsByClassName("sentence")[0];
-        let number = exercises[i].previousElementSibling;
-        let txtValue = sentence.textContent || sentence.innerText;
+    if (toggleStyle == false) {
 
-        // remove the highlighting
-        sentence.innerHTML = txtValue.replace(/<span class="underline">(.*?)<\/span>/gi, '$1');
+        // Loop through all exercise items
+        for (let i = 0; i < exercises.length; i++) {
+            let sentence = exercises[i].getElementsByClassName("sentence")[0];
+            let number = exercises[i].previousElementSibling;
+            let txtValue = sentence.textContent || sentence.innerText;
 
-        let matched = false;
+            // remove the highlighting
+            sentence.innerHTML = txtValue.replace(/<span class="underline">(.*?)<\/span>/gi, '$1');
 
-        // If the input value is composed only of space characters, display all exercises and return
-        if (/^\s*$/.test(input.value)) {
-            exercises[i].style.display = "";
-            if (exercises[i].previousElementSibling) {
-                exercises[i].previousElementSibling.style.display = ""; // show the number
-            }
-            continue;
-        }
+            let matched = false;
 
-        // Loop through all filters
-        for (let j = 0; j < filters.length; j++) {
-
-            // Skip if the filter is an empty string
-            if (filters[j] === '') continue;
-
-            // Check both Hiragana and Katakana matches
-            let hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
-            let katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
-
-            // Check if the filter is a Western number and highlight the corresponding Japanese kanji number
-            if (numberMapping[filters[j]] && txtValue.includes(numberMapping[filters[j]])) {
-                matched = true;
-                let regex = new RegExp(numberMapping[filters[j]], 'gi');
-                sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+            // If the input value is composed only of space characters, display all exercises and return
+            if (/^\s*$/.test(input.value)) {
+                exercises[i].style.display = "";
+                if (exercises[i].previousElementSibling) {
+                    exercises[i].previousElementSibling.style.display = ""; // show the number
+                }
+                continue;
             }
 
-            // Check if the filter is a Japanese kanji number and highlight the corresponding Western number
-            if (reverseNumberMapping[filters[j]] && txtValue.includes(reverseNumberMapping[filters[j]])) {
-                matched = true;
-                let regex = new RegExp(reverseNumberMapping[filters[j]], 'gi');
-                sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+            // Loop through all filters
+            for (let j = 0; j < filters.length; j++) {
+
+                // Skip if the filter is an empty string
+                if (filters[j] === '') continue;
+
+                // Check both Hiragana and Katakana matches
+                let hiraganaMatch = wanakana.toHiragana(txtValue).indexOf(wanakana.toHiragana(filters[j])) > -1;
+                let katakanaMatch = wanakana.toKatakana(txtValue).indexOf(wanakana.toKatakana(filters[j])) > -1;
+
+                // Check if the filter is a Western number and highlight the corresponding Japanese kanji number
+                if (numberMapping[filters[j]] && txtValue.includes(numberMapping[filters[j]])) {
+                    matched = true;
+                    let regex = new RegExp(numberMapping[filters[j]], 'gi');
+                    sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+                }
+
+                // Check if the filter is a Japanese kanji number and highlight the corresponding Western number
+                if (reverseNumberMapping[filters[j]] && txtValue.includes(reverseNumberMapping[filters[j]])) {
+                    matched = true;
+                    let regex = new RegExp(reverseNumberMapping[filters[j]], 'gi');
+                    sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+                }
+
+                if (hiraganaMatch || katakanaMatch) {
+                    matched = true;
+                    // underline the matched content
+                    let regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
+                    sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+                }
             }
 
-            if (hiraganaMatch || katakanaMatch) {
-                matched = true;
-                // underline the matched content
-                let regex = new RegExp(`(${wanakana.toHiragana(filters[j])}|${wanakana.toKatakana(filters[j])})`, 'gi');
-                sentence.innerHTML = sentence.innerHTML.replace(regex, '<span class="underline">$&</span>');
+            if (matched || !input.value.trim()) {
+                exercises[i].style.display = "";
+                number.style.display = ""; // show the number
+            } else {
+                exercises[i].style.display = "none";
+                number.style.display = "none"; // hide the number
             }
-        }
-
-        if (matched || !input.value.trim()) {
-            exercises[i].style.display = "";
-            number.style.display = ""; // show the number
-        } else {
-            exercises[i].style.display = "none";
-            number.style.display = "none"; // hide the number
         }
     }
 }
@@ -544,71 +559,77 @@ var furiganaSearchFunction = debounce(function () {
     // Define an array of colors for highlighting
     let colors = ['red', 'blue', 'green', 'purple', 'orange'];
 
-    // Loop through all exercise items
-    for (let i = 0; i < exercises.length; i++) {
-        let furigana = exercises[i].getElementsByClassName("furigana")[0];
-        let sentence = exercises[i].getElementsByClassName("sentence")[0];
-        let txtValue = furigana.dataset.originalText; // Use the original text stored in data attribute
-        let number = exercises[i].previousElementSibling;
-        let matched = false;
+    if (kanjiInput.value != '') {
 
-        // Create a temporary div element and set its innerHTML to the original text
-        let tempDiv = document.createElement('div');
-        tempDiv.innerHTML = txtValue;
 
-        // Extract the text inside the <ruby> tags
-        let rubyText = '';
-        let rubyElements = tempDiv.getElementsByTagName('ruby');
-        for (let j = 0; j < rubyElements.length; j++) {
-            rubyText += rubyElements[j].textContent;
-        }
 
-        // If the input value is composed only of space characters, display all exercises and return
-        if (/^\s*$/.test(input.value) && /^\s*$/.test(kanjiInput.value)) {
-            exercises[i].style.opacity = "1";
-            if (exercises[i].previousElementSibling) {
-                exercises[i].previousElementSibling.style.opacity = "1"; // show the number
+        // Loop through all exercise items
+        for (let i = 0; i < exercises.length; i++) {
+            let furigana = exercises[i].getElementsByClassName("furigana")[0];
+            let sentence = exercises[i].getElementsByClassName("sentence")[0];
+            let txtValue = furigana.dataset.originalText; // Use the original text stored in data attribute
+            let number = exercises[i].previousElementSibling;
+            let matched = false;
+
+            // Create a temporary div element and set its innerHTML to the original text
+            let tempDiv = document.createElement('div');
+            tempDiv.innerHTML = txtValue;
+
+            // Extract the text inside the <ruby> tags
+            let rubyText = '';
+            let rubyElements = tempDiv.getElementsByTagName('ruby');
+            for (let j = 0; j < rubyElements.length; j++) {
+                rubyText += rubyElements[j].textContent;
             }
-            continue;
-        }
 
-        // Loop through all kanji filters
-        for (let k = 0; k < kanjiFilters.length; k++) {
-            let kanjiFilter = kanjiFilters[k];
+            // If the input value is composed only of space characters, display all exercises and return
+            if (/^\s*$/.test(input.value) && /^\s*$/.test(kanjiInput.value)) {
+                exercises[i].style.opacity = "1";
+                if (exercises[i].previousElementSibling) {
+                    exercises[i].previousElementSibling.style.opacity = "1"; // show the number
+                }
+                continue;
+            }
 
-            // Check if the kanji filter is present in the original text
-            let kanjiMatch = rubyText.indexOf(kanjiFilter) > -1;
+            // Loop through all kanji filters
+            for (let k = 0; k < kanjiFilters.length; k++) {
+                let kanjiFilter = kanjiFilters[k];
 
-            // Loop through all filters
-            for (let j = 0; j < filters.length; j++) {
+                // Check if the kanji filter is present in the original text
+                let kanjiMatch = rubyText.indexOf(kanjiFilter) > -1;
 
-                // Skip if the filter is an empty string
-                if (filters[j] === '') continue;
+                // Loop through all filters
+                for (let j = 0; j < filters.length; j++) {
 
-                // Check both Hiragana and Katakana matches
-                let hiraganaMatch = wanakana.toHiragana(rubyText).indexOf(wanakana.toHiragana(filters[j])) > -1;
-                let katakanaMatch = wanakana.toKatakana(rubyText).indexOf(wanakana.toKatakana(filters[j])) > -1;
+                    // Skip if the filter is an empty string
+                    if (filters[j] === '') continue;
 
-                if ((hiraganaMatch || katakanaMatch) && kanjiMatch) {
-                    matched = true;
-                    // underline the matched content with a specific color
-                    let regex = new RegExp(`(${kanjiFilter})`, 'gi');
-                    sentence.innerHTML = sentence.innerHTML.replace(regex, `<span class="underline" style="color: ${colors[j % colors.length]}">$&</span>`);
+                    // Check both Hiragana and Katakana matches
+                    let hiraganaMatch = wanakana.toHiragana(rubyText).indexOf(wanakana.toHiragana(filters[j])) > -1;
+                    let katakanaMatch = wanakana.toKatakana(rubyText).indexOf(wanakana.toKatakana(filters[j])) > -1;
+
+                    if ((hiraganaMatch || katakanaMatch) && kanjiMatch) {
+                        matched = true;
+                        // underline the matched content with a specific color
+                        let regex = new RegExp(`(${kanjiFilter})`, 'gi');
+                        sentence.innerHTML = sentence.innerHTML.replace(regex, `<span class="underline" style="color: ${colors[j % colors.length]}">$&</span>`);
+                    }
                 }
             }
+
+            if (matched || (!input.value.trim() && kanjiFilters.some(kanjiFilter => rubyText.indexOf(kanjiFilter) > -1))) {
+                exercises[i].style.opacity = "1";
+                number.style.opacity = "1"; // show the number
+                matchCount++; // Increment the counter
+            } else {
+                exercises[i].style.opacity = "0.3";
+                number.style.opacity = "0.3"; // decrease the opacity
+            }
         }
 
-        if (matched || (!input.value.trim() && kanjiFilters.some(kanjiFilter => rubyText.indexOf(kanjiFilter) > -1))) {
-            exercises[i].style.opacity = "1";
-            number.style.opacity = "1"; // show the number
-            matchCount++; // Increment the counter
-        } else {
-            exercises[i].style.opacity = "0.3";
-            number.style.opacity = "0.3"; // decrease the opacity
-        }
+        document.getElementById("filteredNumber").innerText = matchCount
+
     }
-
-    document.getElementById("filteredNumber").innerText = matchCount
 
 }, 300); // 300 milliseconds debounce time
 
