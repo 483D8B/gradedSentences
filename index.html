@@ -17,12 +17,13 @@
     <link href="data:;base64,iVBORw0KGgo=" rel="icon" />
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
-<link rel="manifest" href="manifest.json" />    <title>Graded Sentences</title>
+    <link rel="manifest" href="manifest.json" />
+    <title>Graded Sentences</title>
 </head>
 
 <body>
 
-    <div id="toggleMode"><i class="fa-solid fa-lightbulb"></i></div>
+    <div id="toggleMode" title="toggle light/dark mode"><i class="fa-solid fa-lightbulb"></i></div>
 
     <div id="filteredNumber">&#8203;</div>
     <input type="text" id="search" onkeyup="searchFunction()" placeholder="検索...">
@@ -31,17 +32,20 @@
     <input type="text" id="readingSearch" onkeyup="readingSearchFunction()" placeholder="音訓...">
 
     <input type="text" id="furiganaSearch" onkeyup="furiganaSearchFunction()" placeholder="furigana searching...">
-    
+
+    <div id="toggleAllFurigana" title="toggle all furigana">
+        <img src="Pictogrammers-Material-Furigana-horizontal.png" alt="toggle all furigana">
+    </div>
 
 
     <div id="kanjiFoundContainer"></div>
 
     <div id="readingFoundContainer"></div>
 
-    <div id="counter"></div>
+    <div id="counter" title="sentence counter"></div>
 
-    <div id="showUnit"><i class="fa-solid fa-map"></i></div>
-    <div id="toggleAllTranslations"><i class="fa-solid fa-closed-captioning"></i></div>
+    <div id="showUnit" title="show grid of kanji"><i class="fa-solid fa-map"></i></div>
+    <div id="toggleAllTranslations" title="toggle all translations"><i class="fa-solid fa-closed-captioning"></i></div>
 
     <!-- <button id="shareButton">Share</button> -->
 

@@ -126,6 +126,13 @@ body.dark-mode #toggleAllTranslations {
     border-color: var(--white);
 }
 
+body.dark-mode #toggleAllFurigana {
+    background-color: var(--white);
+    border-color: var(--black);
+    box-shadow: 0 0 2px var(--white);
+}
+
+
 
 
 #container {
@@ -356,6 +363,26 @@ rt {
     text-align: center;
     z-index: 1;
     background-color: var(--white);
+}
+
+#toggleAllFurigana {
+    position: fixed;
+    top: 0;
+    right: 6em;
+    margin-left: 7.5em;
+    margin-top: 0.5em;
+    display: block;
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    text-align: center;
+    z-index: 1;
+    background-color: var(--white);
+}
+
+#toggleAllFurigana img{
+    width: 1.5em;
+    height: 1.28em;
 }
 
 .grammarPointsNote {

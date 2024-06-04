@@ -255,24 +255,42 @@ window.onload = function () {
 
 
 
-    var toggleState = false;
+    var toggleStateTranslation = false;
 
     document.getElementById('toggleAllTranslations').addEventListener('click', function () {
         var translations = document.getElementsByClassName('translation');
-        if (!toggleState) {
+        if (!toggleStateTranslation) {
             for (let i = 0; i < translations.length; i++) {
                 translations[i].innerHTML = translations[i].dataset.originalText;
             }
-            toggleState = true;
+            toggleStateTranslation = true;
         } else {
             for (let i = 0; i < translations.length; i++) {
                 translations[i].innerHTML = 'Show translation';
             }
-            toggleState = false;
+            toggleStateTranslation = false;
         }
     });
 
-    //ghimpen
+
+    var toggleStateFurigana = false;
+
+    document.getElementById('toggleAllFurigana').addEventListener('click', function () {
+        var furigana = document.getElementsByClassName('furigana');
+        if (!toggleStateFurigana) {
+            for (let i = 0; i < furigana.length; i++) {
+                furigana[i].innerHTML = furigana[i].dataset.originalText;
+            }
+            toggleStateFurigana = true;
+        } else {
+            for (let i = 0; i < furigana.length; i++) {
+                furigana[i].innerHTML = 'Show with furigana';
+            }
+            toggleStateFurigana = false;
+        }
+    });
+
+
 
 
 
