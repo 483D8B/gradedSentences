@@ -414,23 +414,33 @@ rt {
 }
 
 #readingFoundContainer {
-    font-size: 2em;
-    align-items: center;
-    justify-content: center;
+    font-size: 1.5em;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.7em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.kanjiGroup {
+    flex: 1 1 calc(50% - 1em); /* Take up half the space minus the gap */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1em;
+    border: 2px solid var(--black);
+    border-top: transparent;
 }
 
 .break {
     flex-basis: 100%;
     text-align: center;
-    border-top: 1px solid var(--black);
+    border-top: 2px solid var(--black);
     text-align: center;
     height: 0;
-    margin-left: 1em;
-    margin-right: 1em;
 }
 
 .break::after {
@@ -442,6 +452,8 @@ rt {
     padding: 0.2em;
     transform: translateY(-50%);
 }
+
+
 
 .kunyomi {
     color: #0d378f;

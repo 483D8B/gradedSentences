@@ -535,30 +535,38 @@ const readingSearchFunction = debounce(() => {
         const kanjiDetails = readings.find(reading => reading.literal === kanji);
 
         if (kanjiDetails) {
-            // Add the Kanji to the container
+            // Create a new div for the Kanji group
+            const kanjiGroup = document.createElement('div');
+            kanjiGroup.classList.add('kanjiGroup');
+
+            // Add the Kanji to the group
             const kanjiDiv = document.createElement('div');
             kanjiDiv.classList.add('break');
             kanjiDiv.setAttribute('data-content', kanji);
-            container.appendChild(kanjiDiv);
+            kanjiGroup.appendChild(kanjiDiv);
 
-            // Add the onyomi readings to the container
+            // Add the onyomi readings to the group
             kanjiDetails.ja_on.forEach(onyomi => {
                 const readingDiv = document.createElement('div');
                 readingDiv.textContent = onyomi; // Display the matched reading
                 readingDiv.classList.add('onyomi', 'reading'); // Add class for styling
-                container.appendChild(readingDiv);
+                kanjiGroup.appendChild(readingDiv);
             });
 
-            // Add the kunyomi readings to the container
+            // Add the kunyomi readings to the group
             kanjiDetails.ja_kun.forEach(kunyomi => {
                 const readingDiv = document.createElement('div');
                 readingDiv.textContent = kunyomi; // Display the matched reading
                 readingDiv.classList.add('kunyomi', 'reading'); // Add class for styling
-                container.appendChild(readingDiv);
+                kanjiGroup.appendChild(readingDiv);
             });
+
+            // Add the group to the container
+            container.appendChild(kanjiGroup);
         }
     });
 }, 300); // 300 milliseconds debounce time
+
 
 
 
