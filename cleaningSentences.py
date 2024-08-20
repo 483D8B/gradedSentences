@@ -89,7 +89,7 @@ with open('playgroundData.csv', 'r', encoding='utf-8') as csv_file:
                         sub_counter = 1
                         
                         
-             # Start the exercise div
+            # Start the exercise div
             if (first_kanji != None):
                 html_file.write(f'\t<div class="number" id="{html.escape(row[3])}">{counter}.{sub_counter}&nbsp;&nbsp;&nbsp;{first_kanji}</div>\n')
             else:

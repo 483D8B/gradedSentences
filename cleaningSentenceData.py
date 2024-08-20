@@ -52,7 +52,7 @@ with open('grs.csv', 'r', encoding='utf-8') as csv_file:
                         sub_counter = 1
                         
                         
-             # Start the exercise div
+            # Start the exercise div
             if (first_kanji != None):
                 js_file.write(f'\t<div class="number" id="{html.escape(row[3])}"><span class="counter">{counter}-{sub_counter}</span><span class="kanjiHeader">{first_kanji}</span></div>\n')
             else:
